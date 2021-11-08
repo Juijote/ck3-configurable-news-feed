@@ -6,6 +6,8 @@ types NewsFeed {
         parentanchor = center
         layer = top
 
+        size = { 600 600 }
+
         state = {
             name = _show
             using = Animation_FadeIn_Quick
@@ -18,7 +20,6 @@ types NewsFeed {
         }
 
         vbox = {
-		    resizeparent = yes
             using = Window_Margins
 
             header_pattern = {
@@ -62,6 +63,7 @@ types NewsFeed {
                     margin_bottom = 50
                     margin_left = 50
                     margin_right = 50
+
                     datamodel = "[GetPlayer.MakeScope.GetList('newsfeed_setting_containers')]"
 
                     newsfeed_settings_label_column = {}
@@ -103,9 +105,9 @@ types NewsFeed {
         datamodel = "[GetGlobalList('newsfeed_types')]"
 
         flowcontainer = {
-            text_single = {
+            newsfeed_subject_icon = {
+                datacontext = "[Story.MakeScope.GetVariable('newsfeed_subject')]"
                 align = center
-                text = "[Localize(Concatenate(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName, '_icon'))]"
                 tooltip = "[Localize(Concatenate(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName, '_label'))]"
             }
             margin_bottom = 8

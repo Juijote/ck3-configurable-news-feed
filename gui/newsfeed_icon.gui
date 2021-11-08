@@ -2,318 +2,368 @@ types NewsFeed {
     type newsfeed_type_icon = flowcontainer {
         ignoreinvisible = yes
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_alliance', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/alliance.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_a_catch_all_councillor_icon', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/a_catch_all_councillor_icon.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_bishop', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/bishop.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_building', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/building.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_chancellor_job', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/chancellor_job.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_child', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/child.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_control', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/control.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_council', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/council.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_county_corruption', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/county_corruption.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_court_physician', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/court_physician.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_death_desease', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/death_desease.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_death_murder', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/death_murder.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_death_natural', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/death_natural.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_death_unknown', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/death_unknown.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_diplomacy', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/diplomacy.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_diplomacy_skill_temp', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/diplomacy_skill_temp.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_dynasty', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/dynasty.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_excommunication', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/excommunication.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_faction', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/faction.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_generic_bad_effect', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/generic_bad_effect.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_generic_good_effect', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/generic_good_effect.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_generic_neutral_effect', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/generic_neutral_effect.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_great_holy_war', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/great_holy_war.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_guest', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/guest.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_heir', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/heir.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_heresy', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/heresy.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_holy_order', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/holy_order.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_hook', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/hook.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_hook_strong', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/hook_strong.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_icon_bishop_temp', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/icon_bishop_temp.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_intrigue', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/intrigue.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_intrigue_skill_temp', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/intrigue_skill_temp.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_law', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/law.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_learning', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/learning.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_learning_skill_temp', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/learning_skill_temp.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_marriage', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/marriage.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_marshal_job', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/marshal_job.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_martial', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/martial.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_martial_skill_temp', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/martial_skill_temp.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_mercenary', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/mercenary.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_mercenary_skill_temp', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/mercenary_skill_temp.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_money', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/money.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_nickname', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/nickname.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_prison', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/prison.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_religious', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/religious.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_religious_councillor_job', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/religious_councillor_job.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_secret', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/secret.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_siege', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/siege.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_spouse_job', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/spouse_job.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_spouse_task_temp', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/spouse_task_temp.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_spy_master', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/spy_master.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_stewardship', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/stewardship.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_stewardship_skill_temp', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/stewardship_skill_temp.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_steward_job', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/steward_job.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_sway_scheme', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/sway_scheme.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_technology', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/technology.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_tier_down', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/tier_down.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_tier_up', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/tier_up.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_titles', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/titles.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_trait', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/trait.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_war', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/war.dds"
         }
 
-        newsfeed_icon = {
+        newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type__default', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/_default.dds"
         }
     }
 
-    type newsfeed_icon = icon {
+    type newsfeed_message_icon = icon {
         size = { 20 20 }
+    }
+
+    type newsfeed_subject_icon = flowcontainer {
+        ignoreinvisible = yes
+
+        icon = {
+            visible = "[EqualTo_string('newsfeed_subject_self', Scope.GetFlagName)]"
+            texture = "gfx/interface/icons/portraits/me.dds"
+            size = { 30 30 }
+        }
+        icon = {
+            visible = "[EqualTo_string('newsfeed_subject_spouse', Scope.GetFlagName)]"
+            texture = "gfx/interface/icons/message_feed/marriage.dds"
+            size = { 30 30 }
+        }
+        icon = {
+            visible = "[EqualTo_string('newsfeed_subject_close_dynastic_family', Scope.GetFlagName)]"
+            texture = "gfx/interface/icons/portraits/relation.dds"
+            framesize = { 40 40 }
+            frame = 5
+            size = { 30 30 }
+        }
+        icon = {
+            visible = "[EqualTo_string('newsfeed_subject_extended_dynastic_family', Scope.GetFlagName)]"
+            texture = "gfx/interface/icons/portraits/relation.dds"
+            framesize = { 40 40 }
+            frame = 8
+            size = { 30 30 }
+        }
+        icon = {
+            visible = "[EqualTo_string('newsfeed_subject_liege', Scope.GetFlagName)]"
+            texture = "gfx/interface/icons/icon_liege.dds"
+            size = { 30 30 }
+        }
+        icon = {
+            visible = "[EqualTo_string('newsfeed_subject_direct_vassal', Scope.GetFlagName)]"
+            texture = "gfx/interface/icons/icon_vassal.dds"
+            size = { 30 30 }
+        }
+        icon = {
+            visible = "[EqualTo_string('newsfeed_subject_pinned_character', Scope.GetFlagName)]"
+            texture = "gfx/interface/icons/flat_icons/pin.dds"
+            size = { 30 30 }
+
+            modify_texture = {
+                texture = "gfx/interface/colors/colors_textured.dds"
+                blend_mode = add
+                framesize = { 96 96 }
+            }
+        }
     }
 }

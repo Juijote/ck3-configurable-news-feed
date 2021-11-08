@@ -1,18 +1,11 @@
 ﻿l_russian:
   newsfeed_subject_self_label: "Мои личные события"
-  newsfeed_subject_self_icon: "@newsfeed_icon_self!"
   newsfeed_subject_spouse_label: "События, в которых участвует [spouse|E]"
-  newsfeed_subject_spouse_icon: "@newsfeed_icon_spouse!"
   newsfeed_subject_close_dynastic_family_label: "События тех, у кого [close_family|E] с моей [dynasty|E]"
-  newsfeed_subject_close_dynastic_family_icon: "@newsfeed_icon_close_dynastic_family!"
   newsfeed_subject_extended_dynastic_family_label: "События тех, у кого [extended_family|E] с моей [dynasty|E]"
-  newsfeed_subject_extended_dynastic_family_icon: "@newsfeed_icon_extended_dynastic_family!"
   newsfeed_subject_liege_label: "События, в которых участвует мой [liege|E]"
-  newsfeed_subject_liege_icon: "@newsfeed_icon_liege!"
   newsfeed_subject_direct_vassal_label: "События, в которых мои прямые [vassals|E]"
-  newsfeed_subject_direct_vassal_icon: "@newsfeed_icon_direct_vassal!"
   newsfeed_subject_pinned_character_label: "События закрепленных мной персонажей"
-  newsfeed_subject_pinned_character_icon: "@newsfeed_icon_pinned_character!"
 
   newsfeed_type_marriage_label: "Браки"
   newsfeed_type_pregnancy_label: "Зачатия"
