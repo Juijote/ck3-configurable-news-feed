@@ -72,10 +72,17 @@ newsfeed_is_interested_in_titles = {
     }
 }
 
-newsfeed_is_interested_in_war = {
+newsfeed_is_interested_in_offensive_war = {
     newsfeed_is_setting_enabled_for_person = {
         PERSON = $PERSON$
-        type = flag:newsfeed_type_war
+        type = flag:newsfeed_type_offensive_war
+    }
+}
+
+newsfeed_is_interested_in_defensive_war = {
+    newsfeed_is_setting_enabled_for_person = {
+        PERSON = $PERSON$
+        type = flag:newsfeed_type_defensive_war
     }
 }
 

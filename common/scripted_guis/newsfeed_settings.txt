@@ -2,13 +2,44 @@
     scope = character
 
     is_valid = {
-        newsfeed_settings_initialized = no
+        is_alive = yes
+        NAND = {
+            exists = var:newsfeed_has_migrated_v2
+            var:newsfeed_has_migrated_v2 = yes
+        }
     }
 
     effect = {
-        newsfeed_initialize_settings = yes
-        newsfeed_set_default_settings = yes
-    }    
+        newsfeed_ensure_global_subjects_and_types = yes
+        
+        if = {
+            limit = {
+                newsfeed_has_any_setting_containers = no
+            }
+
+            save_scope_value_as = {
+                name = newsfeed_should_set_defaults
+                value = yes
+            }
+        }
+        else = {
+            save_scope_value_as = {
+                name = newsfeed_should_set_defaults
+                value = no
+            }
+        }
+
+        newsfeed_ensure_setting_containers_for_all_subjects = yes
+        newsfeed_migrate_v2 = yes
+
+        if = {
+            limit = {
+                scope:newsfeed_should_set_defaults = yes
+            }
+
+            newsfeed_set_default_settings = yes
+        }
+    }
 }
 
 newsfeed_setting_state_gui = {

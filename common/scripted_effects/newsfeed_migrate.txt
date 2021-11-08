@@ -1,0 +1,69 @@
+﻿newsfeed_migrate_v2 = {
+    if = {
+        limit = {
+            NAND = {
+                exists = var:newsfeed_has_migrated_v2
+                var:newsfeed_has_migrated_v2 = yes
+            }
+        }
+
+        every_owned_story = {
+            limit = {
+                story_type = story_newsfeed_setting
+            }
+
+            newsfeed_migrate_v2_setting_container = yes
+        }
+
+        set_variable = {
+            name = newsfeed_has_migrated_v2
+            value = yes
+        }
+    }
+}
+
+newsfeed_migrate_v2_setting_container = {
+    every_in_list = {
+        variable = newsfeed_enabled_types
+        limit = {
+            NOT = { this = flag:newsfeed_type_war }
+        }
+        prev = {
+            add_to_variable_list = {
+                name = newsfeed_migrate_types
+                target = prev
+            }
+        }
+    }
+
+    if = {
+        limit = {
+            any_in_list = {
+                variable = newsfeed_enabled_types
+                this = flag:newsfeed_type_war
+            }
+        }
+
+        add_to_variable_list = {
+            name = newsfeed_migrate_types
+            target = flag:newsfeed_type_offensive_war
+        }
+        add_to_variable_list = {
+            name = newsfeed_migrate_types
+            target = flag:newsfeed_type_defensive_war
+        }
+    }
+
+    every_in_list = {
+        variable = newsfeed_migrate_types
+
+        prev = {
+            add_to_variable_list = {
+                name = newsfeed_enabled_types
+                target = prev
+            }
+        }
+    }
+
+    clear_variable_list = newsfeed_migrate_types
+}

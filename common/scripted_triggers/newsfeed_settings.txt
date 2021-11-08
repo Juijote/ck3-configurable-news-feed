@@ -1,4 +1,4 @@
-﻿newsfeed_settings_initialized = {
+﻿newsfeed_has_any_setting_containers = {
     any_in_list = {
         variable = newsfeed_setting_containers
     }

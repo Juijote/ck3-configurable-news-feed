@@ -1,9 +1,4 @@
-﻿newsfeed_initialize_settings = {
-    newsfeed_ensure_all_subjects_and_types = yes
-    newsfeed_ensure_setting_containers = yes
-}
-
-newsfeed_set_default_settings = {
+﻿newsfeed_set_default_settings = {
     save_temporary_scope_as = newsfeed_set_default_settings_player
 
     every_in_global_list = {
@@ -26,7 +21,7 @@ newsfeed_set_default_settings = {
     }
 }
 
-newsfeed_ensure_all_subjects_and_types = {
+newsfeed_ensure_global_subjects_and_types = {
     newsfeed_create_subject = { SUBJECT = self }
     newsfeed_create_subject = { SUBJECT = spouse }
     newsfeed_create_subject = { SUBJECT = close_dynastic_family }
@@ -39,11 +34,13 @@ newsfeed_ensure_all_subjects_and_types = {
     newsfeed_create_type = { type = pregnancy }
     newsfeed_create_type = { type = birth }
     newsfeed_create_type = { type = death }
-    newsfeed_create_type = { type = war }
+    newsfeed_create_type = { type = offensive_war }
+    newsfeed_create_type = { type = defensive_war }
     newsfeed_create_type = { type = titles }
+    newsfeed_remove_type = { type = war }
 }
 
-newsfeed_ensure_setting_containers = {
+newsfeed_ensure_setting_containers_for_all_subjects = {
     every_in_global_list = {
         variable = newsfeed_subjects
         save_temporary_scope_as = newsfeed_subject
@@ -98,6 +95,13 @@ newsfeed_create_subject = {
 
 newsfeed_create_type = {
     add_to_global_variable_list = {
+        name = newsfeed_types
+        target = flag:newsfeed_type_$type$
+    }
+}
+
+newsfeed_remove_type = {
+    remove_list_global_variable = {
         name = newsfeed_types
         target = flag:newsfeed_type_$type$
     }

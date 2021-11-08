@@ -9,10 +9,10 @@ newsfeed_on_war_started = {
         every_player = {
             if = {
                 limit = {
-                    newsfeed_is_interested_in_war = { PERSON = scope:attacker }
+                    newsfeed_is_interested_in_offensive_war = { PERSON = scope:attacker }
                     NAND = {
                         this = scope:defender
-                        newsfeed_is_interested_in_war = { PERSON = scope:defender }
+                        newsfeed_is_interested_in_defensive_war = { PERSON = scope:defender }
                     }
                 }
 
@@ -24,7 +24,7 @@ newsfeed_on_war_started = {
             }
             else_if = {  
                 limit = {
-                    newsfeed_is_interested_in_war = { PERSON = scope:defender }
+                    newsfeed_is_interested_in_defensive_war = { PERSON = scope:defender }
                 }
 
                 send_interface_message = {
@@ -48,10 +48,10 @@ newsfeed_on_war_won_attacker = {
         every_player = {
             if = {
                 limit = {
-                    newsfeed_is_interested_in_war = { PERSON = scope:attacker }
+                    newsfeed_is_interested_in_offensive_war = { PERSON = scope:attacker }
                     NAND = {
                         this = scope:defender
-                        newsfeed_is_interested_in_war = { PERSON = scope:defender }
+                        newsfeed_is_interested_in_defensive_war = { PERSON = scope:defender }
                     }
                 }
 
@@ -66,7 +66,7 @@ newsfeed_on_war_won_attacker = {
             }
             else_if = {  
                 limit = {
-                    newsfeed_is_interested_in_war = { PERSON = scope:defender }
+                    newsfeed_is_interested_in_defensive_war = { PERSON = scope:defender }
                 }
 
                 scope:defender = { save_scope_as = protagonist }
@@ -93,10 +93,10 @@ newsfeed_on_war_won_defender = {
         every_player = {
             if = {
                 limit = {
-                    newsfeed_is_interested_in_war = { PERSON = scope:attacker }
+                    newsfeed_is_interested_in_offensive_war = { PERSON = scope:attacker }
                     NAND = {
                         this = scope:defender
-                        newsfeed_is_interested_in_war = { PERSON = scope:defender }
+                        newsfeed_is_interested_in_defensive_war = { PERSON = scope:defender }
                     }
                 }
 
@@ -111,7 +111,7 @@ newsfeed_on_war_won_defender = {
             }
             else_if = {  
                 limit = {
-                    newsfeed_is_interested_in_war = { PERSON = scope:defender }
+                    newsfeed_is_interested_in_defensive_war = { PERSON = scope:defender }
                 }
 
                 scope:defender = { save_scope_as = protagonist }
@@ -138,10 +138,10 @@ newsfeed_on_war_white_peace = {
         every_player = {
             if = {
                 limit = {
-                    newsfeed_is_interested_in_war = { PERSON = scope:attacker }
+                    newsfeed_is_interested_in_offensive_war = { PERSON = scope:attacker }
                     NAND = {
                         this = scope:defender
-                        newsfeed_is_interested_in_war = { PERSON = scope:defender }
+                        newsfeed_is_interested_in_defensive_war = { PERSON = scope:defender }
                     }
                 }
 
@@ -156,7 +156,7 @@ newsfeed_on_war_white_peace = {
             }
             else_if = {  
                 limit = {
-                    newsfeed_is_interested_in_war = { PERSON = scope:defender }
+                    newsfeed_is_interested_in_defensive_war = { PERSON = scope:defender }
                 }
 
                 scope:defender = { save_scope_as = protagonist }
@@ -183,10 +183,10 @@ newsfeed_on_war_invalidated = {
         every_player = {
             if = {
                 limit = {
-                    newsfeed_is_interested_in_war = { PERSON = scope:attacker }
+                    newsfeed_is_interested_in_offensive_war = { PERSON = scope:attacker }
                     NAND = {
                         this = scope:defender
-                        newsfeed_is_interested_in_war = { PERSON = scope:defender }
+                        newsfeed_is_interested_in_defensive_war = { PERSON = scope:defender }
                     }
                 }
 
@@ -201,7 +201,7 @@ newsfeed_on_war_invalidated = {
             }
             else_if = {  
                 limit = {
-                    newsfeed_is_interested_in_war = { PERSON = scope:defender }
+                    newsfeed_is_interested_in_defensive_war = { PERSON = scope:defender }
                 }
 
                 scope:defender = { save_scope_as = protagonist }
