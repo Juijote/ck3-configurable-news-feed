@@ -4,7 +4,6 @@
 @msg_bad_soundeffect = "event:/SFX/UI/Notifications/Messages/sfx_ui_message_theme_negative"
 
 event_generic_bad = {
-    display = toast
 	icon = "generic_bad_effect"
     tooltip = "newsfeed_type_generic_bad_effect"
 	title = event_message_title
@@ -14,7 +13,6 @@ event_generic_bad = {
 }
 
 event_generic_bad_text = {
-    display = toast
 	icon = "generic_bad_effect"
     tooltip = "newsfeed_type_generic_bad_effect"
 	title = event_message_title
@@ -24,7 +22,6 @@ event_generic_bad_text = {
 }
 
 event_generic_good = {
-    display = toast
 	icon = "generic_good_effect"
     tooltip = "newsfeed_type_generic_good_effect"
 	title = event_message_title
@@ -34,7 +31,6 @@ event_generic_good = {
 }
 
 event_generic_good_text = {
-    display = toast
 	icon = "generic_good_effect"
     tooltip = "newsfeed_type_generic_good_effect"
 	title = event_message_title
@@ -44,7 +40,6 @@ event_generic_good_text = {
 }
 
 event_generic_neutral = {
-    display = toast
 	icon = "generic_neutral_effect"
     tooltip = "newsfeed_type_generic_neutral_effect"
 	title = event_message_title
@@ -54,7 +49,6 @@ event_generic_neutral = {
 }
 
 event_generic_neutral_text = {
-    display = toast
 	icon = "generic_neutral_effect"
     tooltip = "newsfeed_type_generic_neutral_effect"
 	title = event_message_title
@@ -65,7 +59,6 @@ event_generic_neutral_text = {
 
 #Councillors
 event_chancellor_task_bad = {
-    display = toast
 	icon = "chancellor_job"
     tooltip = "newsfeed_type_chancellor_job"
 	title = event_message_title
@@ -75,7 +68,6 @@ event_chancellor_task_bad = {
 }
 
 event_chancellor_task_good = {
-    display = toast
 	icon = "chancellor_job"
     tooltip = "newsfeed_type_chancellor_job"
 	title = event_message_title
@@ -85,7 +77,6 @@ event_chancellor_task_good = {
 }
 
 event_marshal_task_bad = {
-    display = toast
 	icon = "marshal_job"
     tooltip = "newsfeed_type_marshal_job"
 	title = event_message_title
@@ -95,7 +86,6 @@ event_marshal_task_bad = {
 }
 
 event_marshal_task_good = {
-    display = toast
 	icon = "marshal_job"
     tooltip = "newsfeed_type_marshal_job"
 	title = event_message_title
@@ -105,7 +95,6 @@ event_marshal_task_good = {
 }
 
 event_steward_task_bad = {
-    display = toast
 	icon = "steward_job"
     tooltip = "newsfeed_type_steward_job"
 	title = event_message_title
@@ -115,7 +104,6 @@ event_steward_task_bad = {
 }
 
 event_steward_task_good = {
-    display = toast
 	icon = "steward_job"
     tooltip = "newsfeed_type_steward_job"
 	title = event_message_title
@@ -125,7 +113,6 @@ event_steward_task_good = {
 }
 
 event_spymaster_task_bad = {
-    display = toast
 	icon = "spy_master"
     tooltip = "newsfeed_type_spy_master"
 	title = event_message_title
@@ -135,7 +122,6 @@ event_spymaster_task_bad = {
 }
 
 event_spymaster_task_good = {
-    display = toast
 	icon = "spy_master"
     tooltip = "newsfeed_type_spy_master"
 	title = event_message_title
@@ -145,7 +131,6 @@ event_spymaster_task_good = {
 }
 
 event_court_chaplain_task_bad = {
-    display = toast
 	icon = "religious_councillor_job"
     tooltip = "newsfeed_type_religious_councillor_job"
 	title = event_message_title
@@ -155,7 +140,6 @@ event_court_chaplain_task_bad = {
 }
 
 event_court_chaplain_task_good = {
-    display = toast
 	icon = "religious_councillor_job"
     tooltip = "newsfeed_type_religious_councillor_job"
 	title = event_message_title
@@ -166,7 +150,6 @@ event_court_chaplain_task_good = {
 
 #Skill messages
 event_diplomacy_bad = {
-    display = toast
 	icon = "diplomacy"
     tooltip = "newsfeed_type_diplomacy"
 	title = event_message_title
@@ -176,7 +159,6 @@ event_diplomacy_bad = {
 }
 
 event_diplomacy_good = {
-    display = toast
 	icon = "diplomacy"
     tooltip = "newsfeed_type_diplomacy"
 	title = event_message_title
@@ -186,7 +168,6 @@ event_diplomacy_good = {
 }
 
 event_diplomacy_neutral = {
-    display = toast
 	icon = "diplomacy"
     tooltip = "newsfeed_type_diplomacy"
 	title = event_message_title
@@ -196,7 +177,6 @@ event_diplomacy_neutral = {
 }
 
 event_martial_bad = {
-    display = toast
 	icon = "martial"
     tooltip = "newsfeed_type_martial"
 	title = event_message_title
@@ -206,7 +186,6 @@ event_martial_bad = {
 }
 
 event_martial_good = {
-    display = toast
 	icon = "martial"
     tooltip = "newsfeed_type_martial"
 	title = event_message_title
@@ -216,7 +195,6 @@ event_martial_good = {
 }
 
 event_martial_text_good = {
-    display = toast
 	icon = "martial"
     tooltip = "newsfeed_type_martial"
 	title = event_message_title
@@ -226,7 +204,6 @@ event_martial_text_good = {
 }
 
 event_stewardship_bad = {
-    display = toast
 	icon = "stewardship"
     tooltip = "newsfeed_type_stewardship"
 	title = event_message_title
@@ -236,7 +213,6 @@ event_stewardship_bad = {
 }
 
 event_stewardship_neutral = {
-    display = toast
 	icon = "stewardship"
     tooltip = "newsfeed_type_stewardship"
 	title = event_message_title
@@ -246,7 +222,6 @@ event_stewardship_neutral = {
 }
 
 event_stewardship_neutral_with_text = {
-    display = toast
 	icon = "stewardship"
     tooltip = "newsfeed_type_stewardship"
 	title = event_message_title
@@ -256,7 +231,6 @@ event_stewardship_neutral_with_text = {
 }
 
 event_stewardship_good = {
-    display = toast
 	icon = "stewardship"
     tooltip = "newsfeed_type_stewardship"
 	title = event_message_title
@@ -266,7 +240,6 @@ event_stewardship_good = {
 }
 
 event_intrigue_bad = {
-    display = toast
 	icon = "intrigue"
     tooltip = "newsfeed_type_intrigue"
 	title = event_message_title
@@ -276,7 +249,6 @@ event_intrigue_bad = {
 }
 
 event_intrigue_good = {
-    display = toast
 	icon = "intrigue"
     tooltip = "newsfeed_type_intrigue"
 	title = event_message_title
@@ -286,7 +258,6 @@ event_intrigue_good = {
 }
 
 event_learning_bad = {
-    display = toast
 	icon = "learning"
     tooltip = "newsfeed_type_learning"
 	title = event_message_title
@@ -296,7 +267,6 @@ event_learning_bad = {
 }
 
 event_learning_good = {
-    display = toast
 	icon = "learning"
     tooltip = "newsfeed_type_learning"
 	title = event_message_title
@@ -306,7 +276,6 @@ event_learning_good = {
 }
 
 event_prowess_bad = {
-    display = toast
 	icon = "war"
     tooltip = "newsfeed_type_war"
 	title = event_message_title
@@ -316,7 +285,6 @@ event_prowess_bad = {
 }
 
 event_prowess_good = {
-    display = toast
 	icon = "war"
     tooltip = "newsfeed_type_war"
 	title = event_message_title
@@ -326,7 +294,6 @@ event_prowess_good = {
 }
 
 event_prowess_good_desc = {
-    display = toast
 	icon = "war"
     tooltip = "newsfeed_type_war"
 	title = event_message_title
@@ -337,7 +304,6 @@ event_prowess_good_desc = {
 
 #Spouse tasks
 event_spouse_task_bad = {
-    display = toast
 	icon = "spouse_job"
     tooltip = "newsfeed_type_spouse_job"
 	title = event_message_title
@@ -347,7 +313,6 @@ event_spouse_task_bad = {
 }
 
 event_spouse_task_good = {
-    display = toast
 	icon = "spouse_job"
     tooltip = "newsfeed_type_spouse_job"
 	title = event_message_title
@@ -358,7 +323,6 @@ event_spouse_task_good = {
 
 #Physician
 event_court_physician_bad = {
-    display = toast
 	icon = "court_physician"
     tooltip = "newsfeed_type_court_physician"
 	title = event_message_title
@@ -368,7 +332,6 @@ event_court_physician_bad = {
 }
 
 event_court_physician_good = {
-    display = toast
 	icon = "court_physician"
     tooltip = "newsfeed_type_court_physician"
 	title = event_message_title
@@ -379,7 +342,6 @@ event_court_physician_good = {
 
 # war Events
 event_war_bad = {
-    display = toast
 	icon = "war"
     tooltip = "newsfeed_type_war"
 	title = event_message_title
@@ -389,7 +351,6 @@ event_war_bad = {
 }
 
 event_war_good = {
-    display = toast
 	icon = "war"
     tooltip = "newsfeed_type_war"
 	title = event_message_title
@@ -399,7 +360,6 @@ event_war_good = {
 }
 
 event_captured_combatants_good = {
-    display = toast
 	icon = "prison"
     tooltip = "newsfeed_type_prison"
 	title = event_message_title
@@ -409,7 +369,6 @@ event_captured_combatants_good = {
 }
 
 event_captured_combatants_neutral = {
-    display = toast
 	icon = "prison"
     tooltip = "newsfeed_type_prison"
 	title = event_message_title
@@ -419,7 +378,6 @@ event_captured_combatants_neutral = {
 }
 
 event_captured_combatants_bad = {
-    display = toast
 	icon = "prison"
     tooltip = "newsfeed_type_prison"
 	title = event_message_title
@@ -429,7 +387,6 @@ event_captured_combatants_bad = {
 }
 
 event_slain_combatants_good = {
-    display = toast
 	icon = "death_desease"
     tooltip = "newsfeed_type_death_desease"
 	title = event_message_title
@@ -439,7 +396,6 @@ event_slain_combatants_good = {
 }
 
 event_slain_combatants_neutral = {
-    display = toast
 	icon = "death_natural"
     tooltip = "newsfeed_type_death_natural"
 	title = event_message_title
@@ -449,7 +405,6 @@ event_slain_combatants_neutral = {
 }
 
 event_slain_combatants_bad = {
-    display = toast
 	icon = "death_murder"
     tooltip = "newsfeed_type_death_murder"
 	title = event_message_title
@@ -459,7 +414,6 @@ event_slain_combatants_bad = {
 }
 
 event_war_invalidated = {
-    display = toast
 	icon = "nickname"
     tooltip = "newsfeed_type_nickname"
 	title = event_message_title
@@ -469,7 +423,6 @@ event_war_invalidated = {
 }
 
 event_raid_bad = {
-    display = toast
 	icon = "money"
     tooltip = "newsfeed_type_money"
 	title = event_message_title
@@ -479,7 +432,6 @@ event_raid_bad = {
 }
 
 event_raid_good = {
-    display = toast
 	icon = "money"
     tooltip = "newsfeed_type_money"
 	title = event_message_title
@@ -491,7 +443,6 @@ event_raid_good = {
 # Prison Events
 
 event_prison_good = {
-    display = toast
 	icon = "prison"
     tooltip = "newsfeed_type_prison"
 	title = event_message_title
@@ -501,7 +452,6 @@ event_prison_good = {
 }
 
 event_prison_neutral = {
-    display = toast
 	icon = "prison"
     tooltip = "newsfeed_type_prison"
 	title = event_message_title
@@ -511,7 +461,6 @@ event_prison_neutral = {
 }
 
 event_prison_bad = {
-    display = toast
 	icon = "prison"
     tooltip = "newsfeed_type_prison"
 	title = event_message_title
@@ -524,7 +473,6 @@ event_prison_bad = {
 # Heresy Outbreaks
 
 event_heresy_outbreak_neutral = {
-    display = toast
 	icon = "heresy"
     tooltip = "newsfeed_type_heresy"
 	title = event_message_title
@@ -533,7 +481,6 @@ event_heresy_outbreak_neutral = {
 }
 
 event_heresy_outbreak_bad = {
-    display = toast
 	icon = "heresy"
     tooltip = "newsfeed_type_heresy"
 	title = event_message_title
@@ -543,7 +490,6 @@ event_heresy_outbreak_bad = {
 }
 
 event_heresy_outbreak_good = {
-    display = toast
 	icon = "heresy"
     tooltip = "newsfeed_type_heresy"
 	title = event_message_title
@@ -555,7 +501,6 @@ event_heresy_outbreak_good = {
 # HoF Messages
 
 event_hof_established = {
-    display = toast
 	icon = "learning"
     tooltip = "newsfeed_type_learning"
 	title = event_message_title
@@ -566,7 +511,6 @@ event_hof_established = {
 
 
 enemy_holy_order_founded_message = {
-    display = toast
 	icon = "holy_order"
     tooltip = "newsfeed_type_holy_order"
 	title = holy_order_founded_title
@@ -576,7 +520,6 @@ enemy_holy_order_founded_message = {
 }
 
 holy_order_expanded_message = {
-    display = toast
 	icon = "holy_order"
     tooltip = "newsfeed_type_holy_order"
 	title = holy_order_expanded
@@ -586,7 +529,6 @@ holy_order_expanded_message = {
 }
 
 holy_order_hired_message = {
-    display = toast
 	icon = "holy_order"
     tooltip = "newsfeed_type_holy_order"
 	title = holy_order_hired_message
@@ -596,7 +538,6 @@ holy_order_hired_message = {
 }
 
 holy_order_hired_by_enemy_message = {
-    display = toast
 	icon = "holy_order"
     tooltip = "newsfeed_type_holy_order"
 	title = holy_order_hired_by_enemy_message
@@ -608,7 +549,6 @@ holy_order_hired_by_enemy_message = {
 #COUNTY CORRUPTION MESSAGES#
 
 msg_county_corruption_bad = {
-    display = toast
 	icon = "county_corruption"
     tooltip = "newsfeed_type_county_corruption"
 	title = event_message_title
@@ -618,7 +558,6 @@ msg_county_corruption_bad = {
 }
 
 msg_county_corruption_good = {
-    display = toast
 	icon = "county_corruption"
     tooltip = "newsfeed_type_county_corruption"
 	title = event_message_title
@@ -628,7 +567,6 @@ msg_county_corruption_good = {
 }
 
 msg_county_corruption_good_increase_control = {
-    display = toast
 	icon = "control"
     tooltip = "newsfeed_type_control"
 	title = event_message_title
@@ -641,7 +579,6 @@ msg_county_corruption_good_increase_control = {
 ###RELIGIOUS MESSAGES###
 
 great_holy_war_good_message = {
-    display = toast
 	icon = "great_holy_war"
     tooltip = "newsfeed_type_great_holy_war"
 	title = event_message_title
@@ -651,7 +588,6 @@ great_holy_war_good_message = {
 }
 
 great_holy_war_bad_message = {
-    display = toast
 	icon = "great_holy_war"
     tooltip = "newsfeed_type_great_holy_war"
 	title = event_message_title
@@ -661,7 +597,6 @@ great_holy_war_bad_message = {
 }
 
 excommunicated_other_message = {
-    display = toast
 	icon = "excommunication"
     tooltip = "newsfeed_type_excommunication"
 	title = excommunicated_other_message
@@ -671,7 +606,6 @@ excommunicated_other_message = {
 }
 
 bishop_good_message = {
-    display = toast
 	icon = "bishop"
     tooltip = "newsfeed_type_bishop"
 	title = event_message_title
@@ -681,7 +615,6 @@ bishop_good_message = {
 }
 
 bishop_bad_message = {
-    display = toast
 	icon = "bishop"
     tooltip = "newsfeed_type_bishop"
 	title = event_message_title
@@ -691,7 +624,6 @@ bishop_bad_message = {
 }
 
 sinful_theocrat_exposed = {
-    display = toast
 	icon = "religious"
     tooltip = "newsfeed_type_religious"
 	title = event_message_title
@@ -701,7 +633,6 @@ sinful_theocrat_exposed = {
 }
 
 virtuous_theocrat_celebrated = {
-    display = toast
 	icon = "religious"
     tooltip = "newsfeed_type_religious"
 	title = event_message_title
@@ -711,7 +642,6 @@ virtuous_theocrat_celebrated = {
 }
 
 good_omen = {
-    display = toast
 	icon = "religious"
     tooltip = "newsfeed_type_religious"
 	title = event_message_title
@@ -721,7 +651,6 @@ good_omen = {
 }
 
 designated_sacrifice_unsacrificed = {
-    display = toast
 	icon = "religious"
     tooltip = "newsfeed_type_religious"
 	title = event_message_title
@@ -731,7 +660,6 @@ designated_sacrifice_unsacrificed = {
 }
 
 revealed_crypto_faith = {
-    display = toast
 	icon = "religious"
     tooltip = "newsfeed_type_religious"
 	title = event_message_title
@@ -743,7 +671,6 @@ revealed_crypto_faith = {
 ###SCHEME MESSAGES###
 
 sway_good_message = {
-    display = toast
 	icon = "sway_scheme"
     tooltip = "newsfeed_type_sway_scheme"
 	title = event_message_title
@@ -753,7 +680,6 @@ sway_good_message = {
 }
 
 sway_bad_message = {
-    display = toast
 	icon = "sway_scheme"
     tooltip = "newsfeed_type_sway_scheme"
 	title = event_message_title
@@ -763,7 +689,6 @@ sway_bad_message = {
 }
 
 fabricate_hook_bad_message = {
-    display = toast
 	icon = "hook"
     tooltip = "newsfeed_type_hook"
 	title = event_message_title
@@ -773,7 +698,6 @@ fabricate_hook_bad_message = {
 }
 
 fabricate_hook_invalidated_message = {
-    display = toast
 	icon = "hook"
     tooltip = "newsfeed_type_hook"
 	title = event_message_title
@@ -783,7 +707,6 @@ fabricate_hook_invalidated_message = {
 }
 
 abduct_invalidated_i_imprisoned_message = {
-    display = toast
 	icon = "prison"
     tooltip = "newsfeed_type_prison"
 	title = event_message_title
@@ -793,7 +716,6 @@ abduct_invalidated_i_imprisoned_message = {
 }
 
 murder_invalidated_message = {
-    display = toast
 	icon = "intrigue"
     tooltip = "newsfeed_type_intrigue"
 	title = event_message_title
@@ -803,7 +725,6 @@ murder_invalidated_message = {
 }
 
 murder_agent_join_or_leave_message = {
-    display = toast
 	icon = "spy_master"
     tooltip = "newsfeed_type_spy_master"
 	title = event_message_title
@@ -815,7 +736,6 @@ murder_agent_join_or_leave_message = {
 ###SECRET MESSAGES###
 
 secret_exposed_message = {
-    display = toast
 	icon = "secret"
     tooltip = "newsfeed_type_secret"
 	title = secret_exposed_notification_effect_message
@@ -825,7 +745,6 @@ secret_exposed_message = {
 }
 
 secret_discovered_message = {
-    display = toast
 	icon = "secret"
     tooltip = "newsfeed_type_secret"
 	title = event_message_title
@@ -836,7 +755,6 @@ secret_discovered_message = {
 
 ### CULTURE MESSAGES
 culture_conversion = {
-    display = toast
 	icon = "trait"
     tooltip = "newsfeed_type_trait"
 	title = event_message_title
@@ -849,7 +767,6 @@ culture_conversion = {
 ###GUEST AND COURTIER TRAVEL MESSAGES###
 
 character_preparing_to_leave = {
-    display = toast
 	icon = "guest"
     tooltip = "newsfeed_type_guest"
 	title = event_message_title
@@ -859,7 +776,6 @@ character_preparing_to_leave = {
 }
 
 character_has_left = {
-    display = toast
 	icon = "guest"
     tooltip = "newsfeed_type_guest"
 	title = event_message_title
@@ -869,7 +785,6 @@ character_has_left = {
 }
 
 character_arrived = {
-    display = toast
 	icon = "guest"
     tooltip = "newsfeed_type_guest"
 	title = event_message_title
@@ -882,7 +797,6 @@ character_arrived = {
 ###DEATH MESSAGES###
 
 character_has_died = {
-    display = toast
 	icon = "death_murder"
     tooltip = "newsfeed_type_death_murder"
 	title = death_notification_title
@@ -892,7 +806,6 @@ character_has_died = {
 }
 
 councillor_has_died = {
-    display = toast
 	icon = "death_murder"
     tooltip = "newsfeed_type_death_murder"
 	title = councillor_death_notification_title
@@ -902,7 +815,6 @@ councillor_has_died = {
 }
 
 friend_has_died = {
-    display = toast
 	icon = "death_murder"
     tooltip = "newsfeed_type_death_murder"
 	title = friend_death_notification_title
@@ -912,7 +824,6 @@ friend_has_died = {
 }
 
 lover_has_died = {
-    display = toast
 	icon = "death_murder"
     tooltip = "newsfeed_type_death_murder"
 	title = lover_death_notification_title
@@ -925,7 +836,6 @@ lover_has_died = {
 ###CHILDHOOD MESSAGES###
 
 child_personality_gain = {
-    display = toast
 	icon = "child"
     tooltip = "newsfeed_type_child"
 	title = event_message_title
@@ -935,13 +845,11 @@ child_personality_gain = {
 }
 
 msg_marriage = {
-    display = toast
 	icon = "marriage"
     tooltip = "newsfeed_type_marriage"
 }
 
 msg_building_done = {
-    display = toast
 	icon = "building"
     tooltip = "newsfeed_type_building"
 	style = good
@@ -949,7 +857,6 @@ msg_building_done = {
 }
 
 msg_siege_loot = {
-    display = toast
 	icon = "siege"
     tooltip = "newsfeed_type_siege"
 	style = good
@@ -957,7 +864,6 @@ msg_siege_loot = {
 }
 
 msg_scheme_abandoned = {
-    display = toast
 	icon = "intrigue"
     tooltip = "newsfeed_type_intrigue"
 	style = good
@@ -965,7 +871,6 @@ msg_scheme_abandoned = {
 }
 
 msg_agent_joined_my_scheme = {
-    display = toast
 	icon = "spy_master"
     tooltip = "newsfeed_type_spy_master"
 	style = good
@@ -973,7 +878,6 @@ msg_agent_joined_my_scheme = {
 }
 
 msg_2_agents_joined_my_scheme = {
-    display = toast
 	icon = "spy_master"
     tooltip = "newsfeed_type_spy_master"
 	style = good
@@ -981,7 +885,6 @@ msg_2_agents_joined_my_scheme = {
 }
 
 msg_multiple_agents_joined_my_scheme = {
-    display = toast
 	icon = "spy_master"
     tooltip = "newsfeed_type_spy_master"
 	style = good
@@ -989,7 +892,6 @@ msg_multiple_agents_joined_my_scheme = {
 }
 
 msg_agent_removed_my_scheme = {
-    display = toast
 	icon = "spy_master"
     tooltip = "newsfeed_type_spy_master"
 	style = bad
@@ -997,7 +899,6 @@ msg_agent_removed_my_scheme = {
 }
 
 msg_2_agents_removed_my_scheme = {
-    display = toast
 	icon = "spy_master"
     tooltip = "newsfeed_type_spy_master"
 	style = bad
@@ -1005,7 +906,6 @@ msg_2_agents_removed_my_scheme = {
 }
 
 msg_multiple_agents_removed_my_scheme = {
-    display = toast
 	icon = "spy_master"
     tooltip = "newsfeed_type_spy_master"
 	style = bad
@@ -1013,7 +913,6 @@ msg_multiple_agents_removed_my_scheme = {
 }	
 	
 msg_council_task_finished = {
-    display = toast
 	icon = "a_catch_all_councillor_icon"
     tooltip = "newsfeed_type_a_catch_all_councillor_icon"
 	style = good
@@ -1021,7 +920,6 @@ msg_council_task_finished = {
 }
 
 msg_council_task_finished_location = {
-    display = toast
 	icon = "a_catch_all_councillor_icon"
     tooltip = "newsfeed_type_a_catch_all_councillor_icon"
 	style = good
@@ -1029,14 +927,12 @@ msg_council_task_finished_location = {
 }
 
 msg_broken_alliance = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	style = bad
 	soundeffect = @msg_bad_soundeffect
 }
 msg_expired_alliance = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	style = bad
@@ -1044,7 +940,6 @@ msg_expired_alliance = {
 }
 
 msg_expired_alliance_ally_death = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	title = msg_expired_alliance
@@ -1054,14 +949,12 @@ msg_expired_alliance_ally_death = {
 }
 
 msg_alliance_became_landed = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	style = good
 	soundeffect = @msg_good_soundeffect
 }
 msg_alliance_became_unlanded = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	style = bad
@@ -1069,72 +962,61 @@ msg_alliance_became_unlanded = {
 }
 
 msg_war_ally_joined = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	style = good
 	soundeffect = @msg_good_soundeffect
 }
 msg_war_enemy_joined = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	style = bad
 	soundeffect = @msg_bad_soundeffect
 }
 msg_war_player_joined = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	soundeffect = @msg_neutral_soundeffect	
 }
 msg_war_ally_joined_multiple = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	style = good
 	soundeffect = @msg_good_soundeffect
 }
 msg_war_enemy_joined_multiple = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	style = bad
 	soundeffect = @msg_bad_soundeffect
 }
 msg_war_ally_replaced = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	soundeffect = @msg_neutral_soundeffect	
 }
 msg_war_enemy_replaced = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	soundeffect = @msg_neutral_soundeffect	
 }
 msg_war_player_replaced = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	soundeffect = @msg_neutral_soundeffect	
 }
 
 msg_war_enemy_transferred = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	soundeffect = @msg_neutral_soundeffect	
 }
 msg_war_player_transferred = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	soundeffect = @msg_neutral_soundeffect	
 }
 msg_war_ally_transferred = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	soundeffect = @msg_neutral_soundeffect
@@ -1142,34 +1024,29 @@ msg_war_ally_transferred = {
 
 
 msg_war_ally_removed = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	style = bad
 	soundeffect = @msg_bad_soundeffect
 }
 msg_war_enemy_removed = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	style = good
 	soundeffect = @msg_good_soundeffect
 }
 msg_war_player_removed = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	soundeffect = @msg_neutral_soundeffect	
 }
 msg_war_ally_removed_multiple = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	style = bad
 	soundeffect = @msg_bad_soundeffect
 }
 msg_war_enemy_removed_multiple = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	style = good
@@ -1177,7 +1054,6 @@ msg_war_enemy_removed_multiple = {
 }
 
 msg_war_declared_on_me = {
-    display = toast
 	icon = "alliance"
     tooltip = "newsfeed_type_alliance"
 	style = bad
@@ -1185,35 +1061,30 @@ msg_war_declared_on_me = {
 }
 
 msg_liege_war_ended_attacker_win = {
-    display = toast
 	icon = "nickname"
     tooltip = "newsfeed_type_nickname"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_liege_war_ended_defender_win = {
-    display = toast
 	icon = "nickname"
     tooltip = "newsfeed_type_nickname"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_liege_war_ended_white_peace = {
-    display = toast
 	icon = "nickname"
     tooltip = "newsfeed_type_nickname"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_liege_war_ended_invalid = {
-    display = toast
 	icon = "nickname"
     tooltip = "newsfeed_type_nickname"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_war_ended_invalid = {
-    display = toast
 	icon = "nickname"
     tooltip = "newsfeed_type_nickname"
 	title = msg_invalidate_war_title
@@ -1222,7 +1093,6 @@ msg_war_ended_invalid = {
 }
 
 msg_invalidation_of_council_task = {
-    display = toast
 	icon = "a_catch_all_councillor_icon"
     tooltip = "newsfeed_type_a_catch_all_councillor_icon"
 	style = bad
@@ -1230,14 +1100,12 @@ msg_invalidation_of_council_task = {
 }
 
 msg_troops_disbanding_civil_war = {
-    display = toast
 	icon = "nickname"
     tooltip = "newsfeed_type_nickname"
 	soundeffect = @msg_neutral_soundeffect	
 }
 
 send_interface_message = {
-    display = toast
 	icon = "generic_neutral_effect"
     tooltip = "newsfeed_type_generic_neutral_effect"
 	title = event_message_title
@@ -1246,7 +1114,6 @@ send_interface_message = {
 }
 
 send_interface_message_good = {
-    display = toast
 	icon = "generic_neutral_effect"
     tooltip = "newsfeed_type_generic_neutral_effect"
 	title = event_message_title
@@ -1256,7 +1123,6 @@ send_interface_message_good = {
 }
 
 send_interface_message_bad = {
-    display = toast
 	icon = "generic_neutral_effect"
     tooltip = "newsfeed_type_generic_neutral_effect"
 	title = event_message_title
@@ -1266,28 +1132,24 @@ send_interface_message_bad = {
 }
 
 msg_disbanded_faction_target_died = {
-    display = toast
 	icon = "faction"
     tooltip = "newsfeed_type_faction"
 	style = bad
 	soundeffect = @msg_bad_soundeffect
 }
 msg_removed_from_faction_not_valid = {
-    display = toast
 	icon = "faction"
     tooltip = "newsfeed_type_faction"
 	style = bad
 	soundeffect = @msg_bad_soundeffect
 }
 msg_removed_from_faction_not_valid_leader = {
-    display = toast
 	icon = "faction"
     tooltip = "newsfeed_type_faction"
 	style = bad
 	soundeffect = @msg_bad_soundeffect
 }
 msg_removed_from_faction_not_liege = {
-    display = toast
 	icon = "faction"
     tooltip = "newsfeed_type_faction"
 	title = msg_removed_from_faction_not_liege
@@ -1297,7 +1159,6 @@ msg_removed_from_faction_not_liege = {
 }
 
 msg_faction_against_liege_created = {
-    display = toast
 	icon = "faction"
     tooltip = "newsfeed_type_faction"
 	title = msg_faction_against_liege_or_me_created
@@ -1305,7 +1166,6 @@ msg_faction_against_liege_created = {
 	soundeffect = @msg_neutral_soundeffect
 }
 msg_faction_against_me_created = {
-    display = toast
 	icon = "faction"
     tooltip = "newsfeed_type_faction"
 	title = msg_faction_against_liege_or_me_created
@@ -1314,7 +1174,6 @@ msg_faction_against_me_created = {
 	soundeffect = @msg_bad_soundeffect
 }
 msg_county_faction_against_liege_created = {
-    display = toast
 	icon = "faction"
     tooltip = "newsfeed_type_faction"
 	title = msg_faction_against_liege_or_me_created
@@ -1322,7 +1181,6 @@ msg_county_faction_against_liege_created = {
 	soundeffect = @msg_neutral_soundeffect
 }
 msg_county_faction_against_me_created = {
-    display = toast
 	icon = "faction"
     tooltip = "newsfeed_type_faction"
 	title = msg_faction_against_liege_or_me_created
@@ -1332,60 +1190,51 @@ msg_county_faction_against_me_created = {
 }
 
 msg_faction_against_me_disbanded = {
-    display = toast
 	icon = "faction"
     tooltip = "newsfeed_type_faction"
 	style = good
 	soundeffect = @msg_good_soundeffect
 }
 msg_liege_passed_law = {
-    display = toast
 	icon = "law"
     tooltip = "newsfeed_type_law"
 	soundeffect = @msg_neutral_soundeffect	
 }
 msg_liege_passed_title_law = {
-    display = toast
 	icon = "law"
     tooltip = "newsfeed_type_law"
 	soundeffect = @msg_neutral_soundeffect	
 }
 msg_liege_removed_title_law = {
-    display = toast
 	icon = "law"
     tooltip = "newsfeed_type_law"
 	soundeffect = @msg_neutral_soundeffect	
 }
 msg_law_invalidated = {
-    display = toast
 	icon = "law"
     tooltip = "newsfeed_type_law"
 	soundeffect = @msg_neutral_soundeffect	
 }
 
 msg_betrothal_invalidated = {
-    display = toast
 	icon = "marriage"
     tooltip = "newsfeed_type_marriage"
 	style = bad
 	soundeffect = @msg_bad_soundeffect
 }
 msg_break_betrothal = {
-    display = toast
 	icon = "marriage"
     tooltip = "newsfeed_type_marriage"
 	style = bad 
 	soundeffect = @msg_bad_soundeffect
 }
 msg_betrothal_invalidated_player_heir = {
-    display = toast
 	icon = "marriage"
     tooltip = "newsfeed_type_marriage"
 	style = bad 
 	soundeffect = @msg_bad_soundeffect
 }
 msg_break_betrothal_player_heir = {
-    display = toast
 	icon = "marriage"
     tooltip = "newsfeed_type_marriage"
 	style = bad 
@@ -1393,28 +1242,24 @@ msg_break_betrothal_player_heir = {
 }
 
 msg_spouse_invalidated = {
-    display = toast
 	icon = "marriage"
     tooltip = "newsfeed_type_marriage"
 	style = bad
 	soundeffect = @msg_bad_soundeffect
 }
 msg_divorce = {
-    display = toast
 	icon = "marriage"
     tooltip = "newsfeed_type_marriage"
 	style = bad 
 	soundeffect = @msg_bad_soundeffect
 }
 msg_spouse_invalidated_player_heir = {
-    display = toast
 	icon = "marriage"
     tooltip = "newsfeed_type_marriage"
 	style = bad 
 	soundeffect = @msg_bad_soundeffect
 }
 msg_divorce_player_heir = {
-    display = toast
 	icon = "marriage"
     tooltip = "newsfeed_type_marriage"
 	style = bad 
@@ -1422,7 +1267,6 @@ msg_divorce_player_heir = {
 }
 
 msg_became_dynast = {
-    display = toast
 	icon = "dynasty"
     tooltip = "newsfeed_type_dynasty"
 	style = good
@@ -1430,7 +1274,6 @@ msg_became_dynast = {
 }
 
 msg_new_theocracy_lesee_approve = {
-    display = toast
 	icon = "bishop"
     tooltip = "newsfeed_type_bishop"
 	title = msg_new_theocracy_lesse
@@ -1439,7 +1282,6 @@ msg_new_theocracy_lesee_approve = {
 }
 
 msg_new_theocracy_lesee_disapprove = {
-    display = toast
 	icon = "bishop"
     tooltip = "newsfeed_type_bishop"
 	title = msg_new_theocracy_lesse
@@ -1448,14 +1290,12 @@ msg_new_theocracy_lesee_disapprove = {
 }
 
 msg_mercenary_company_dismissed = {
-    display = toast
 	icon = "mercenary"
     tooltip = "newsfeed_type_mercenary"
 	title = msg_mercenary_company_dismissed
 	soundeffect = @msg_neutral_soundeffect
 }
 msg_holy_order_dismissed = {
-    display = toast
 	icon = "holy_order"
     tooltip = "newsfeed_type_holy_order"
 	title = msg_holy_order_dismissed
@@ -1464,7 +1304,6 @@ msg_holy_order_dismissed = {
 
 
 mongol_occupation_bad = {
-    display = toast
 	icon = "martial"
     tooltip = "newsfeed_type_martial"
 	title = event_message_title
@@ -1474,7 +1313,6 @@ mongol_occupation_bad = {
 }
 
 mongol_occupation_good = {
-    display = toast
 	icon = "martial"
     tooltip = "newsfeed_type_martial"
 	title = event_message_title
@@ -1485,7 +1323,6 @@ mongol_occupation_good = {
 
 # Vassal contract invalidation
 msg_vassal_contract_level_invalidated = {
-    display = toast
 	icon = "law"
     tooltip = "newsfeed_type_law"
 	style = bad
@@ -1493,7 +1330,6 @@ msg_vassal_contract_level_invalidated = {
 }
 
 msg_vassal_contract_2_levels_invalidated = {
-    display = toast
 	icon = "law"
     tooltip = "newsfeed_type_law"
 	style = bad
@@ -1501,7 +1337,6 @@ msg_vassal_contract_2_levels_invalidated = {
 }
 
 msg_vassal_contract_multiple_levels_invalidated = {
-    display = toast
 	icon = "law"
     tooltip = "newsfeed_type_law"
 	style = bad
@@ -1509,7 +1344,6 @@ msg_vassal_contract_multiple_levels_invalidated = {
 }
 
 msg_vassal_contract_change = {
-    display = toast
 	icon = "law"
     tooltip = "newsfeed_type_law"
 	title = event_message_title
@@ -1519,8 +1353,7 @@ msg_vassal_contract_change = {
 }
 
 holy_order_founded_message = {
-    display = toast
-	
+	display = feed
 	icon = "martial"
 	tooltip = "newsfeed_type_martial"
 	title = holy_order_founded_title
@@ -1530,32 +1363,28 @@ holy_order_founded_message = {
 }
 
 msg_new_heir = {
-    display = toast
-	
+	display = feed
 	icon = "heir"
 	tooltip = "newsfeed_type_heir"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_new_heir_newborn = {
-    display = toast
-	
+	display = feed
 	icon = "heir"
 	tooltip = "newsfeed_type_heir"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_new_heir_old_heir_dead = {
-    display = toast
-	
+	display = feed
 	icon = "heir"
 	tooltip = "newsfeed_type_heir"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_no_new_heir = {
-    display = toast
-	
+	display = feed
 	icon = "heir"
 	tooltip = "newsfeed_type_heir"
 	style = bad
@@ -1563,8 +1392,7 @@ msg_no_new_heir = {
 }
 
 msg_no_new_heir_old_heir_dead = {
-    display = toast
-	
+	display = feed
 	icon = "heir"
 	tooltip = "newsfeed_type_heir"
 	style = bad
@@ -1572,8 +1400,7 @@ msg_no_new_heir_old_heir_dead = {
 }
 
 msg_inherited_single_title = {
-    display = toast
-	
+	display = feed
 	icon = "titles"
 	tooltip = "newsfeed_type_titles"
 	style = good
@@ -1581,8 +1408,7 @@ msg_inherited_single_title = {
 }
 
 msg_inherited_titles = {
-    display = toast
-	
+	display = feed
 	icon = "titles"
 	tooltip = "newsfeed_type_titles"
 	style = good
@@ -1590,8 +1416,7 @@ msg_inherited_titles = {
 }
 
 msg_lost_single_title = {
-    display = toast
-	
+	display = feed
 	icon = "titles"
 	tooltip = "newsfeed_type_titles"
 	style = bad
@@ -1599,8 +1424,7 @@ msg_lost_single_title = {
 }
 
 msg_lost_titles = {
-    display = toast
-	
+	display = feed
 	icon = "titles"
 	tooltip = "newsfeed_type_titles"
 	style = bad
@@ -1608,8 +1432,7 @@ msg_lost_titles = {
 }
 
 msg_alliance = {
-    display = toast
-	
+	display = feed
 	icon = "alliance"
 	tooltip = "newsfeed_type_alliance"
 	style = good
@@ -1617,8 +1440,7 @@ msg_alliance = {
 }
 
 msg_war_declared_on_liege = {
-    display = toast
-	
+	display = feed
 	icon = "war"
 	tooltip = "newsfeed_type_war"
 	title = msg_war_declared_on_liege
@@ -1628,8 +1450,7 @@ msg_war_declared_on_liege = {
 }
 
 msg_war_declared_by_liege = {
-    display = toast
-	
+	display = feed
 	icon = "war"
 	tooltip = "newsfeed_type_war"
 	title = msg_war_declared_by_liege
@@ -1638,8 +1459,7 @@ msg_war_declared_by_liege = {
 }
 
 send_interface_message_as_toast = {
-    display = toast
-	
+	display = feed
 	icon = "_default"
     tooltip = "newsfeed_type__default"
 	title = event_message_title
@@ -1648,8 +1468,7 @@ send_interface_message_as_toast = {
 }
 
 event_toast_effect_good = {
-    display = toast
-	
+	display = feed
 	icon = "_default"
     tooltip = "newsfeed_type__default"
 	title = event_message_title
@@ -1659,8 +1478,7 @@ event_toast_effect_good = {
 }
 
 event_toast_effect_neutral = {
-    display = toast
-	
+	display = feed
 	icon = "_default"
     tooltip = "newsfeed_type__default"
 	title = event_message_title
@@ -1670,8 +1488,7 @@ event_toast_effect_neutral = {
 }
 
 event_toast_effect_bad = {
-    display = toast
-	
+	display = feed
 	icon = "_default"
     tooltip = "newsfeed_type__default"
 	title = event_message_title
@@ -1681,8 +1498,7 @@ event_toast_effect_bad = {
 }
 
 event_toast_text_good = {
-    display = toast
-	
+	display = feed
 	icon = "generic_good_effect"
     tooltip = "newsfeed_type_generic_good_effect"
 	title = event_message_title
@@ -1692,8 +1508,7 @@ event_toast_text_good = {
 }
 
 event_toast_text_neutral = {
-    display = toast
-	
+	display = feed
 	icon = "generic_neutral_effect"
     tooltip = "newsfeed_type_generic_neutral_effect"
 	title = event_message_title
@@ -1703,8 +1518,7 @@ event_toast_text_neutral = {
 }
 
 event_toast_text_bad = {
-    display = toast
-	
+	display = feed
 	icon = "generic_bad_effect"
     tooltip = "newsfeed_type_generic_bad_effect"
 	title = event_message_title
@@ -1714,39 +1528,34 @@ event_toast_text_bad = {
 }
 
 msg_gain_trait = {
-    display = toast
-	
+	display = feed
 	icon = "trait"
 	tooltip = "newsfeed_type_trait"
 	soundeffect = @msg_neutral_soundeffect
 }
 msg_lose_trait = {
-    display = toast
-	
+	display = feed
 	icon = "trait"
 	tooltip = "newsfeed_type_trait"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_gain_nickname = {
-    display = toast
-	
+	display = feed
 	icon = "nickname"
 	tooltip = "newsfeed_type_nickname"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_lost_nickname = {
-    display = toast
-	
+	display = feed
 	icon = "nickname"
 	tooltip = "newsfeed_type_nickname"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_title_rank_up = {
-    display = toast
-	
+	display = feed
 	icon = "tier_up"
 	tooltip = "newsfeed_type_tier_up"
 	style = good
@@ -1754,8 +1563,7 @@ msg_title_rank_up = {
 	soundeffect = @msg_neutral_soundeffect
 }
 msg_title_rank_down = {
-    display = toast
-	
+	display = feed
 	icon = "tier_down"
 	tooltip = "newsfeed_type_tier_down"
 	style = bad
@@ -1764,33 +1572,29 @@ msg_title_rank_down = {
 }
 
 msg_change_primary = {
-    display = toast
-	
+	display = feed
 	icon = "titles"
 	tooltip = "newsfeed_type_titles"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_betrothal_fulfilled = {
-    display = toast
 	icon = "marriage"
 	tooltip = "newsfeed_type_marriage"
-	
+	display = feed
 	style = good
 	soundeffect = @msg_good_soundeffect
 }
 
 msg_marriage_forced = {
-    display = toast
 	icon = "marriage"
 	tooltip = "newsfeed_type_marriage"
-	
+	display = feed
 	style = bad
 	soundeffect = @msg_bad_soundeffect
 }
 
 msg_consort_invalidated = {
-    display = toast
 	icon = "marriage"
 	tooltip = "newsfeed_type_marriage"
 	style = bad
@@ -1798,35 +1602,31 @@ msg_consort_invalidated = {
 }
 
 msg_faction_local_not_leader_anymore = {
-    display = toast
 	icon = "faction"
 	tooltip = "newsfeed_type_faction"
-	
+	display = feed
 	style = bad
 	soundeffect = @msg_bad_soundeffect
 }
 
 msg_faction_local_becomes_leader = {
-    display = toast
 	icon = "faction"
 	tooltip = "newsfeed_type_faction"
-	
+	display = feed
 	style = good
 	soundeffect = @msg_good_soundeffect
 	soundeffect = @msg_good_soundeffect
 }
 
 msg_faction_forced_to_join = {
-    display = toast
 	icon = "hook_strong"
 	tooltip = "newsfeed_type_hook_strong"
-	
+	display = feed
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_my_faction_disbanded = {
-    display = toast
-	
+	display = feed
 	icon = "faction"
 	tooltip = "newsfeed_type_faction"
 	style = bad
@@ -1835,24 +1635,21 @@ msg_my_faction_disbanded = {
 }
 
 msg_war_casus_belli_changed = {
-    display = toast
-	
+	display = feed
 	icon = "war"
 	tooltip = "newsfeed_type_war"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_cadet_branch_created = {
-    display = toast
-	
+	display = feed
 	icon = "dynasty"
 	tooltip = "newsfeed_type_dynasty"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_i_became_head_of_house = {
-    display = toast
-	
+	display = feed
 	icon = "dynasty"
 	tooltip = "newsfeed_type_dynasty"
 	style = good
@@ -1861,8 +1658,7 @@ msg_i_became_head_of_house = {
 }
 
 msg_i_not_head_of_house_anymore = {
-    display = toast
-	
+	display = feed
 	icon = "dynasty"
 	tooltip = "newsfeed_type_dynasty"
 	style = bad
@@ -1870,15 +1666,13 @@ msg_i_not_head_of_house_anymore = {
 }
 
 msg_became_head_of_house = {
-    display = toast
 	icon = "dynasty"
 	tooltip = "newsfeed_type_dynasty"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_i_became_dynast = {
-    display = toast
-	
+	display = feed
 	icon = "dynasty"
 	tooltip = "newsfeed_type_dynasty"
 	style = good
@@ -1887,8 +1681,7 @@ msg_i_became_dynast = {
 }
 
 msg_i_not_dynast_anymore = {
-    display = toast
-	
+	display = feed
 	icon = "dynasty"
 	tooltip = "newsfeed_type_dynasty"
 	style = bad
@@ -1897,7 +1690,6 @@ msg_i_not_dynast_anymore = {
 }
 
 msg_became_dynast = {
-    display = toast
 	icon = "dynasty"
 	tooltip = "newsfeed_type_dynasty"
 	style = good
@@ -1905,8 +1697,7 @@ msg_became_dynast = {
 }
 
 msg_i_became_head_of_faith = {
-    display = toast
-	
+	display = feed
 	icon = "religious"
 	tooltip = "newsfeed_type_religious"
 	style = good
@@ -1915,8 +1706,7 @@ msg_i_became_head_of_faith = {
 }
 
 msg_i_not_head_of_faith_anymore = {
-    display = toast
-	
+	display = feed
 	icon = "religious"
 	tooltip = "newsfeed_type_religious"
 	style = bad
@@ -1924,16 +1714,14 @@ msg_i_not_head_of_faith_anymore = {
 }
 
 msg_new_fascination_selected = {
-    display = toast
-	
+	display = feed
 	icon = "technology"
 	tooltip = "newsfeed_type_technology"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_innovation_discovered = {
-    display = toast
-	
+	display = feed
 	icon = "technology"
 	tooltip = "newsfeed_type_technology"
 	style = good
@@ -1942,8 +1730,7 @@ msg_innovation_discovered = {
 }
 
 msg_fascination_discovered = {
-    display = toast
-	
+	display = feed
 	icon = "technology"
 	tooltip = "newsfeed_type_technology"
 	style = good
@@ -1952,8 +1739,7 @@ msg_fascination_discovered = {
 }
 
 msg_era_discovered = {
-    display = toast
-	
+	display = feed
 	icon = "technology"
 	tooltip = "newsfeed_type_technology"
 	style = good
@@ -1962,16 +1748,14 @@ msg_era_discovered = {
 }
 
 msg_first_era_discovered = {
-    display = toast
-	
+	display = feed
 	icon = "technology"
 	tooltip = "newsfeed_type_technology"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_no_longer_culture_head = {
-    display = toast
-	
+	display = feed
 	icon = "culture"
 	tooltip = "newsfeed_type_culture"
 	style = bad
@@ -1979,8 +1763,7 @@ msg_no_longer_culture_head = {
 }
 
 msg_become_culture_head = {
-    display = toast
-	
+	display = feed
 	icon = "culture"
 	tooltip = "newsfeed_type_culture"
 	style = good
@@ -1988,100 +1771,87 @@ msg_become_culture_head = {
 }
 
 msg_fired_from_council = {
-    display = toast
-	
+	display = feed
 	icon = "council"
 	tooltip = "newsfeed_type_council"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_council_swap_position = {
-    display = toast
-	
+	display = feed
 	icon = "council"
 	tooltip = "newsfeed_type_council"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_left_council_position = {
-    display = toast
-	
+	display = feed
 	icon = "council"
 	tooltip = "newsfeed_type_council"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_peace_armies_disbanded = {
-    display = toast
-	
+	display = feed
 	icon = "war"
 	tooltip = "newsfeed_type_war"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_my_hook_replaced = {
-    display = toast
-	
+	display = feed
 	icon = "hook"
 	tooltip = "newsfeed_type_hook"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_my_hook_added = {
-    display = toast
-	
+	display = feed
 	icon = "hook"
 	tooltip = "newsfeed_type_hook"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_hook_on_me_replaced = {
-    display = toast
-	
+	display = feed
 	icon = "hook"
 	tooltip = "newsfeed_type_hook"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_hook_on_me_added = {
-    display = toast
-	
+	display = feed
 	icon = "hook"
 	tooltip = "newsfeed_type_hook"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_hook_on_me_expired = {
-    display = toast
-	
+	display = feed
 	icon = "hook"
 	tooltip = "newsfeed_type_hook"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_my_hook_expired = {
-    display = toast
-	
+	display = feed
 	icon = "hook"
 	tooltip = "newsfeed_type_hook"
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_perk_point_added = {
-    display = toast
-	
+	display = feed
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_focus_invalidated = {
-    display = toast
-	
+	display = feed
 	soundeffect = @msg_neutral_soundeffect
 }
 
 msg_dynasty_perk_added = {
-    display = toast
-	
+	display = feed
 	icon = "dynasty"
 	tooltip = "newsfeed_type_dynasty"
 	style = good
@@ -2089,8 +1859,7 @@ msg_dynasty_perk_added = {
 }
 
 msg_dynasty_perk_removed = {
-    display = toast
-	
+	display = feed
 	icon = "dynasty"
 	tooltip = "newsfeed_type_dynasty"
 	style = good
@@ -2098,8 +1867,7 @@ msg_dynasty_perk_removed = {
 }
 
 msg_dynasty_prestige_level_increase = {
-    display = toast
-	
+	display = feed
 	icon = "dynasty"
 	tooltip = "newsfeed_type_dynasty"
 	style = good
@@ -2107,8 +1875,7 @@ msg_dynasty_prestige_level_increase = {
 }
 
 msg_dynasty_prestige_level_dencrease = {
-    display = toast
-	
+	display = feed
 	icon = "dynasty"
 	tooltip = "newsfeed_type_dynasty"
 	style = bad
@@ -2116,8 +1883,7 @@ msg_dynasty_prestige_level_dencrease = {
 }
 
 msg_holy_order_patronage_lost = {
-    display = toast
-	
+	display = feed
 	icon = "_default"
     tooltip = "newsfeed_type__default"
 	style = bad
@@ -2126,8 +1892,7 @@ msg_holy_order_patronage_lost = {
 }
 
 msg_holy_order_patronage_gained = {
-    display = toast
-	
+	display = feed
 	icon = "_default"
     tooltip = "newsfeed_type__default"
 	style = good
@@ -2136,8 +1901,7 @@ msg_holy_order_patronage_gained = {
 }
 
 msg_gained_stress_level = {
-    display = toast
-	
+	display = feed
 	icon = "_default"
     tooltip = "newsfeed_type__default"
 	title = stress_threshold.0010.toast
@@ -2147,8 +1911,7 @@ msg_gained_stress_level = {
 }
 
 msg_lost_stress_level = {
-    display = toast
-	
+	display = feed
 	icon = "_default"
     tooltip = "newsfeed_type__default"
 	title = stress_level_reduced.message
@@ -2158,8 +1921,7 @@ msg_lost_stress_level = {
 }
 
 msg_notable_guest = {
-    display = toast
-	
+	display = feed
 	icon = "guest"
 	tooltip = "newsfeed_type_guest"
 	title = event_message_title
@@ -2169,8 +1931,7 @@ msg_notable_guest = {
 }
 
 msg_created_new_house = {
-    display = toast
-	
+	display = feed
 	icon = "dynasty"
 	tooltip = "newsfeed_type_dynasty"
 	title = event_message_title
@@ -2180,8 +1941,7 @@ msg_created_new_house = {
 }
 
 msg_character_level_increase = {
-    display = toast
-	
+	display = feed
 	title = event_message_title
 	desc = event_message_text
 	style = good
@@ -2189,8 +1949,7 @@ msg_character_level_increase = {
 }
 
 msg_character_level_decrease = {
-    display = toast
-	
+	display = feed
 	title = event_message_title
 	desc = event_message_text
 	style = bad
@@ -2198,8 +1957,7 @@ msg_character_level_decrease = {
 }
 
 msg_character_captured_by_me = {
-    display = toast
-	
+	display = feed
 	icon = "prison"
 	tooltip = "newsfeed_type_prison"
 	title = event_message_title
@@ -2209,8 +1967,7 @@ msg_character_captured_by_me = {
 }
 
 msg_character_captured_by_other_side = {
-    display = toast
-	
+	display = feed
 	icon = "prison"
 	tooltip = "newsfeed_type_prison"
 	title = event_message_title
@@ -2220,7 +1977,6 @@ msg_character_captured_by_other_side = {
 }
 
 msg_vassal_contract_level_invalidated = {
-    display = toast
 	icon = "law"
 	tooltip = "newsfeed_type_law"
 	style = bad
@@ -2228,7 +1984,6 @@ msg_vassal_contract_level_invalidated = {
 }
 
 msg_vassal_contract_2_levels_invalidated = {
-    display = toast
 	icon = "law"
 	tooltip = "newsfeed_type_law"
 	style = bad
@@ -2236,7 +1991,6 @@ msg_vassal_contract_2_levels_invalidated = {
 }
 
 msg_vassal_contract_multiple_levels_invalidated = {
-    display = toast
 	icon = "law"
 	tooltip = "newsfeed_type_law"
 	style = bad
@@ -2244,7 +1998,6 @@ msg_vassal_contract_multiple_levels_invalidated = {
 }
 
 msg_vassal_contract_change = {
-    display = toast
 	icon = "law"
 	tooltip = "newsfeed_type_law"
 	title = event_message_title
