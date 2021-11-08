@@ -1,28 +1,33 @@
 ﻿newsfeed_notify_birth_effect = {
-    send_interface_message = {
-        type = newsfeed_birth
-        title = {
-            first_valid = {
-                triggered_desc = {
-                    trigger = {
-                        OR = {
-                            NOT = { exists = scope:father }
-                            NOT = { newsfeed_is_interested_in_birth = { PERSON = scope:father } }
-                        }
-                    }
-                    desc = newsfeed_birth_mother
-                }
-                desc = newsfeed_birth_father
+    if = {
+        limit = {
+            NOT = {
+                exists = scope:father
             }
         }
-        desc = {
-            first_valid = {
-                triggered_desc = {
-                    trigger = { NOT = { exists = scope:father } }
-                    desc = newsfeed_birth_no_father_desc
-                }
-                desc = newsfeed_birth_desc
-            }
+
+        send_interface_message = {
+            type = newsfeed_birth
+            title = newsfeed_birth_mother
+            desc = newsfeed_birth_no_father_desc
+        }
+    }
+    else_if = {
+        limit = {
+            newsfeed_is_interested_in_birth = { PERSON = scope:father }
+        }
+
+        send_interface_message = {
+            type = newsfeed_birth
+            title = newsfeed_birth_father
+            desc = newsfeed_birth_desc
+        }
+    }
+    else = {
+        send_interface_message = {
+            type = newsfeed_birth
+            title = newsfeed_birth_mother
+            desc = newsfeed_birth_desc
         }
     }
 }

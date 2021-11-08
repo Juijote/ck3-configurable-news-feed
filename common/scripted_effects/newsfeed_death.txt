@@ -1,23 +1,20 @@
 ﻿newsfeed_notify_of_death_effect = {
-    send_interface_message = {
-        type = newsfeed_death
-        title = {
-            first_valid = {
-                triggered_desc = {
-                    trigger = { exists = scope:killer }
-                    desc = newsfeed_death_murder
-                }
-                desc = newsfeed_death
-            }
+    if = {
+        limit = {
+            exists = scope:killer
         }
-        desc = {
-            first_valid = {
-                triggered_desc = {
-                    trigger = { exists = scope:killer }
-                    desc = newsfeed_death_murder_desc
-                }
-                desc = newsfeed_death_desc
-            }
+
+        send_interface_message = {
+            type = newsfeed_death
+            title = newsfeed_death_murder
+            desc = newsfeed_death_murder_desc
+        }
+    }
+    else = {
+        send_interface_message = {
+            type = newsfeed_death
+            title = newsfeed_death
+            desc = newsfeed_death_desc
         }
     }
 }
@@ -45,25 +42,22 @@ newsfeed_check_relative_of_deceased_effect = {
                 save_scope_as = newsfeed_related
 
                 scope:newsfeed_observer = {
-                    send_interface_message = {
-                        type = newsfeed_death
-                        title = {
-                            first_valid = {
-                                triggered_desc = {
-                                    trigger = { exists = scope:killer }
-                                    desc = newsfeed_death_related_murder
-                                }
-                                desc = newsfeed_death_related
-                            }
+                    if = {
+                        limit = {
+                            exists = scope:killer
                         }
-                        desc = {
-                            first_valid = {
-                                triggered_desc = {
-                                    trigger = { exists = scope:killer }
-                                    desc = newsfeed_death_related_murder_desc
-                                }
-                                desc = newsfeed_death_related_desc
-                            }
+
+                        send_interface_message = {
+                            type = newsfeed_death
+                            title = newsfeed_death_related_murder
+                            desc = newsfeed_death_related_murder_desc
+                        }
+                    }
+                    else = {
+                        send_interface_message = {
+                            type = newsfeed_death
+                            title = newsfeed_death_related
+                            desc = newsfeed_death_related_desc
                         }
                     }
                 }
