@@ -1,4 +1,6 @@
 ﻿newsfeed_vanilla_will_show_death = {
+    NOT = { player_heir = $PERSON$ }
+
     OR = {
         newsfeed_is_my_sibling = { PERSON = $PERSON$ }
         newsfeed_is_my_parent = { PERSON = $PERSON$ }
