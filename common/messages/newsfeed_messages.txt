@@ -4,6 +4,7 @@
 @msg_bad_soundeffect = "event:/SFX/UI/Notifications/Messages/sfx_ui_message_theme_negative"
 
 newsfeed_pregnancy = {
+    display = toast
 	icon = "child"
 	tooltip = "newsfeed_type_child"
 	title = event_message_title
@@ -13,6 +14,7 @@ newsfeed_pregnancy = {
 }
 
 newsfeed_pregnancy_ended = {
+    display = toast
 	icon = "death_natural"
 	tooltip = "newsfeed_type_death_natural"
 	title = event_message_title
@@ -22,6 +24,7 @@ newsfeed_pregnancy_ended = {
 }
 
 newsfeed_birth = {
+    display = toast
 	icon = "child"
 	tooltip = "newsfeed_type_child"
 	title = event_message_title
@@ -31,6 +34,7 @@ newsfeed_birth = {
 }
 
 newsfeed_titles = {
+    display = toast
     icon = "titles"
     tooltip = "newsfeed_type_titles"
 	title = event_message_title
@@ -40,6 +44,7 @@ newsfeed_titles = {
 }
 
 newsfeed_powerful_vassal = {
+    display = toast
     icon = "council"
     tooltip = "newsfeed_type_council"
 	title = event_message_title
@@ -49,6 +54,7 @@ newsfeed_powerful_vassal = {
 }
 
 newsfeed_relation_good = {
+    display = toast
     icon = "sway_scheme"
     tooltip = "newsfeed_type_sway_scheme"
 	title = event_message_title
@@ -58,6 +64,7 @@ newsfeed_relation_good = {
 }
 
 newsfeed_relation_bad = {
+    display = toast
     icon = "sway_scheme"
     tooltip = "newsfeed_type_sway_scheme"
 	title = event_message_title
@@ -67,6 +74,7 @@ newsfeed_relation_bad = {
 }
 
 newsfeed_war_neutral = {
+    display = toast
 	icon = "war"
 	tooltip = "newsfeed_type_war"
 	title = event_message_title
@@ -76,6 +84,7 @@ newsfeed_war_neutral = {
 }
 
 newsfeed_war_bad = {
+    display = toast
 	icon = "war"
 	tooltip = "newsfeed_type_war"
 	title = event_message_title
@@ -85,6 +94,7 @@ newsfeed_war_bad = {
 }
 
 newsfeed_marriage = {
+    display = toast
     icon = "marriage"
     tooltip = "newsfeed_type_marriage"
 	title = event_message_title
@@ -94,6 +104,7 @@ newsfeed_marriage = {
 }
 
 newsfeed_death = {
+    display = toast
     icon = "death_murder"
     tooltip = "newsfeed_type_death_murder"
 	title = event_message_title
