@@ -5,7 +5,7 @@ types NewsFeed {
         parentanchor = bottom|right
         resizable = yes
         size = { 600 400 }
-        using = Background_Area_ExtraDark
+        using = Background_Area_Dark
         allow_outside = yes
 
         state = {
