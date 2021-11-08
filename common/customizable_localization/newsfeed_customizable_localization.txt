@@ -2,8 +2,15 @@
     type = character
 
     text = {
+        trigger = {
+            has_RelationToMe_relation = { CHARACTER = scope:second }
+            localization_key = "[Localize('CHARACTER_NAME_MY')] [Scope.Char.Custom2('RelationToMe', second.Self)] "
+        }
+    }
+
+    text = {
         fallback = yes
-        localization_key = "[Select_CString(Or(EqualTo_string(Scope.Char.Custom2('RelationToMe', second.Self), Localize('relation_acquaintance_female')), EqualTo_string(Scope.Char.Custom2('RelationToMe', second.Self), Localize('relation_acquaintance_male'))), '', Concatenate(Concatenate(Concatenate(Localize('CHARACTER_NAME_MY'), ' '), Scope.Char.Custom2('RelationToMe', second.Self)), ' '))]"
+        localization_key = ""
     }
 }
 
