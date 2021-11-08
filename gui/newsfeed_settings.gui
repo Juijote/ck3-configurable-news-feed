@@ -107,7 +107,6 @@ types NewsFeed {
         flowcontainer = {
             newsfeed_subject_icon = {
                 datacontext = "[Story.MakeScope.GetVariable('newsfeed_subject')]"
-                align = center
                 tooltip = "[Localize(Concatenate(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName, '_label'))]"
             }
             margin_bottom = 8
