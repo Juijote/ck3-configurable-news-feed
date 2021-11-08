@@ -26,3 +26,17 @@
         }
     }
 }
+
+newsfeed_delete_message_gui = {
+    scope = character
+
+    saved_scopes = {
+        newsfeed_message_index
+    }
+
+    effect = {
+        newsfeed_delete_message_effect = {
+            INDEX = scope:newsfeed_message_index
+        }
+    }
+}

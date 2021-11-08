@@ -44,6 +44,23 @@
     newsfeed_prune_message_containers = yes
 }
 
+newsfeed_delete_message_effect = {
+    ordered_owned_story = {
+        limit = {
+            story_type = story_newsfeed_message
+            var:newsfeed_message_index = $INDEX$
+        }
+        max = 1
+        prev = {
+            remove_list_variable = {
+                name = newsfeed_message_containers
+                target = prev
+            }
+        }
+        end_story = yes
+    }
+}
+
 newsfeed_clear_message_containers_for_all_players = {
     every_player = {
         newsfeed_clear_message_containers = yes

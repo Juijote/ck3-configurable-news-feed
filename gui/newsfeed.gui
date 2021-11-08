@@ -125,55 +125,63 @@ types NewsFeed {
         }
     }
 
-    type newsfeed_item = flowcontainer {
-        margin_top = 20
-        layoutpolicy_horizontal = expanding
-
+    type newsfeed_item = button {
         datacontext = "[FeedMessageItem.GetPlayerMessageItem]"
 
-        direction = vertical
+        size = { 550 85 }
+        onrightclick = "[GetScriptedGui('newsfeed_delete_message_gui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'newsfeed_message_index', MakeScopeValue(Scope.GetVariable('newsfeed_message_index').GetValue) ).End )]"
+        button_ignore = left
+        allow_outside = yes
+        filter_mouse = right
+
+        tooltip = RIGHT_CLICK_DISMISS
 
         flowcontainer = {
+            margin_top = 20
+            direction = vertical
+        
             flowcontainer = {
-                margin_right = 6
-                newsfeed_type_icon = {}
-            }
+                flowcontainer = {
+                    margin_right = 6
+                    newsfeed_type_icon = {}
+                }
 
-            text_single = {
+                text_single = {
+                    layoutpolicy_horizontal = expanding
+                    text = "[Scope.GetVariable('newsfeed_message_title').GetFlagName]"
+                    default_format = "#high"
+                    fontsize = 14
+                    align = left|nobaseline
+                }
+
+                text_single = {
+                    layoutpolicy_horizontal = expanding
+                    text = "[Scope.GetVariable('newsfeed_message_date').GetFlagName]"
+                    default_format = "#weak"
+                    fontsize = 14
+                    align = left|nobaseline
+                    margin_left = 8
+                }
+
+                text_single = {
+                    visible = "[InDebugMode]"
+                    layoutpolicy_horizontal = expanding
+                    text = "#D [Scope.GetVariable('newsfeed_message_index').GetValue|0] #!"
+                    default_format = "#weak"
+                    fontsize = 14
+                    align = left|nobaseline
+                    margin_left = 8
+                }
+            }
+        
+            text_multi = {
+                max_width = 550
+                autoresize = yes
                 layoutpolicy_horizontal = expanding
-                text = "[Scope.GetVariable('newsfeed_message_title').GetFlagName]"
-                default_format = "#high"
+                text = "[Scope.GetVariable('newsfeed_message_desc').GetFlagName]"
                 fontsize = 14
                 align = left|nobaseline
             }
-
-            text_single = {
-                layoutpolicy_horizontal = expanding
-                text = "[Scope.GetVariable('newsfeed_message_date').GetFlagName]"
-                default_format = "#weak"
-                fontsize = 14
-                align = left|nobaseline
-                margin_left = 8
-            }
-
-            text_single = {
-        		visible = "[InDebugMode]"
-                layoutpolicy_horizontal = expanding
-                text = "#D [Scope.GetVariable('newsfeed_message_index').GetValue|0] #!"
-                default_format = "#weak"
-                fontsize = 14
-                align = left|nobaseline
-                margin_left = 8
-            }
-        }
-    
-        text_multi = {
-            max_width = 550
-            autoresize = yes
-            layoutpolicy_horizontal = expanding
-            text = "[Scope.GetVariable('newsfeed_message_desc').GetFlagName]"
-            fontsize = 14
-            align = left|nobaseline
         }
     }
 }
