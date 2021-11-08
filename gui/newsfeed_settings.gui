@@ -57,7 +57,7 @@ types NewsFeed {
                 
                 expand = {}
 
-                flowcontainer = {
+                hbox = {
                     margin_top = 40
                     margin_bottom = 50
                     margin_left = 50
@@ -76,17 +76,19 @@ types NewsFeed {
         }
     }
 
-    type newsfeed_settings_label_column = flowcontainer {
-        direction = vertical
+    type newsfeed_settings_label_column = vbox {
         datamodel = "[GetGlobalList('newsfeed_types')]"
 
         margin_top = 45
         margin_right = 8
 
         item = {
-            flowcontainer = {
+            hbox = {
                 margin_bottom = 9
+                layoutpolicy_horizontal = expanding
+
                 text_single = {
+                    layoutpolicy_horizontal = expanding
                     align = right
                     text = "[Localize(Concatenate(Scope.GetFlagName, '_label'))]"
                     default_format = "#high"
