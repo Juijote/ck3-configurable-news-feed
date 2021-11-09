@@ -2,3 +2,4 @@
   newsfeed_setting_tooltip: "Report [Localize(Concatenate(Scope.GetFlagName, '_label'))|l] for [Localize(Concatenate(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName, '_label'))]"
   newsfeed_select_all_for_subject_tooltip: "Report all event types for [Localize(Concatenate(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName, '_label'))]"
   newsfeed_select_all_for_type_tooltip: "Report [Localize(Concatenate(Scope.GetFlagName, '_label'))|l] for all character groups"
+  newsfeed_subject_courtier_label: "My [courtiers|E]"
