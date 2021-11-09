@@ -47,19 +47,53 @@ newsfeed_on_title_inherited = {
     }
 
     effect = {
-        set_variable = {
-            name = newsfeed_inherited_titles_from
-            value = scope:previous_holder
+        ordered_owned_story = {
+            limit = {
+                story_type = story_newsfeed_titles
+                has_variable = newsfeed_title_source
+                var:newsfeed_title_source = scope:previous_holder
+            }
+
+            max = 1
+
+            add_to_variable_list = {
+                name = newsfeed_inherited_titles
+                target = scope:title
+            }
         }
 
-        add_to_variable_list = {
-            name = newsfeed_inherited_titles
-            target = scope:title
+        if = {
+            limit = {
+                NOT = {
+                    any_owned_story = {
+                        story_type = story_newsfeed_titles
+                        has_variable = newsfeed_title_source
+                        var:newsfeed_title_source = scope:previous_holder
+                    }
+                }
+            }
+
+            create_story = {
+                type = story_newsfeed_titles
+                save_scope_as = newsfeed_title_story
+            }
+
+            scope:newsfeed_title_story = {
+                set_variable = {
+                    name = newsfeed_title_source
+                    value = scope:previous_holder
+                }
+
+                add_to_variable_list = {
+                    name = newsfeed_inherited_titles
+                    target = scope:title
+                }
+            }
         }
 
-        add_to_global_variable_list = {
-            name = newsfeed_inheritors
-            target = root
+        trigger_event = {
+            id = newsfeed_titles.0001
+            days = 1
         }
     }
 }
@@ -71,7 +105,10 @@ newsfeed_on_title_abdicated = {
         every_player = {
             if = {
                 limit = {
-                    newsfeed_is_interested_in_titles = { PERSON = root }
+                    OR = {
+                        newsfeed_is_interested_in_titles = { PERSON = root }
+                        newsfeed_is_interested_in_titles = { PERSON = scope:previous_holder }
+                    }
                 }
 
                 send_interface_message = {

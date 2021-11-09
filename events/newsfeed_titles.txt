@@ -1,0 +1,11 @@
+﻿namespace = newsfeed_titles
+
+newsfeed_titles.0001 = {
+	type = character_event
+
+	hidden = yes
+
+	immediate = {
+		newsfeed_flush_inherited_titles_effect = yes
+	}
+}

@@ -1402,12 +1402,6 @@
         resizable = yes
         size = { 600 400 }
 
-        state = {
-            name = flush_inherited_titles
-            trigger_when = "[GetScriptedGui('newsfeed_flush_inherited_titles').IsValid(GuiScope.End)]"
-            on_start = "[GetScriptedGui('newsfeed_flush_inherited_titles').Execute(GuiScope.End)]"
-        }
-
         flowcontainer = {
             datamodel = "[MessageFeedHandler.GetItems]"
 

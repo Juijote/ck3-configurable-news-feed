@@ -1,166 +1,152 @@
 ﻿newsfeed_flush_inherited_titles_effect = {
-    every_in_global_list = {
-        variable = newsfeed_inheritors
+    save_scope_as = newsfeed_inheritor
 
-        limit = {
-            any_in_list = {
-                variable = newsfeed_inherited_titles
-            }
+    every_owned_story = {
+        limit = { story_type = story_newsfeed_titles }
+
+        ordered_in_list = {
+            variable = newsfeed_inherited_titles
+            order_by = tier
+            max = 1
+            save_scope_as = newsfeed_main_title
         }
 
-        save_temporary_scope_as = newsfeed_inheritor
+        var:newsfeed_title_source = {
+            save_scope_as = newsfeed_previous_holder
+        }
+
+        newsfeed_save_title_count = { AS = newsfeed_title_count }
 
         every_player = {
             limit = {
-                newsfeed_is_interested_in_titles = { PERSON = scope:newsfeed_inheritor }
+                OR = {
+                    newsfeed_is_interested_in_titles = { PERSON = scope:newsfeed_inheritor }
+                    newsfeed_is_interested_in_titles = { PERSON = scope:newsfeed_previous_holder }
+                }
             }
 
             save_temporary_scope_as = newsfeed_observer
 
-            scope:newsfeed_inheritor = {
-                if = {
-                    limit = {
-                        any_in_list = {
-                            variable = newsfeed_inherited_titles
-                            count > 10
-                        }
-                    }
-
-                    newsfeed_send_inherited_titles_notification_effect = { COUNT = many }
-                }
-                else_if = {
-                    limit = {
-                        any_in_list = {
-                            variable = newsfeed_inherited_titles
-                            count = 10
-                        }
-                    }
-
-                    newsfeed_send_inherited_titles_notification_effect = { COUNT = 10 }
-                }
-                else_if = {
-                    limit = {
-                        any_in_list = {
-                            variable = newsfeed_inherited_titles
-                            count = 9
-                        }
-                    }
-
-                    newsfeed_send_inherited_titles_notification_effect = { COUNT = 9 }
-                }
-                else_if = {
-                    limit = {
-                        any_in_list = {
-                            variable = newsfeed_inherited_titles
-                            count = 8
-                        }
-                    }
-
-                    newsfeed_send_inherited_titles_notification_effect = { COUNT = 8 }
-                }
-                else_if = {
-                    limit = {
-                        any_in_list = {
-                            variable = newsfeed_inherited_titles
-                            count = 7
-                        }
-                    }
-
-                    newsfeed_send_inherited_titles_notification_effect = { COUNT = 7 }
-                }
-                else_if = {
-                    limit = {
-                        any_in_list = {
-                            variable = newsfeed_inherited_titles
-                            count = 6
-                        }
-                    }
-
-                    newsfeed_send_inherited_titles_notification_effect = { COUNT = 6 }
-                }
-                else_if = {
-                    limit = {
-                        any_in_list = {
-                            variable = newsfeed_inherited_titles
-                            count = 5
-                        }
-                    }
-
-                    newsfeed_send_inherited_titles_notification_effect = { COUNT = 5 }
-                }
-                else_if = {
-                    limit = {
-                        any_in_list = {
-                            variable = newsfeed_inherited_titles
-                            count = 4
-                        }
-                    }
-
-                    newsfeed_send_inherited_titles_notification_effect = { COUNT = 4 }
-                }
-                else_if = {
-                    limit = {
-                        any_in_list = {
-                            variable = newsfeed_inherited_titles
-                            count = 3
-                        }
-                    }
-
-                    newsfeed_send_inherited_titles_notification_effect = { COUNT = 3 }
-                }
-                else_if = {
-                    limit = {
-                        any_in_list = {
-                            variable = newsfeed_inherited_titles
-                            count = 2
-                        }
-                    }
-
-                    newsfeed_send_inherited_titles_notification_effect = { COUNT = 2 }
-                }
-                else_if = {
-                    limit = {
-                        any_in_list = {
-                            variable = newsfeed_inherited_titles
-                            count = 1
-                        }
-                    }
-
-                    newsfeed_send_inherited_titles_notification_effect = { COUNT = 1 }
-                }
+            send_interface_message = {
+                type = newsfeed_titles
+                title = newsfeed_titles_inherited
+                desc = newsfeed_titles_inherited_desc
             }
         }
 
-        remove_variable = newsfeed_inherited_titles_from
-        clear_variable_list = newsfeed_inherited_titles
+        end_story = yes
     }
-
-    clear_global_variable_list = newsfeed_inheritors
 }
 
-newsfeed_send_inherited_titles_notification_effect = {
-    ordered_in_list = {
-        variable = newsfeed_inherited_titles
-        order_by = tier
-        max = 1
-        save_scope_as = newsfeed_main_title
-    }
-
-    save_scope_as = newsfeed_inheritor
-
-    var:newsfeed_inherited_titles_from = {
-        save_scope_as = newsfeed_previous_holder
-    }
-
-    flag:newsfeed_title_count_$COUNT$ = {
-        save_scope_as = newsfeed_title_count
-    }
-
-    scope:newsfeed_observer = {
-        send_interface_message = {
-            type = newsfeed_titles
-            title = newsfeed_titles_inherited
-            desc = newsfeed_titles_inherited_desc
+newsfeed_save_title_count = {
+    if = {
+        limit = {
+            any_in_list = {
+                variable = newsfeed_inherited_titles
+                count > 10
+            }
         }
+
+        save_scope_value_as = { name = $AS$ value = flag:newsfeed_title_count_many }
+    }
+    else_if = {
+        limit = {
+            any_in_list = {
+                variable = newsfeed_inherited_titles
+                count = 10
+            }
+        }
+
+        save_scope_value_as = { name = $AS$ value = flag:newsfeed_title_count_10 }
+    }
+    else_if = {
+        limit = {
+            any_in_list = {
+                variable = newsfeed_inherited_titles
+                count = 9
+            }
+        }
+
+        save_scope_value_as = { name = $AS$ value = flag:newsfeed_title_count_9 }
+    }
+    else_if = {
+        limit = {
+            any_in_list = {
+                variable = newsfeed_inherited_titles
+                count = 8
+            }
+        }
+
+        save_scope_value_as = { name = $AS$ value = flag:newsfeed_title_count_8 }
+    }
+    else_if = {
+        limit = {
+            any_in_list = {
+                variable = newsfeed_inherited_titles
+                count = 7
+            }
+        }
+
+        save_scope_value_as = { name = $AS$ value = flag:newsfeed_title_count_7 }
+    }
+    else_if = {
+        limit = {
+            any_in_list = {
+                variable = newsfeed_inherited_titles
+                count = 6
+            }
+        }
+
+        save_scope_value_as = { name = $AS$ value = flag:newsfeed_title_count_6 }
+    }
+    else_if = {
+        limit = {
+            any_in_list = {
+                variable = newsfeed_inherited_titles
+                count = 5
+            }
+        }
+
+        save_scope_value_as = { name = $AS$ value = flag:newsfeed_title_count_5 }
+    }
+    else_if = {
+        limit = {
+            any_in_list = {
+                variable = newsfeed_inherited_titles
+                count = 4
+            }
+        }
+
+        save_scope_value_as = { name = $AS$ value = flag:newsfeed_title_count_4 }
+    }
+    else_if = {
+        limit = {
+            any_in_list = {
+                variable = newsfeed_inherited_titles
+                count = 3
+            }
+        }
+
+        save_scope_value_as = { name = $AS$ value = flag:newsfeed_title_count_3 }
+    }
+    else_if = {
+        limit = {
+            any_in_list = {
+                variable = newsfeed_inherited_titles
+                count = 2
+            }
+        }
+
+        save_scope_value_as = { name = $AS$ value = flag:newsfeed_title_count_2 }
+    }
+    else_if = {
+        limit = {
+            any_in_list = {
+                variable = newsfeed_inherited_titles
+                count = 1
+            }
+        }
+
+        save_scope_value_as = { name = $AS$ value = flag:newsfeed_title_count_1 }
     }
 }
