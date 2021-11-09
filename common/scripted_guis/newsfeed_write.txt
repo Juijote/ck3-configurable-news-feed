@@ -13,6 +13,7 @@
             limit = {
                 NOR = {
                     scope:newsfeed_message_title = flag:newsfeed_suppress
+                    scope:newsfeed_message_desc = flag:newsfeed_suppress
                     scope:newsfeed_message_tooltip = flag:newsfeed_suppress
                 }
             }
