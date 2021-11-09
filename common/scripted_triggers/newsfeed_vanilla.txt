@@ -5,6 +5,5 @@
         $PERSON$ = { is_councillor_of = prev }
         newsfeed_is_my_sibling = { PERSON = $PERSON$ }
         newsfeed_is_my_parent = { PERSON = $PERSON$ }
-        newsfeed_is_my_pinned_character = { PERSON = $PERSON$ }
     }
 }
