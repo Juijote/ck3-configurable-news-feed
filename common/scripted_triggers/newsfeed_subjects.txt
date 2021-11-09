@@ -34,6 +34,7 @@ newsfeed_is_my_liege = {
 newsfeed_is_my_direct_vassal = {
     NOT = { this = $PERSON$ }
     this = $PERSON$.liege
+    $PERSON$ = { is_landed = yes }
 }
 
 newsfeed_is_my_close_dynastic_family = {
