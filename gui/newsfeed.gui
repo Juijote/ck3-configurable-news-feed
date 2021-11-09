@@ -58,19 +58,35 @@ types NewsFeed {
                 }
                 
         		scrollwidget = {
-                    fixedgridbox = {
-                        allow_outside = yes
-                        maxhorizontalslots = 1
-                        maxverticalslots = 1000
-                        addrow = 85
-                        addcolumn = 1
-                        datamodel_reuse_widgets = yes
+                    flowcontainer = {
+                        direction = vertical
                         layoutpolicy_horizontal = expanding
-                        
-                        datamodel = "[GetPlayer.MakeScope.GetList('newsfeed_message_containers')]"
+                        flowcontainer = {
+                            direction = vertical
+                            allow_outside = yes
+                            layoutpolicy_horizontal = expanding
+                            
+                            datamodel = "[GetPlayer.MakeScope.GetList('newsfeed_recent_message_containers')]"
+    
+                            item = {
+                                newsfeed_item = {}
+                            }
+                        }
 
-                        item = {
-                            newsfeed_item = {}
+                        fixedgridbox = {
+                            allow_outside = yes
+                            maxhorizontalslots = 1
+                            maxverticalslots = 1000
+                            addrow = 85
+                            addcolumn = 1
+                            datamodel_reuse_widgets = yes
+                            layoutpolicy_horizontal = expanding
+                            
+                            datamodel = "[GetPlayer.MakeScope.GetList('newsfeed_older_message_containers')]"
+    
+                            item = {
+                                newsfeed_item = {}
+                            }
                         }
                     }
                 }
@@ -81,7 +97,7 @@ types NewsFeed {
             layoutpolicy_vertical = expanding
             layoutpolicy_horizontal = expanding
 
-            visible = "[IsDataModelEmpty(GetPlayer.MakeScope.GetList('newsfeed_message_containers'))]"
+            visible = "[IsDataModelEmpty(GetPlayer.MakeScope.GetList('newsfeed_recent_message_containers'))]"
 
             expand = {}
 

@@ -35,18 +35,30 @@ newsfeed_on_death_transfer_message_containers = {
         }
 
         every_in_list = {
-            variable = newsfeed_message_containers
+            variable = newsfeed_recent_message_containers
 
             prev.player_heir = {
                 add_to_variable_list = {
-                    name = newsfeed_message_containers
+                    name = newsfeed_recent_message_containers
+                    target = prev
+                }
+            }
+        }
+
+        every_in_list = {
+            variable = newsfeed_older_message_containers
+
+            prev.player_heir = {
+                add_to_variable_list = {
+                    name = newsfeed_older_message_containers
                     target = prev
                 }
             }
         }
         
         remove_variable = newsfeed_next_message_index
-        clear_variable_list = newsfeed_message_containers
+        clear_variable_list = newsfeed_recent_message_containers
+        clear_variable_list = newsfeed_older_message_containers
     }
 }
 
