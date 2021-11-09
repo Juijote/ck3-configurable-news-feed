@@ -1,5 +1,5 @@
 ﻿l_simp_chinese:
- newsfeed_suppress: "信息摘要_折叠"
+ newsfeed_suppress: "newsfeed_suppress"
  declare_war_interaction_notification: "$newsfeed_suppress$"
  pregnancy_not_first_child_message: "$newsfeed_suppress$"
- death_management.liege_councillor.desc: "$newsfeed_suppress$"
+ death_management.pinned.desc: "$newsfeed_suppress$"
