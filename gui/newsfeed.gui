@@ -34,12 +34,6 @@ types NewsFeed {
             on_start = "[GetScriptedGui('newsfeed_ensure_settings_initialized_gui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
         }
 
-        state = {
-            name = flush_inherited_titles
-            trigger_when = "[GetScriptedGui('newsfeed_flush_inherited_titles').IsValid(GuiScope.End)]"
-            on_start = "[GetScriptedGui('newsfeed_flush_inherited_titles').Execute(GuiScope.End)]"
-        }
-
         vbox = {
             margin_left = 20
 
