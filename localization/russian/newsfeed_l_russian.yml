@@ -27,15 +27,8 @@
   newsfeed_birth_desc: "У [SCOPE.sC('father').GetUIName] и [SCOPE.sC('mother').GetUIName] родился ребенок [SCOPE.sC('child').GetShortUIName|U]"
   newsfeed_birth_no_father_desc: "У [SCOPE.sC('mother').GetUIName] родился ребенок [SCOPE.sC('child').GetShortUIName|U]"
 
-  newsfeed_death: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] умирает"
-  newsfeed_death_desc: "[ROOT.Char.GetUIName|U] настигла смерть"
-  newsfeed_death_murder: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] убили"
-  newsfeed_death_murder_desc: "[ROOT.Char.GetUIName|U] погибает из-за [SCOPE.sC('killer').GetUIName]"
-
-  newsfeed_death_related: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] умирает"
-  newsfeed_death_related_desc: "Окончилась жизнь [GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('newsfeed_related'))] [SCOPE.sC('newsfeed_related').GetUINamePossessive] [SCOPE.sC('newsfeed_related').Custom2('RelationToMeShort', ROOT.Char)] [ROOT.Char.GetUIName|U]"
-  newsfeed_death_related_murder: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] убили"
-  newsfeed_death_related_murder_desc: "Ваш [GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('newsfeed_related'))] [SCOPE.sC('newsfeed_related').GetUINamePossessive] [SCOPE.sC('newsfeed_related').Custom2('RelationToMeShort', ROOT.Char)] [ROOT.Char.GetUIName|U] погибает из-за [SCOPE.sC('killer').GetUIName]"
+  newsfeed_death: "[Localize(SCOPE.GetFlagName('newsfeed_dead_character_relation'))|U] умирает"
+  newsfeed_death_desc: "[SCOPE.sC('newsfeed_dead_character').GetUIName|U] [SCOPE.sC('newsfeed_dead_character').GetDeathReason]"
 
   newsfeed_title_created: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] создает Титул"
   newsfeed_title_created_desc: "[ROOT.Char.GetUIName|U] создает титул [SCOPE.sTitle('title').GetName]"

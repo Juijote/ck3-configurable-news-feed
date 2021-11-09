@@ -1,20 +1,18 @@
 ﻿newsfeed_notify_of_death_effect = {
-    if = {
-        limit = {
-            exists = scope:killer
-        }
+    save_temporary_scope_as = newsfeed_observer
 
-        send_interface_message = {
-            type = newsfeed_death
-            title = newsfeed_death_murder
-            desc = newsfeed_death_murder_desc
-        }
+    newsfeed_save_simple_relation = {
+        FIRST = scope:newsfeed_observer
+        SECOND = root
+        AS = newsfeed_dead_character_relation
     }
-    else = {
-        send_interface_message = {
-            type = newsfeed_death
-            title = newsfeed_death
-            desc = newsfeed_death_desc
-        }
+
+    root = {
+        save_scope_as = newsfeed_dead_character
+    }
+
+    trigger_event = {
+        id = newsfeed_death.0001
+        days = 1
     }
 }

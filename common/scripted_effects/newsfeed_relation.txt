@@ -1,0 +1,179 @@
+﻿
+newsfeed_save_simple_relation = {
+    $FIRST$ = {
+        # You
+        if = {
+            limit = {
+                newsfeed_is_my_self = { PERSON = $SECOND$ }
+            }
+            save_scope_value_as = { name = $AS$ value = flag:CHARACTER_NAME_ME }
+        }
+
+        # Spouse
+        else_if = {
+            limit = {
+                newsfeed_is_my_spouse = { PERSON = $SECOND$ }
+                $SECOND$ = { is_male = yes }
+            }
+            save_scope_value_as = { name = $AS$ value = flag:relation_husband }
+        }
+        else_if = {
+            limit = {
+                newsfeed_is_my_spouse = { PERSON = $SECOND$ }
+                $SECOND$ = { is_female = yes }
+            }
+            save_scope_value_as = { name = $AS$ value = flag:relation_wife }
+        }
+
+        # Family
+		else_if = {
+			limit = {
+				newsfeed_is_my_sibling = { PERSON = $SECOND$ }
+				$SECOND$ = { is_male = yes }
+			}
+			save_scope_value_as = { name = $AS$ value = flag:relation_brother }
+		}
+		else_if = {
+			limit = {
+				newsfeed_is_my_sibling = { PERSON = $SECOND$ }
+				$SECOND$ = { is_female = yes }
+			}
+			save_scope_value_as = { name = $AS$ value = flag:relation_sister }
+		}
+		else_if = {
+			limit = {
+				newsfeed_is_my_parent = { PERSON = $SECOND$ }
+				$SECOND$ = { is_male = yes }
+			}
+			save_scope_value_as = { name = $AS$ value = flag:relation_father }
+		}
+		else_if = {
+			limit = {
+				newsfeed_is_my_parent = { PERSON = $SECOND$ }
+				$SECOND$ = { is_female = yes }
+			}
+			save_scope_value_as = { name = $AS$ value = flag:relation_mother }
+		}
+		else_if = {
+			limit = {
+				newsfeed_is_my_child = { PERSON = $SECOND$ }
+				$SECOND$ = { is_male = yes }
+			}
+			save_scope_value_as = { name = $AS$ value = flag:relation_son }
+		}
+		else_if = {
+			limit = {
+				newsfeed_is_my_child = { PERSON = $SECOND$ }
+				$SECOND$ = { is_female = yes }
+			}
+			save_scope_value_as = { name = $AS$ value = flag:relation_daughter }
+		}
+		else_if = {
+			limit = {
+				newsfeed_is_my_grandchild = { PERSON = $SECOND$ }
+				$SECOND$ = { is_male = yes }
+			}
+			save_scope_value_as = { name = $AS$ value = flag:relation_grandson }
+		}
+		else_if = {
+			limit = {
+				newsfeed_is_my_grandchild = { PERSON = $SECOND$ }
+				$SECOND$ = { is_female = yes }
+			}
+			save_scope_value_as = { name = $AS$ value = flag:relation_granddaughter }
+		}
+		else_if = {
+			limit = {
+				newsfeed_is_my_grandparent = { PERSON = $SECOND$ }
+				$SECOND$ = { is_male = yes }
+			}
+			save_scope_value_as = { name = $AS$ value = flag:relation_grandfather }
+		}
+		else_if = {
+			limit = {
+				newsfeed_is_my_grandparent = { PERSON = $SECOND$ }
+				$SECOND$ = { is_female = yes }
+			}
+			save_scope_value_as = { name = $AS$ value = flag:relation_grandmother }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					newsfeed_is_my_close_dynastic_family = { PERSON = $SECOND$ }
+					newsfeed_is_my_extended_dynastic_family = { PERSON = $SECOND$ }
+				}
+				$SECOND$ = { is_male = yes }
+			} 
+			save_scope_value_as = { name = $AS$ value = flag:relation_kinsman }
+		}
+		else_if = {
+			limit = {
+				OR = {
+					newsfeed_is_my_close_dynastic_family = { PERSON = $SECOND$ }
+					newsfeed_is_my_extended_dynastic_family = { PERSON = $SECOND$ }
+				}
+				$SECOND$ = { is_female = yes }
+			} 
+			save_scope_value_as = { name = $AS$ value = flag:relation_kinswoman }
+		}
+
+        # Liege
+        else_if = {
+            limit = {
+                newsfeed_is_my_liege = { PERSON = $SECOND$ }
+                $SECOND$ = { is_male = yes }
+            }
+            save_scope_value_as = { name = $AS$ value = flag:relation_liege_male }
+        }
+        else_if = {
+            limit = {
+                newsfeed_is_my_liege = { PERSON = $SECOND$ }
+                $SECOND$ = { is_female = yes }
+            }
+            save_scope_value_as = { name = $AS$ value = flag:relation_liege_female }
+        }
+
+        # Direct vassal
+        else_if = {
+            limit = {
+                newsfeed_is_my_direct_vassal = { PERSON = $SECOND$ }
+                $SECOND$ = { is_male = yes }
+            }
+            save_scope_value_as = { name = $AS$ value = flag:relation_vassal_male }
+        }
+        else_if = {
+            limit = {
+                newsfeed_is_my_direct_vassal = { PERSON = $SECOND$ }
+                $SECOND$ = { is_female = yes }
+            }
+            save_scope_value_as = { name = $AS$ value = flag:relation_vassal_female }
+        }
+
+        # Courtier
+        else_if = {
+            limit = {
+                newsfeed_is_my_courtier = { PERSON = $SECOND$ }
+                $SECOND$ = { is_male = yes }
+            }
+            save_scope_value_as = { name = $AS$ value = flag:relation_courtier_male }
+        }
+        else_if = {
+            limit = {
+                newsfeed_is_my_courtier = { PERSON = $SECOND$ }
+                $SECOND$ = { is_female = yes }
+            }
+            save_scope_value_as = { name = $AS$ value = flag:relation_courtier_female }
+        }
+
+        # Other
+        else_if = {
+            limit = {
+                $SECOND$ = { is_male = yes }
+            }
+            save_scope_value_as = { name = $AS$ value = flag:relation_acquaintance_male }
+        }
+        else = {
+            save_scope_value_as = { name = $AS$ value = flag:relation_acquaintance_female }
+        }
+    }
+}

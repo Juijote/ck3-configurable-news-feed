@@ -1,0 +1,15 @@
+﻿namespace = newsfeed_death
+
+newsfeed_death.0001 = {
+	type = character_event
+
+	hidden = yes
+
+	immediate = {
+        send_interface_message = {
+            type = newsfeed_death
+            title = newsfeed_death
+            desc = newsfeed_death_desc
+        }
+	}
+}
