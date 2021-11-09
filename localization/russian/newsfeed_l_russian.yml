@@ -3,10 +3,6 @@
   newsfeed_settings_header: "Настройки уведомлений"
   newsfeed_settings_explanation: "Выберите группы персонажей, по которым показывать уведомления.\n\nВнимание! Ряд уведомлений продолжать появляться даже при отключении соответствующей опции. Это события базовой игры, которые нельзя отключить."
 
-  newsfeed_suppress: "newsfeed_suppress"
-  declare_war_interaction_notification: "$newsfeed_suppress$"
-  pregnancy_not_first_child_message: "$newsfeed_suppress$"
-
   newsfeed_marriage: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('newsfeed_spouse1'))|U] [Concept('marriage', 'в браке')|E]"
   newsfeed_marriage_desc: "Ваш [GetPlayer.Custom2('RelationToMe', SCOPE.sC('newsfeed_spouse1'))] [SCOPE.sC('newsfeed_spouse1').GetUIName] в браке с [SCOPE.sC('newsfeed_spouse2').GetUIName]"
   newsfeed_marriage_me: "Вы заключили [Concept('marriage', 'брак')|E]"
