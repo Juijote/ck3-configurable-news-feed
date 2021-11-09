@@ -15,15 +15,15 @@
   newsfeed_marriage_me: "You Got [Concept('marriage', 'Married')|E]"
   newsfeed_marriage_me_desc: "[SCOPE.sC('spouse').GetUIName] is now your [SCOPE.sC('spouse').Custom('WifeHusband')]"
 
-  newsfeed_pregnancy_mother: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('mother'))|U] is Pregnant"
-  newsfeed_pregnancy_father: "[GetPlayer.Custom2('newsfeed_relation_possessive_or_my', SCOPE.sC('father'))|U] [SCOPE.sC('father').Custom2('RelationToMeShort', SCOPE.sC('mother'))|U] is Pregnant"
-  newsfeed_pregnancy_desc: "[SCOPE.sC('mother').GetUIName|U] is bearing [SCOPE.sC('father').GetUINamePossessive] child"
-  newsfeed_pregnancy_no_father_desc: "[SCOPE.sC('mother').GetUIName|U] is with child"
+  newsfeed_pregnancy_mother: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('mother'))|U] Became Pregnant"
+  newsfeed_pregnancy_father: "[GetPlayer.Custom2('newsfeed_relation_possessive_or_my', SCOPE.sC('father'))|U] [SCOPE.sC('father').Custom2('RelationToMeShort', SCOPE.sC('mother'))|U] Became Pregnant"
+  newsfeed_pregnancy_desc: "[SCOPE.sC('mother').GetUIName|U] became pregnant with [SCOPE.sC('father').GetUINamePossessive] child"
+  newsfeed_pregnancy_no_father_desc: "[SCOPE.sC('mother').GetUIName|U] became heavy with child"
 
   newsfeed_pregnancy_ended_mother: "[GetPlayer.Custom2('newsfeed_relation_possessive_or_my', SCOPE.sC('mother'))|U] Pregnancy Ended"
   newsfeed_pregnancy_ended_father: "[GetPlayer.Custom2('newsfeed_relation_possessive_or_my', SCOPE.sC('father'))|U] [SCOPE.sC('father').Custom2('RelationToMePossessive', SCOPE.sC('mother'))|U] Pregnancy Ended"
-  newsfeed_pregnancy_ended_desc: "[SCOPE.sC('mother').GetUIName|U] is no longer bearing [SCOPE.sC('father').GetUINamePossessive] child"
-  newsfeed_pregnancy_ended_no_father_desc: "[SCOPE.sC('mother').GetUIName|U] is no longer with child"
+  newsfeed_pregnancy_ended_desc: "[SCOPE.sC('mother').GetUINamePossessive|U] pregnancy with [SCOPE.sC('father').GetUINamePossessive] child was lost"
+  newsfeed_pregnancy_ended_no_father_desc: "[SCOPE.sC('mother').GetUINamePossessive|U] pregnancy was lost"
 
   newsfeed_birth_mother: "Child Born to [GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('mother'))|U]"
   newsfeed_birth_father: "Child Born to [GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('father'))|U]"
