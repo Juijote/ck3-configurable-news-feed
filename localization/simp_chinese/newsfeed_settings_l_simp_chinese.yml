@@ -10,6 +10,7 @@
  newsfeed_type_pregnancy_label: "怀孕"
  newsfeed_type_birth_label: "出生"
  newsfeed_type_death_label: "死亡"
+ newsfeed_type_titles_label: "头衔"
+ newsfeed_subject_courtier_label: "我的[courtiers|E]"
  newsfeed_type_offensive_war_label: "进攻战争"
  newsfeed_type_defensive_war_label: "防御战争"
- newsfeed_type_titles_label: "头衔"
