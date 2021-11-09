@@ -32,6 +32,23 @@ newsfeed_relation_or_me = {
     }
 }
 
+newsfeed_relation_possessive_or_my = {
+    type = character
+
+    text = {
+        trigger = {
+            root = scope:second
+        }
+
+        localization_key = CHARACTER_NAME_MY
+    }
+
+    text = {
+        fallback = yes
+        localization_key = "[Scope.Char.Custom2('RelationToMePossessive', second.Self)]"
+    }
+}
+
 newsfeed_relation_name_or_me = {
     type = character
 
