@@ -14,19 +14,19 @@
     }
     else_if = {
         limit = {
-            newsfeed_is_interested_in_birth = { PERSON = scope:father }
+            newsfeed_is_interested_in_birth = { PERSON = scope:mother }
         }
 
         send_interface_message = {
             type = newsfeed_birth
-            title = newsfeed_birth_father
+            title = newsfeed_birth_mother
             desc = newsfeed_birth_desc
         }
     }
     else = {
         send_interface_message = {
             type = newsfeed_birth
-            title = newsfeed_birth_mother
+            title = newsfeed_birth_father
             desc = newsfeed_birth_desc
         }
     }

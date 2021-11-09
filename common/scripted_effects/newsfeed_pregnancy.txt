@@ -14,19 +14,19 @@
     }
     else_if = {
         limit = {
-            newsfeed_is_interested_in_pregnancy = { PERSON = scope:father }
+            newsfeed_is_interested_in_pregnancy = { PERSON = scope:mother }
         }
 
         send_interface_message = {
             type = newsfeed_pregnancy
-            title = newsfeed_pregnancy_father
+            title = newsfeed_pregnancy_mother
             desc = newsfeed_pregnancy_desc
         }
     }
     else = {
         send_interface_message = {
             type = newsfeed_pregnancy
-            title = newsfeed_pregnancy_mother
+            title = newsfeed_pregnancy_father
             desc = newsfeed_pregnancy_desc
         }
     }
@@ -48,19 +48,19 @@ newsfeed_notify_pregnancy_ended_effect = {
     }
     else_if = {
         limit = {
-            newsfeed_is_interested_in_pregnancy = { PERSON = scope:father }
+            newsfeed_is_interested_in_pregnancy = { PERSON = scope:mother }
         }
 
         send_interface_message = {
             type = newsfeed_pregnancy_ended
-            title = newsfeed_pregnancy_ended_father
+            title = newsfeed_pregnancy_ended_mother
             desc = newsfeed_pregnancy_ended_desc
         }
     }
     else = {
         send_interface_message = {
             type = newsfeed_pregnancy_ended
-            title = newsfeed_pregnancy_ended_mother
+            title = newsfeed_pregnancy_ended_father
             desc = newsfeed_pregnancy_ended_desc
         }
     }
