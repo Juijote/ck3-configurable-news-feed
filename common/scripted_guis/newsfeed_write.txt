@@ -41,3 +41,11 @@ newsfeed_delete_message_gui = {
         }
     }
 }
+
+newsfeed_delete_all_messages_gui = {
+    scope = character
+
+    effect = {
+        newsfeed_delete_all_messages_effect = yes
+    }
+}

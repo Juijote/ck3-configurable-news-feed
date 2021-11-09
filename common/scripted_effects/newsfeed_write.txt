@@ -61,6 +61,21 @@ newsfeed_delete_message_effect = {
     }
 }
 
+newsfeed_delete_all_messages_effect = {
+    every_owned_story = {
+        limit = {
+            story_type = story_newsfeed_message
+        }
+        prev = {
+            remove_list_variable = {
+                name = newsfeed_message_containers
+                target = prev
+            }
+        }
+        end_story = yes
+    }
+}
+
 newsfeed_clear_message_containers_for_all_players = {
     every_player = {
         newsfeed_clear_message_containers = yes

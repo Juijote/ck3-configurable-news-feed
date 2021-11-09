@@ -129,25 +129,25 @@ types NewsFeed {
         margin_top = 20
         direction = vertical
         allow_outside = yes
-    
-        state = {
-            name = _mouse_hierarchy_enter
-            on_start = "[PdxGuiWidget.FindChild('newsfeed_type').TriggerAnimation('hover_enter')]"
-            on_start = "[PdxGuiWidget.FindChild('newsfeed_dismiss').TriggerAnimation('hover_enter')]"
-        }
-
-        state = {
-            name = _mouse_hierarchy_leave
-            on_start = "[PdxGuiWidget.FindChild('newsfeed_type').TriggerAnimation('hover_leave')]"
-            on_start = "[PdxGuiWidget.FindChild('newsfeed_dismiss').TriggerAnimation('hover_leave')]"
-        }
 
         flowcontainer = {
             allow_outside = yes
 
-            container = {
-        allow_outside = yes
-                size = { 20 20 }
+            widget = {
+                size = { 24 20 }
+            
+                state = {
+                    name = _mouse_hierarchy_enter
+                    on_start = "[PdxGuiWidget.FindChild('newsfeed_type').TriggerAnimation('hover_enter')]"
+                    on_start = "[PdxGuiWidget.FindChild('newsfeed_dismiss').TriggerAnimation('hover_enter')]"
+                }
+        
+                state = {
+                    name = _mouse_hierarchy_leave
+                    on_start = "[PdxGuiWidget.FindChild('newsfeed_type').TriggerAnimation('hover_leave')]"
+                    on_start = "[PdxGuiWidget.FindChild('newsfeed_dismiss').TriggerAnimation('hover_leave')]"
+                }
+
                 newsfeed_type_icon = {
                     name = "newsfeed_type"
 
@@ -169,9 +169,12 @@ types NewsFeed {
                 button_clear = {
                     name = "newsfeed_dismiss"
                     size = { 20 20 }
+
                     alpha = 0
 
                     onclick = "[GetScriptedGui('newsfeed_delete_message_gui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'newsfeed_message_index', MakeScopeValue(Scope.GetVariable('newsfeed_message_index').GetValue) ).End )]"
+                    onrightclick = "[GetScriptedGui('newsfeed_delete_all_messages_gui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+                    button_ignore = none
 
                     state = {
                         name = hover_enter
@@ -186,6 +189,8 @@ types NewsFeed {
                         duration = 0.2
                         using = Animation_Curve_Default
                     }
+
+                    tooltip = MESSAGE_CLEAR_ALL_TOOLTIP
                 }
             }
 
