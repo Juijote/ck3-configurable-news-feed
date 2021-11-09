@@ -10,24 +10,13 @@ newsfeed_on_death = {
     effect = {
         every_player = {
             limit = {
+                newsfeed_is_interested_in_death = { PERSON = root }
                 NOT = {
                     newsfeed_vanilla_will_show_death = { PERSON = root }
                 }
             }
 
-            if = {
-                limit = {
-                    newsfeed_is_interested_in_death = { PERSON = root }
-                }
-
-                newsfeed_notify_of_death_effect = yes
-            }
-            else = {
-                newsfeed_check_relative_of_deceased_effect = { type = parent }
-                newsfeed_check_relative_of_deceased_effect = { type = spouse }
-                newsfeed_check_relative_of_deceased_effect = { type = child }
-                newsfeed_check_relative_of_deceased_effect = { type = sibling }
-            }
+            newsfeed_notify_of_death_effect = yes
         }
     }
 }
