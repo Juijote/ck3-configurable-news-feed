@@ -114,6 +114,7 @@ types NewsFeed {
                     checked = "[GetScriptedGui('newsfeed_setting_select_all_type_state_gui').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('newsfeed_type', MakeScopeFlag(Scope.GetFlagName)).End )]"
                     onclick = "[GetScriptedGui('newsfeed_setting_select_all_type_toggle_gui').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('newsfeed_type', MakeScopeFlag(Scope.GetFlagName)).End )]"
                     tooltip = newsfeed_select_all_for_type_tooltip
+                    using = tooltip_ne
                 }
             }
         }
@@ -139,6 +140,7 @@ types NewsFeed {
                 checked = "[GetScriptedGui('newsfeed_setting_select_all_subject_state_gui').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('newsfeed_subject', MakeScopeFlag(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName)).End )]"
                 onclick = "[GetScriptedGui('newsfeed_setting_select_all_subject_toggle_gui').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('newsfeed_subject', MakeScopeFlag(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName)).End )]"
                 tooltip = newsfeed_select_all_for_subject_tooltip
+                using = tooltip_ne
             }
             margin_bottom = 16
         }
@@ -150,6 +152,7 @@ types NewsFeed {
                     checked = "[GetScriptedGui('newsfeed_setting_state_gui').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('newsfeed_subject', MakeScopeFlag(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName)).AddScope('newsfeed_type', MakeScopeFlag(Scope.GetFlagName)).End )]"
                     onclick = "[GetScriptedGui('newsfeed_setting_toggle_gui').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('newsfeed_subject', MakeScopeFlag(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName)).AddScope('newsfeed_type', MakeScopeFlag(Scope.GetFlagName)).End )]"
                     tooltip = newsfeed_setting_tooltip
+                    using = tooltip_ne
                 }
             }
         }
