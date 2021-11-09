@@ -24,10 +24,12 @@
     newsfeed_enable_setting = { SUBJECT = flag:newsfeed_subject_extended_dynastic_family type = flag:newsfeed_type_birth }
     newsfeed_enable_setting = { SUBJECT = flag:newsfeed_subject_extended_dynastic_family type = flag:newsfeed_type_death }
     
+    newsfeed_enable_setting = { SUBJECT = flag:newsfeed_subject_liege type = flag:newsfeed_type_death }
     newsfeed_enable_setting = { SUBJECT = flag:newsfeed_subject_liege type = flag:newsfeed_type_offensive_war }
     newsfeed_enable_setting = { SUBJECT = flag:newsfeed_subject_liege type = flag:newsfeed_type_defensive_war }
     newsfeed_enable_setting = { SUBJECT = flag:newsfeed_subject_liege type = flag:newsfeed_type_titles }
     
+    newsfeed_enable_setting = { SUBJECT = flag:newsfeed_subject_direct_vassal type = flag:newsfeed_type_death }
     newsfeed_enable_setting = { SUBJECT = flag:newsfeed_subject_direct_vassal type = flag:newsfeed_type_offensive_war }
     newsfeed_enable_setting = { SUBJECT = flag:newsfeed_subject_direct_vassal type = flag:newsfeed_type_defensive_war }
     newsfeed_enable_setting = { SUBJECT = flag:newsfeed_subject_direct_vassal type = flag:newsfeed_type_titles }
