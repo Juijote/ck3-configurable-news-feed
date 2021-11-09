@@ -59,6 +59,7 @@ types NewsFeed {
                 
         		scrollwidget = {
                     flowcontainer = {
+                        margin_top = 20
                         direction = vertical
                         layoutpolicy_horizontal = expanding
                         flowcontainer = {
@@ -142,7 +143,7 @@ types NewsFeed {
     }
 
     type newsfeed_item = flowcontainer {
-        margin_top = 20
+        margin_bottom = 20
         direction = vertical
         allow_outside = yes
 
