@@ -27,31 +27,37 @@ newsfeed_on_death_transfer_message_containers = {
     }
 
     effect = {
-        player_heir = {
-            set_variable = {
-                name = newsfeed_next_message_index
-                value = prev.var:newsfeed_next_message_index
+        if = {
+            limit = {
+                exists = player_heir
             }
-        }
 
-        every_in_list = {
-            variable = newsfeed_recent_message_containers
-
-            prev.player_heir = {
-                add_to_variable_list = {
-                    name = newsfeed_recent_message_containers
-                    target = prev
+            player_heir = {
+                set_variable = {
+                    name = newsfeed_next_message_index
+                    value = prev.var:newsfeed_next_message_index
                 }
             }
-        }
-
-        every_in_list = {
-            variable = newsfeed_older_message_containers
-
-            prev.player_heir = {
-                add_to_variable_list = {
-                    name = newsfeed_older_message_containers
-                    target = prev
+    
+            every_in_list = {
+                variable = newsfeed_recent_message_containers
+    
+                prev.player_heir = {
+                    add_to_variable_list = {
+                        name = newsfeed_recent_message_containers
+                        target = prev
+                    }
+                }
+            }
+    
+            every_in_list = {
+                variable = newsfeed_older_message_containers
+    
+                prev.player_heir = {
+                    add_to_variable_list = {
+                        name = newsfeed_older_message_containers
+                        target = prev
+                    }
                 }
             }
         }
@@ -68,13 +74,19 @@ newsfeed_on_death_transfer_setting_containers = {
     }
 
     effect = {
-        every_in_list = {
-            variable = newsfeed_setting_containers
+        if = {
+            limit = {
+                exists = player_heir
+            }
 
-            prev.player_heir = {
-                add_to_variable_list = {
-                    name = newsfeed_setting_containers
-                    target = prev
+            every_in_list = {
+                variable = newsfeed_setting_containers
+
+                prev.player_heir = {
+                    add_to_variable_list = {
+                        name = newsfeed_setting_containers
+                        target = prev
+                    }
                 }
             }
         }
