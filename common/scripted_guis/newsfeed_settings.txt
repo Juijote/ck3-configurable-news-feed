@@ -130,3 +130,11 @@ newsfeed_setting_select_all_subject_toggle_gui = {
         }
     }
 }
+
+newsfeed_reset_settings_to_default_gui = {
+    scope = character
+
+    effect = {
+        newsfeed_reset_settings_to_default = yes
+    }
+}

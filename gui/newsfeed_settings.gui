@@ -6,7 +6,7 @@ types NewsFeed {
         parentanchor = center
         layer = top
 
-        size = { 700 700 }
+        size = { 700 720 }
 
         state = {
             name = _show
@@ -58,7 +58,6 @@ types NewsFeed {
 
                 hbox = {
                     margin_top = 40
-                    margin_bottom = 50
 
                     datamodel = "[GetPlayer.MakeScope.GetList('newsfeed_setting_containers')]"
 
@@ -71,6 +70,16 @@ types NewsFeed {
                 }
 
                 expand = {}
+            }
+
+            flowcontainer = {
+                button_standard = {
+                    text = "CHARACTER_RESET_FILTERS"
+                    focuspolicy = click
+                    onclick = "[GetScriptedGui('newsfeed_reset_settings_to_default_gui').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).End )]"
+                }
+                margin_top = 50
+                margin_bottom = 50
             }
         }
     }
