@@ -84,7 +84,7 @@ newsfeed_migrate_v3 = {
         newsfeed_ensure_setting_containers_for_all_subjects = yes
 
         set_variable = {
-            name = newsfeed_has_migrated_v2
+            name = newsfeed_has_migrated_v3
             value = yes
         }
     }
