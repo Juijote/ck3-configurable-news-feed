@@ -37,6 +37,13 @@ newsfeed_is_my_direct_vassal = {
     $PERSON$ = { is_landed = yes }
 }
 
+newsfeed_is_my_courtier = {
+    NOT = { this = $PERSON$ }
+    $PERSON$ = {
+        is_courtier_of = prev
+    }
+}
+
 newsfeed_is_my_close_dynastic_family = {
     NOT = { this = $PERSON$ }
     this.dynasty = $PERSON$.dynasty

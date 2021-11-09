@@ -67,3 +67,25 @@ newsfeed_migrate_v2_setting_container = {
 
     clear_variable_list = newsfeed_migrate_types
 }
+
+newsfeed_migrate_v3 = {
+    if = {
+        limit = {
+            NAND = {
+                exists = var:newsfeed_has_migrated_v3
+                var:newsfeed_has_migrated_v3 = yes
+            }
+        }
+
+        newsfeed_create_subject = {
+            SUBJECT = courtier
+        }
+
+        newsfeed_ensure_setting_containers_for_all_subjects = yes
+
+        set_variable = {
+            name = newsfeed_has_migrated_v2
+            value = yes
+        }
+    }
+}

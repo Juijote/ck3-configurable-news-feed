@@ -28,6 +28,7 @@ newsfeed_ensure_global_subjects_and_types = {
     newsfeed_create_subject = { SUBJECT = extended_dynastic_family }
     newsfeed_create_subject = { SUBJECT = liege }
     newsfeed_create_subject = { SUBJECT = direct_vassal }
+    newsfeed_create_subject = { SUBJECT = courtier }
     newsfeed_create_subject = { SUBJECT = pinned_character }
 
     newsfeed_create_type = { type = marriage }

@@ -35,6 +35,7 @@ newsfeed_is_person_subject = {
         newsfeed_subject_matches = { PERSON = $PERSON$ SUBJECT = $SUBJECT$ check_subject = extended_dynastic_family }
         newsfeed_subject_matches = { PERSON = $PERSON$ SUBJECT = $SUBJECT$ check_subject = liege }
         newsfeed_subject_matches = { PERSON = $PERSON$ SUBJECT = $SUBJECT$ check_subject = direct_vassal }
+        newsfeed_subject_matches = { PERSON = $PERSON$ SUBJECT = $SUBJECT$ check_subject = courtier }
         newsfeed_subject_matches = { PERSON = $PERSON$ SUBJECT = $SUBJECT$ check_subject = pinned_character }
     }
 }

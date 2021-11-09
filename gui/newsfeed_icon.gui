@@ -355,6 +355,11 @@ types NewsFeed {
             size = { 30 30 }
         }
         icon = {
+            visible = "[EqualTo_string('newsfeed_subject_courtier', Scope.GetFlagName)]"
+            texture = "gfx/interface/skinned/hud_maintab/maintab_court.dds"
+            size = { 30 30 }
+        }
+        icon = {
             visible = "[EqualTo_string('newsfeed_subject_pinned_character', Scope.GetFlagName)]"
             texture = "gfx/interface/icons/flat_icons/pin.dds"
             size = { 30 30 }
