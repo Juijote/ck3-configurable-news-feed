@@ -13,12 +13,12 @@
   newsfeed_marriage_me_desc: "[SCOPE.sC('spouse').GetUIName] теперь ваш [SCOPE.sC('spouse').Custom('WifeHusband')]"
 
   newsfeed_pregnancy_mother: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('mother'))|U] беременна"
-  newsfeed_pregnancy_father: "[GetPlayer.Custom2('RelationToMePossessive', SCOPE.sC('father'))|U] [SCOPE.sC('father').Custom2('RelationToMeShort', SCOPE.sC('mother'))|U] ожидает ребенка"
+  newsfeed_pregnancy_father: "[GetPlayer.Custom2('newsfeed_relation_possessive_or_my', SCOPE.sC('father'))|U] [SCOPE.sC('father').Custom2('RelationToMeShort', SCOPE.sC('mother'))|U] ожидает ребенка"
   newsfeed_pregnancy_desc: "[SCOPE.sC('mother').GetUIName|U] забеременела от [SCOPE.sC('father').GetUINamePossessive]"
   newsfeed_pregnancy_no_father_desc: "У [SCOPE.sC('mother').GetUIName|U] будет ребенок"
 
-  newsfeed_pregnancy_ended_mother: "[GetPlayer.Custom2('RelationToMePossessive', SCOPE.sC('mother'))|U] больше не беременна"
-  newsfeed_pregnancy_ended_father: "[GetPlayer.Custom2('RelationToMePossessive', SCOPE.sC('father'))|U] [SCOPE.sC('father').Custom2('RelationToMePossessive', SCOPE.sC('mother'))|U] больше не ждет ребенка"
+  newsfeed_pregnancy_ended_mother: "[GetPlayer.Custom2('newsfeed_relation_possessive_or_my', SCOPE.sC('mother'))|U] больше не беременна"
+  newsfeed_pregnancy_ended_father: "[GetPlayer.Custom2('newsfeed_relation_possessive_or_my', SCOPE.sC('father'))|U] [SCOPE.sC('father').Custom2('RelationToMePossessive', SCOPE.sC('mother'))|U] больше не ждет ребенка"
   newsfeed_pregnancy_ended_desc: "[SCOPE.sC('mother').GetUIName|U] больше не вынашивает ребенка [SCOPE.sC('father').GetUINamePossessive]"
   newsfeed_pregnancy_ended_no_father_desc: "[SCOPE.sC('mother').GetUIName|U] лишилась ребенка"
 
@@ -60,7 +60,7 @@
   newsfeed_title_abdicated_desc: "[SCOPE.sC('previous_holder').GetUIName|U] отказывается от титула [SCOPE.sTitle('title').GetName], который принадлежит [ROOT.Char.GetUIName]"
 
   newsfeed_title_usurped_recipient: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] узурпирует Титул"
-  newsfeed_title_usurped_predecessor: "Бывший владелец титула [GetPlayer.Custom2('RelationToMePossessive', SCOPE.sC('previous_holder'))|U]"
+  newsfeed_title_usurped_predecessor: "Бывший владелец титула [GetPlayer.Custom2('newsfeed_relation_possessive_or_my', SCOPE.sC('previous_holder'))|U]"
   newsfeed_title_usurped_desc: "[ROOT.Char.GetUIName|U] узурпировал у [SCOPE.sC('previous_holder').GetUINamePossessive] титул [SCOPE.sTitle('title').GetName]!"
 
   newsfeed_title_granted_recipient: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] получает Титул"
@@ -68,7 +68,7 @@
   newsfeed_title_granted_desc: "[SCOPE.sC('previous_holder').GetUIName|U] передает [ROOT.Char.GetUIName] титул [SCOPE.sTitle('title').GetName]"
 
   newsfeed_title_revoked_recipient: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] отзывает Титул"
-  newsfeed_title_revoked_predecessor: "Титул теряет [GetPlayer.Custom2('RelationToMePossessive', SCOPE.sC('previous_holder'))|U] "
+  newsfeed_title_revoked_predecessor: "Титул теряет [GetPlayer.Custom2('newsfeed_relation_possessive_or_my', SCOPE.sC('previous_holder'))|U] "
   newsfeed_title_revoked_desc: "[ROOT.Char.GetUIName|U] отозвал у [SCOPE.sC('previous_holder').GetUINamePossessive] титул [SCOPE.sTitle('title').GetName]"
 
   newsfeed_title_destroyed: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] уничтожает Титул"
