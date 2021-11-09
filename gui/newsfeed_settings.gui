@@ -6,7 +6,7 @@ types NewsFeed {
         parentanchor = center
         layer = top
 
-        size = { 600 600 }
+        size = { 600 700 }
 
         state = {
             name = _show
@@ -67,6 +67,7 @@ types NewsFeed {
                     datamodel = "[GetPlayer.MakeScope.GetList('newsfeed_setting_containers')]"
 
                     newsfeed_settings_label_column = {}
+                    newsfeed_settings_select_all_column = {}
 
                     item = {
                         newsfeed_settings_subject_column = {}
@@ -81,8 +82,9 @@ types NewsFeed {
     type newsfeed_settings_label_column = vbox {
         datamodel = "[GetGlobalList('newsfeed_types')]"
 
-        margin_top = 45
         margin_right = 8
+
+        newsfeed_column_spacer = {}
 
         item = {
             hbox = {
@@ -99,6 +101,26 @@ types NewsFeed {
         }
     }
 
+    type newsfeed_settings_select_all_column = vbox {
+        datamodel = "[GetGlobalList('newsfeed_types')]"
+
+        margin_right = 16
+
+        newsfeed_column_spacer = {}
+
+        item = {
+            flowcontainer = {
+                newsfeed_select_all_checkbox = {
+                    checked = "[GetScriptedGui('newsfeed_setting_select_all_type_state_gui').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('newsfeed_type', MakeScopeFlag(Scope.GetFlagName)).End )]"
+                    onclick = "[GetScriptedGui('newsfeed_setting_select_all_type_toggle_gui').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('newsfeed_type', MakeScopeFlag(Scope.GetFlagName)).End )]"
+                    tooltip = newsfeed_select_all_for_type_tooltip
+                }
+            }
+        }
+
+        expand = {}
+    }
+
     type newsfeed_settings_subject_column = flowcontainer {
         direction = vertical
         datacontext = "[Scope.Story]"
@@ -112,14 +134,32 @@ types NewsFeed {
             margin_bottom = 8
         }
 
+        flowcontainer = {
+            newsfeed_select_all_checkbox = {
+                checked = "[GetScriptedGui('newsfeed_setting_select_all_subject_state_gui').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('newsfeed_subject', MakeScopeFlag(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName)).End )]"
+                onclick = "[GetScriptedGui('newsfeed_setting_select_all_subject_toggle_gui').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('newsfeed_subject', MakeScopeFlag(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName)).End )]"
+                tooltip = newsfeed_select_all_for_subject_tooltip
+            }
+            margin_bottom = 16
+        }
+
         item = {
             flowcontainer = {
                 margin_right = 8
                 button_checkbox = {
                     checked = "[GetScriptedGui('newsfeed_setting_state_gui').IsValid( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('newsfeed_subject', MakeScopeFlag(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName)).AddScope('newsfeed_type', MakeScopeFlag(Scope.GetFlagName)).End )]"
                     onclick = "[GetScriptedGui('newsfeed_setting_toggle_gui').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('newsfeed_subject', MakeScopeFlag(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName)).AddScope('newsfeed_type', MakeScopeFlag(Scope.GetFlagName)).End )]"
+                    tooltip = newsfeed_setting_tooltip
                 }
             }
         }
+    }
+
+    type newsfeed_column_spacer = widget {
+        size = { 30 83 }
+    }
+
+    type newsfeed_select_all_checkbox = button_checkbox {
+
     }
 }

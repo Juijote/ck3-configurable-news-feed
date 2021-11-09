@@ -16,3 +16,41 @@ newsfeed_is_setting_enabled = {
         }
     }
 }
+
+newsfeed_is_type_enabled_for_all_subjects = {
+    NOT = {
+        any_in_global_list = {
+            variable = newsfeed_subjects
+
+            save_temporary_scope_as = newsfeed_subject
+
+            NOT = {
+                root = {
+                    newsfeed_is_setting_enabled = {
+                        SUBJECT = scope:newsfeed_subject
+                        type = $TYPE$
+                    }
+                }
+            }
+        }
+    }
+}
+
+newsfeed_is_subject_enabled_for_all_types = {
+    NOT = {
+        any_in_global_list = {
+            variable = newsfeed_types
+
+            save_temporary_scope_as = newsfeed_type
+
+            NOT = {
+                root = {
+                    newsfeed_is_setting_enabled = {
+                        SUBJECT = $SUBJECT$
+                        type = scope:newsfeed_type
+                    }
+                }
+            }
+        }
+    }
+}

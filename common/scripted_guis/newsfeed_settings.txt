@@ -73,3 +73,59 @@ newsfeed_setting_toggle_gui = {
         }
     }
 }
+
+newsfeed_setting_select_all_type_state_gui = {
+    scope = character
+
+    saved_scopes = {
+        newsfeed_type
+    }
+
+    is_valid = {
+        newsfeed_is_type_enabled_for_all_subjects = {
+            TYPE = scope:newsfeed_type
+        }
+    }
+}
+
+newsfeed_setting_select_all_type_toggle_gui = {
+    scope = character
+
+    saved_scopes = {
+        newsfeed_type
+    }
+
+    effect = {
+        newsfeed_toggle_type_for_all_subjects = {
+            TYPE = scope:newsfeed_type
+        }
+    }
+}
+
+newsfeed_setting_select_all_subject_state_gui = {
+    scope = character
+
+    saved_scopes = {
+        newsfeed_subject
+    }
+
+    is_valid = {
+        newsfeed_is_subject_enabled_for_all_types = {
+            SUBJECT = scope:newsfeed_subject
+        }
+    }
+}
+
+newsfeed_setting_select_all_subject_toggle_gui = {
+    scope = character
+
+    saved_scopes = {
+        newsfeed_subject
+    }
+
+    effect = {
+        newsfeed_toggle_subject_for_all_types = {
+            SUBJECT = scope:newsfeed_subject
+        }
+    }
+}
