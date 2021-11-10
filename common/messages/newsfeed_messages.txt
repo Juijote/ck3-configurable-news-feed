@@ -9,7 +9,7 @@ newsfeed_pregnancy = {
 	title = event_message_title
     desc = event_message_text
 	style = good
-	soundeffect = @msg_good_soundeffect
+	soundeffect = @msg_neutral_soundeffect
 }
 
 newsfeed_pregnancy_ended = {
@@ -18,7 +18,7 @@ newsfeed_pregnancy_ended = {
 	title = event_message_title
     desc = event_message_text
 	style = bad
-	soundeffect = @msg_bad_soundeffect
+	soundeffect = @msg_neutral_soundeffect
 }
 
 newsfeed_birth = {
@@ -27,7 +27,7 @@ newsfeed_birth = {
 	title = event_message_title
     desc = event_message_text
 	style = good
-	soundeffect = @msg_good_soundeffect
+	soundeffect = @msg_neutral_soundeffect
 }
 
 newsfeed_titles = {
@@ -66,22 +66,13 @@ newsfeed_relation_bad = {
 	soundeffect = @msg_bad_soundeffect
 }
 
-newsfeed_war_neutral = {
+newsfeed_war = {
 	icon = "war"
 	tooltip = "newsfeed_type_war"
 	title = event_message_title
 	desc = event_message_text
 	style = neutral
 	soundeffect = @msg_neutral_soundeffect
-}
-
-newsfeed_war_bad = {
-	icon = "war"
-	tooltip = "newsfeed_type_war"
-	title = event_message_title
-	desc = event_message_text
-	style = bad
-	soundeffect = @msg_bad_soundeffect
 }
 
 newsfeed_marriage = {
@@ -99,5 +90,5 @@ newsfeed_death = {
 	title = event_message_title
     desc = event_message_text
 	style = bad
-	soundeffect = @msg_bad_soundeffect
+	soundeffect = @msg_neutral_soundeffect
 }

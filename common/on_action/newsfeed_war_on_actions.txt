@@ -17,7 +17,7 @@ newsfeed_on_war_started = {
                 }
 
                 send_interface_message = {
-                    type = newsfeed_war_neutral
+                    type = newsfeed_war
                     title = newsfeed_war_declared_by_subject
                     desc = newsfeed_war_declared_by_subject_desc
                 }
@@ -28,7 +28,7 @@ newsfeed_on_war_started = {
                 }
 
                 send_interface_message = {
-                    type = newsfeed_war_neutral
+                    type = newsfeed_war
                     title = newsfeed_war_declared_on_subject
                     desc = newsfeed_war_declared_on_subject_desc
                 }
@@ -59,7 +59,7 @@ newsfeed_on_war_won_attacker = {
                 scope:defender = { save_scope_as = antagonist }
 
                 send_interface_message = {
-                    type = newsfeed_war_neutral
+                    type = newsfeed_war
                     title = newsfeed_war_won
                     desc = newsfeed_war_won_desc
                 }
@@ -73,7 +73,7 @@ newsfeed_on_war_won_attacker = {
                 scope:attacker = { save_scope_as = antagonist }
 
                 send_interface_message = {
-                    type = newsfeed_war_neutral
+                    type = newsfeed_war
                     title = newsfeed_war_lost
                     desc = newsfeed_war_lost_desc
                 }
@@ -104,7 +104,7 @@ newsfeed_on_war_won_defender = {
                 scope:defender = { save_scope_as = antagonist }
 
                 send_interface_message = {
-                    type = newsfeed_war_neutral
+                    type = newsfeed_war
                     title = newsfeed_war_lost
                     desc = newsfeed_war_lost_desc
                 }
@@ -118,7 +118,7 @@ newsfeed_on_war_won_defender = {
                 scope:attacker = { save_scope_as = antagonist }
 
                 send_interface_message = {
-                    type = newsfeed_war_neutral
+                    type = newsfeed_war
                     title = newsfeed_war_won
                     desc = newsfeed_war_won_desc
                 }
@@ -149,7 +149,7 @@ newsfeed_on_war_white_peace = {
                 scope:defender = { save_scope_as = antagonist }
 
                 send_interface_message = {
-                    type = newsfeed_war_neutral
+                    type = newsfeed_war
                     title = newsfeed_war_white_peace
                     desc = newsfeed_war_white_peace_desc
                 }
@@ -163,7 +163,7 @@ newsfeed_on_war_white_peace = {
                 scope:attacker = { save_scope_as = antagonist }
 
                 send_interface_message = {
-                    type = newsfeed_war_neutral
+                    type = newsfeed_war
                     title = newsfeed_war_white_peace
                     desc = newsfeed_war_white_peace_desc
                 }
@@ -194,7 +194,7 @@ newsfeed_on_war_invalidated = {
                 scope:defender = { save_scope_as = antagonist }
 
                 send_interface_message = {
-                    type = newsfeed_war_neutral
+                    type = newsfeed_war
                     title = newsfeed_war_invalidated
                     desc = newsfeed_war_invalidated_desc
                 }
@@ -208,7 +208,7 @@ newsfeed_on_war_invalidated = {
                 scope:attacker = { save_scope_as = antagonist }
 
                 send_interface_message = {
-                    type = newsfeed_war_neutral
+                    type = newsfeed_war
                     title = newsfeed_war_invalidated
                     desc = newsfeed_war_invalidated_desc
                 }
