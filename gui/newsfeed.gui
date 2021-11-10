@@ -239,6 +239,14 @@ types NewsFeed {
                     }
 
                     tooltip = MESSAGE_CLEAR_ALL_TOOLTIP
+
+					tooltipwidget = {
+						using = TooltipWithFakeShortcut
+						blockoverride "shortcut_text" {
+							text = F
+                            default_format = "#bold"
+						}
+					}
                 }
             }
 
