@@ -498,22 +498,382 @@
     ######################################################
     type notifications_toasts = widget {
         name = "toast_container_widget"
+        visible = "[And(ToastMessageHandler.HasMessage, Not(SinglePlayerShowingPausedSuccession))]"
+        # visible = "[Or(ToastMessageHandler.HasMessage, IsGamePaused)]"
+        allow_outside = yes
 
-        container = {
+        state = {
+            name = _show
+            on_start = "[PdxGuiWidget.AccessChild('toast_icon').TriggerAnimation('show')]"
+            on_start = "[PdxGuiWidget.AccessChild('toast_paper').TriggerAnimation('show')]"
+            on_start = "[PdxGuiWidget.AccessChild('toast_content').TriggerAnimation('show')]"
+        }
+
+        state = {
+            name = _hide
+            duration = 1
+            on_start = "[PdxGuiWidget.AccessChild('toast_icon').TriggerAnimation('hide')]"
+            on_start = "[PdxGuiWidget.AccessChild('toast_paper').TriggerAnimation('hide')]"
+            on_start = "[PdxGuiWidget.AccessChild('toast_content').TriggerAnimation('hide')]"
+        }
+
+        ### SHIELD ###
+        widget = {
+            name = "toast_icon"
+            visible = "[Not(SinglePlayerShowingPausedSuccession)]"
             datacontext = "[ToastMessageHandler.GetMessage]"
 
+            size = { 160 160 }
+            parentanchor = center
+
             state = {
-                name = write_message
-                trigger_when = "[And(ToastMessageHandler.HasMessage, Not(GetVariableSystem.Exists('newsfeed_writing_toast')))]"
-                on_start = "[GetVariableSystem.Toggle('newsfeed_writing_toast')]"
+                name = show
+                next = a
+                duration = 0.15
+
+                animation = {
+                    scale = 1.6
+                    bezier = { 0.7 0 0.7 1 }
+                }
+
+                animation = {
+                    alpha = 1
+                    bezier = { 0 0 0.4 1 }
+                }
             }
 
             state = {
-                name = reset
-                trigger_when = "[And(ToastMessageHandler.HasMessage, GetVariableSystem.Exists('newsfeed_writing_toast'))]"
-                on_start = "[GetScriptedGui('newsfeed_write_message_gui').Execute( GuiScope.SetRoot(GetPlayer.MakeScope).AddScope('newsfeed_message_title', MakeScopeFlag(ToastMessageHandler.GetMessage.GetTitle)).AddScope('newsfeed_message_desc', MakeScopeFlag(ToastMessageHandler.GetMessage.GetDescription)).AddScope('newsfeed_message_tooltip', MakeScopeFlag(Select_CString(StringIsEmpty(ToastMessageHandler.GetMessage.GetTooltip), 'newsfeed_type__default', ToastMessageHandler.GetMessage.GetTooltip))).AddScope('newsfeed_message_date', MakeScopeFlag(ToastMessageHandler.GetMessage.GetDate.GetStringShort)).End )]"
-                on_start = "[ToastMessageHandler.DismissMessage]"
-                on_finish = "[GetVariableSystem.Toggle('newsfeed_writing_toast')]"
+                name = a
+                next = b
+
+                duration = 0.15
+                scale = 0.95
+                bezier = { 0.3 0 0.7 1 }
+            }
+
+            state = {
+                name = b
+
+                duration = 0.075
+                scale = 1
+                bezier = { 0.6 0 0.7 1 }
+            }
+
+            state = {
+                name = hide
+                using = Animation_FadeOut_Quick
+                scale = 0.5
+            }
+
+            state = {
+                name = _hide
+                using = Animation_FadeOut_Quick
+            }
+
+            icon = {
+                visible = "[PlayerMessageItem.GetType.IsGood]"
+                texture = "gfx/interface/hud/toast_bg_good.dds"
+                parentanchor = center
+                size = { 160 160 }
+            }
+
+            icon = {
+                visible = "[PlayerMessageItem.GetType.IsNeutral]"
+                texture = "gfx/interface/hud/toast_bg_neutral.dds"
+                parentanchor = center
+                size = { 160 160 }
+            }
+
+            icon = {
+                visible = "[PlayerMessageItem.GetType.IsBad]"
+                texture = "gfx/interface/hud/toast_bg_bad.dds"
+                parentanchor = center
+                size = { 160 160 }
+            }
+        }
+
+        ### PAPER ###
+        widget = {
+            name = "toast_paper"
+            visible = "[Not(SinglePlayerShowingPausedSuccession)]"
+            size = { 100% 100% }
+
+            widgetanchor = center
+            parentanchor = center
+            alwaystransparent = yes
+
+            button = {
+                size = { 100% 100% }
+                onmousehierarchyenter = "[ToastMessageHandler.StartDelayingMessage]"
+                onmousehierarchyleave = "[ToastMessageHandler.StopDelayingMessage]"
+                onrightclick = "[ToastMessageHandler.DismissMessage]"
+                button_ignore = none
+            }
+
+            background = {
+                texture = "gfx/interface/hud/toast_title_bg.dds"
+                spriteType = Corneredstretched
+                spriteborder = { 0 10 }
+                margin = { 12 0 }
+            }
+
+            widget = {
+                size = { 24 120 }
+                widgetanchor = right|vcenter
+                parentanchor = left|vcenter
+
+                background = {
+                    layoutpolicy_vertical = expanding
+                    texture = "gfx/interface/hud/toast_title_bg_edge.dds"
+                    spriteType = Corneredstretched
+                    spriteborder = { 5 20 }
+                }
+            }
+
+            widget = {
+                size = { 24 120 }
+                widgetanchor = left|vcenter
+                parentanchor = right|vcenter
+
+                background = {
+                    layoutpolicy_vertical = expanding
+                    texture = "gfx/interface/hud/toast_title_bg_edge.dds"
+                    spriteType = Corneredstretched
+                    spriteborder = { 0 20 }
+                    mirror = horizontal
+                }
+            }
+
+            state = {
+                name = show
+                next = a
+                duration = 0.15
+
+                animation = {
+                    alpha = 1
+                    bezier = { 0.7 0 0.7 1 }
+                }
+            }
+
+            state = {
+                name = a
+
+                duration = 0.25
+                bezier = { 0.3 0 0.7 1 }
+
+                animation = {
+                    size = { 585 100 }
+                    bezier = { 0.8 0.3 0 1 }
+                }
+
+                animation = {
+                    alpha = 1
+                    bezier = { 0.7 0 0.7 1 }
+                }
+            }
+
+            state = {
+                name = hide
+                using = Animation_FadeOut_Quick
+                size = { -1 80 }
+            }
+
+            state = {
+                name = _hide
+                using = Animation_FadeOut_Quick
+            }
+        }
+
+        ### CONTENT ###
+        widget = {
+            name = "toast_content"
+            datacontext = "[ToastMessageHandler.GetMessage]"
+            visible = "[Not(SinglePlayerShowingPausedSuccession)]"
+            widgetanchor = center
+            parentanchor = center
+            size = { 560 100 }
+
+            state = {
+                name = show
+                delay = 0.28
+                using = Animation_FadeIn_Standard
+
+                animation = {
+                    size = { 560 100 }
+
+                    bezier = { 0.8 0.3 0 1 }
+                }
+
+                animation = {
+                    alpha = 1
+                    bezier = { 0.7 0 0.7 1 }
+                }
+            }
+
+            state = {
+                name = hide
+                using = Animation_FadeOut_Quick
+                duration = 0.08
+            }
+
+            hbox = {
+                layoutpolicy_horizontal = expanding
+                ignoreinvisible = yes
+
+                spacer = {
+                    size = { 120 90 }
+                    visible = "[Not(Or(PlayerMessageItem.HasLeftCharacter,PlayerMessageItem.HasLeftTitle))]"
+                }
+
+                widget = {
+                    size = { 120 90 }
+                    visible = "[Or(PlayerMessageItem.HasLeftCharacter,PlayerMessageItem.HasLeftTitle)]"
+
+                    portrait_shoulders = {
+                        name = "portrait_left"
+                        datacontext = "[PlayerMessageItem.GetLeftCharacter]"
+                        visible = "[PlayerMessageItem.HasLeftCharacter]"
+                        parentanchor = center
+                        position = { 0 -25 }
+
+                        blockoverride "opinon_box" {}
+                        blockoverride "status_icons" {}
+                    }
+
+                    coa_title_medium = {
+                        name = "title_left"
+                        datacontext = "[PlayerMessageItem.GetLeftTitle]"
+                        visible = "[PlayerMessageItem.HasLeftTitle]"
+                        parentanchor = center
+                    }
+                }
+
+                vbox = {
+                    name = "message"
+                    layoutpolicy_horizontal = expanding
+                    layoutpolicy_vertical = expanding
+                    spacing = 2
+                    margin_bottom = 5
+
+                    text_single = {
+                        name = "title"
+                        layoutpolicy_horizontal = expanding
+                        margin = { 5 5 }
+                        autoresize = no
+                        fontsize_min = 10
+                        align = center|nobaseline
+
+                        text = "[PlayerMessageItem.GetTitle]"
+                        using = Font_Type_Flavor
+                        using = Font_Size_Big
+
+                        default_format = "#light_background"
+                        using = Text_Light_Background_Overrides
+
+                        background = {
+                            name = "neutral"
+                            visible = "[PlayerMessageItem.GetType.IsNeutral]"
+                            using = Toast_Header
+                            using = Color_Blue
+                        }
+
+                        background = {
+                            name = "good"
+                            visible = "[PlayerMessageItem.GetType.IsGood]"
+                            using = Color_Green
+                            using = Toast_Header
+                        }
+
+                        background = {
+                            name = "bad"
+                            visible = "[PlayerMessageItem.GetType.IsBad]"
+                            using = Color_Red
+                            using = Toast_Header
+                        }
+                    }
+
+                    text_multi = {
+                        name = "desc"
+                        layoutpolicy_horizontal = expanding
+                        layoutpolicy_vertical = expanding
+                        margin = { 5 5 }
+                        using = Text_Light_Background_Overrides
+
+                        align = top|hcenter
+
+                        text = "[PlayerMessageItem.GetDescription]"
+                        tooltip = "[PlayerMessageItem.GetDescription]"
+
+                        default_format = "#light_background"
+                        format_override = { E light_background }
+                        fontsize_min = 10
+                        alwaystransparent = yes
+                    }
+                }
+
+                widget = {
+                    size = { 120 90 }
+                    visible = "[Or(PlayerMessageItem.HasRightCharacter,PlayerMessageItem.HasRightTitle)]"
+
+                    portrait_shoulders = {
+                        name = "portrait_right"
+                        datacontext = "[PlayerMessageItem.GetRightCharacter]"
+                        visible = "[PlayerMessageItem.HasRightCharacter]"
+                        parentanchor = center
+                        position = { 0 -25 }
+
+                        blockoverride "opinon_box" {}
+                        blockoverride "status_icons" {}
+                    }
+
+                    coa_title_medium = {
+                        name = "title_left"
+                        datacontext = "[PlayerMessageItem.GetRightTitle]"
+                        visible = "[PlayerMessageItem.HasRightTitle]"
+                        parentanchor = center
+                    }
+                }
+
+                spacer = {
+                    size = { 120 90 }
+                    visible = "[Not(Or(PlayerMessageItem.HasRightCharacter,PlayerMessageItem.HasRightTitle))]"
+                }
+            }
+
+            button_cancel = {
+                parentanchor = top|right
+                position = { 10 3 }
+                onclick = "[ToastMessageHandler.DismissMessage]"
+                tooltip = "DISMISS"
+                alpha = 0
+
+                blockoverride "master_color_frame" {
+                    frame = 3
+                }
+
+                blockoverride "button_frames"
+                {
+                    gfxtype = togglepushbuttongfx
+
+                    upframe = 3
+                    uphoverframe = 2
+                    uppressedframe = 3
+                }
+
+                state = {
+                    name = a
+                    next = b
+                    trigger_on_create = yes
+                    alpha = 0
+                }
+
+                state = {
+                    name = b
+                    alpha = 1
+                    delay = 3
+                    duration = 0.5
+                    using = Animation_Curve_Default
+                }
             }
         }
     }
