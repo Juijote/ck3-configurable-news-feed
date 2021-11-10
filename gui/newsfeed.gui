@@ -169,6 +169,8 @@ types NewsFeed {
         newsfeed_settings_menu = {
             visible = "[GetVariableSystem.Exists('newsfeed_settings_shown')]"
         }
+
+        newsfeed_time_ticker = {}
     }
 
     type newsfeed_item = flowcontainer {
@@ -266,6 +268,26 @@ types NewsFeed {
                 align = left|nobaseline
                 margin_left = 8
             }
+
+            text_single = {
+                visible = "[InDebugMode]"
+                layoutpolicy_horizontal = expanding
+                text = "#D [Scope.GetVariable('newsfeed_message_timestamp').GetValue] #!"
+                default_format = "#weak"
+                fontsize = 14
+                align = left|nobaseline
+                margin_left = 8
+            }
+
+            text_single = {
+                visible = "[InDebugMode]"
+                layoutpolicy_horizontal = expanding
+                text = "#D [GetPlayer.MakeScope.GetVariable('newsfeed_time_tick').GetValue] #!"
+                default_format = "#weak"
+                fontsize = 14
+                align = left|nobaseline
+                margin_left = 8
+            }
         }
     
         text_multi = {
@@ -275,6 +297,17 @@ types NewsFeed {
             text = "[Scope.GetVariable('newsfeed_message_desc').GetFlagName]"
             fontsize = 14
             align = left|nobaseline
+        }
+    }
+
+    type newsfeed_time_ticker = widget {
+        name = "newsfeed_time_ticker"
+        state = {
+            name = newsfeed_time_tick
+            trigger_on_create = yes
+            on_start = "[GetScriptedGui('newsfeed_time_tick').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+            duration = 0.2
+            next = newsfeed_time_tick
         }
     }
 }

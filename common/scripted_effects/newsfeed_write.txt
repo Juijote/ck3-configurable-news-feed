@@ -38,6 +38,13 @@
             name = newsfeed_message_date
             value = $date$
         }
+        set_variable = {
+            name = newsfeed_message_timestamp
+            value = {
+                value = prev.var:newsfeed_time_tick
+                add = 0.003
+            }
+        }
     }
 
     newsfeed_resort_message_containers = yes
@@ -45,9 +52,13 @@
 }
 
 newsfeed_delete_message_effect = {
-    every_newsfeed_message_container = {
+    ordered_newsfeed_message_container = {
         limit = {
             var:newsfeed_message_index = $INDEX$
+            NAND = {
+                has_variable = newsfeed_message_timestamp
+                var:newsfeed_message_timestamp.compare_value > prev.var:newsfeed_time_tick.compare_value
+            }
         }
         max = 1
         prev = {
@@ -68,11 +79,26 @@ newsfeed_delete_message_effect = {
 
 newsfeed_delete_all_messages_effect = {
     every_newsfeed_message_container = {
+        limit = {
+            NAND = {
+                has_variable = newsfeed_message_timestamp
+                var:newsfeed_message_timestamp.compare_value > prev.var:newsfeed_time_tick.compare_value
+            }
+        }
+        prev = {
+            remove_list_variable = {
+                name = newsfeed_recent_message_containers
+                target = prev
+            }
+            remove_list_variable = {
+                name = newsfeed_older_message_containers
+                target = prev
+            }
+        }
         end_story = yes
     }
 
-    clear_variable_list = newsfeed_recent_message_containers
-    clear_variable_list = newsfeed_older_message_containers
+    newsfeed_resort_message_containers = yes
 }
 
 newsfeed_resort_message_containers = {

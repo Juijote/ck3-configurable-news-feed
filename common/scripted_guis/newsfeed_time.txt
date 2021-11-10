@@ -1,0 +1,18 @@
+﻿newsfeed_time_tick = {
+	scope = character
+
+	effect = {
+		set_variable = {
+			name = newsfeed_time_tick
+			value = {
+				value = 0.001
+				if = {
+					limit = {
+						has_variable = newsfeed_time_tick
+					}
+					add = var:newsfeed_time_tick
+				}
+			}
+		}
+	}
+}
