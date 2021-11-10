@@ -104,32 +104,32 @@ types NewsFeed {
             expand = {}
         }
 
-        button_icon = {
-            name = "button_send_debug_message"
-            visible = "[InDebugMode]"
-
-            parentanchor = top|right
-            position = { -50 5 }
-            size = { 40 40 }
-            texture = "gfx/interface/icons/flat_icons/blank.dds"
-            onclick = "[GetScriptedGui('newsfeed_send_test_message_gui').Execute(GuiScope.End)]"
-
-            alpha = 0.5
-
-            state = {
-                name = hover_enter
-                alpha = 1
-                duration = 0.05
-                using = Animation_Curve_Default
-            }
-
-            state = {
-                name = hover_leave
-                alpha = 0.2
-                duration = 0.2
-                using = Animation_Curve_Default
-            }
-        }
+        #button_icon = {
+        #    name = "button_send_debug_message"
+        #    visible = "[InDebugMode]"
+        #
+        #    parentanchor = top|right
+        #    position = { -50 5 }
+        #    size = { 40 40 }
+        #    texture = "gfx/interface/icons/flat_icons/blank.dds"
+        #    onclick = "[GetScriptedGui('newsfeed_send_test_message_gui').Execute(GuiScope.End)]"
+        #
+        #    alpha = 0.5
+        #
+        #    state = {
+        #        name = hover_enter
+        #        alpha = 1
+        #        duration = 0.05
+        #        using = Animation_Curve_Default
+        #    }
+        #
+        #    state = {
+        #        name = hover_leave
+        #        alpha = 0.2
+        #        duration = 0.2
+        #        using = Animation_Curve_Default
+        #    }
+        #}
 
         button_icon = {
             name = "button_settings"
@@ -273,35 +273,35 @@ types NewsFeed {
                 margin_left = 8
             }
 
-            text_single = {
-                visible = "[InDebugMode]"
-                layoutpolicy_horizontal = expanding
-                text = "#D [Scope.GetVariable('newsfeed_message_index').GetValue|0] #!"
-                default_format = "#weak"
-                fontsize = 14
-                align = left|nobaseline
-                margin_left = 8
-            }
+            #text_single = {
+            #    visible = "[InDebugMode]"
+            #    layoutpolicy_horizontal = expanding
+            #    text = "#D [Scope.GetVariable('newsfeed_message_index').GetValue|0] #!"
+            #    default_format = "#weak"
+            #    fontsize = 14
+            #    align = left|nobaseline
+            #    margin_left = 8
+            #}
 
-            text_single = {
-                visible = "[InDebugMode]"
-                layoutpolicy_horizontal = expanding
-                text = "#D [Scope.GetVariable('newsfeed_message_timestamp').GetValue] #!"
-                default_format = "#weak"
-                fontsize = 14
-                align = left|nobaseline
-                margin_left = 8
-            }
+            #text_single = {
+            #    visible = "[InDebugMode]"
+            #    layoutpolicy_horizontal = expanding
+            #    text = "#D [Scope.GetVariable('newsfeed_message_timestamp').GetValue] #!"
+            #    default_format = "#weak"
+            #    fontsize = 14
+            #    align = left|nobaseline
+            #    margin_left = 8
+            #}
 
-            text_single = {
-                visible = "[InDebugMode]"
-                layoutpolicy_horizontal = expanding
-                text = "#D [GetPlayer.MakeScope.GetVariable('newsfeed_time_tick').GetValue] #!"
-                default_format = "#weak"
-                fontsize = 14
-                align = left|nobaseline
-                margin_left = 8
-            }
+            #text_single = {
+            #    visible = "[InDebugMode]"
+            #    layoutpolicy_horizontal = expanding
+            #    text = "#D [GetPlayer.MakeScope.GetVariable('newsfeed_time_tick').GetValue] #!"
+            #    default_format = "#weak"
+            #    fontsize = 14
+            #    align = left|nobaseline
+            #    margin_left = 8
+            #}
         }
     
         text_multi = {
