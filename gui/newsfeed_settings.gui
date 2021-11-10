@@ -1,3 +1,7 @@
+newsfeed_settings_menu = {
+    name = "newsfeed_settings_window"
+}
+
 types NewsFeed {
     type newsfeed_settings_menu = window {
         using = Window_Background
@@ -22,16 +26,12 @@ types NewsFeed {
         vbox = {
             using = Window_Margins
 
-            header_pattern = {
+            newsfeed_settings_header = {
                 layoutpolicy_horizontal = expanding
 
                 blockoverride "header_text"
                 {
                     text = "newsfeed_settings_header"
-                }
-                blockoverride "button_back"
-                {
-                    visible = no
                 }
                 blockoverride "button_close"
                 {
@@ -81,6 +81,58 @@ types NewsFeed {
                 margin_top = 50
                 margin_bottom = 50
             }
+        }
+    }
+
+    type newsfeed_settings_header = widget {
+        name = "header"
+        size = { 100 56 }
+
+        background = {
+            name = "header"
+            texture = "gfx/interface/component_tiles/tile_title_big_top_01.dds"
+            spriteType = Corneredtiled
+            texture_density = 2
+
+            modify_texture = {
+                name = "mask"
+                texture = "gfx/interface/component_masks/mask_title_big_top.dds"
+                spriteType = Corneredtiled
+                spriteborder = { 160 0 }
+                blend_mode = alphamultiply
+                alpha = 0.5
+            }
+
+            modify_texture = {
+                name = "overlay"
+                texture = "gfx/interface/component_overlay/overlay_title_big_top.dds"
+                spriteType = Corneredstretched
+                spriteborder = { 0 0 }
+                blend_mode = overlay
+            }
+        }
+
+        flowcontainer = {
+            parentanchor = top|right
+            margin = { 8 8 }
+            button_close = {
+                block "button_close" {}
+            }
+        }
+
+        text_single = {
+            name = "header_text"
+            parentanchor = top|hcenter
+            position = { 0 5 }
+
+            block "header_text" {
+                text = "Header Text"
+            }
+
+            maximumsize = { 400 -1 }
+
+            using = Font_Type_Flavor
+            using = Font_Size_Big
         }
     }
 

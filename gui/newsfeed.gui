@@ -143,6 +143,18 @@ types NewsFeed {
             alpha = 0.5
 
             state = {
+                name = open_settings
+                trigger_when = "[GetVariableSystem.Exists('newsfeed_settings_shown')]"
+                on_start = "[ExecuteConsoleCommand('gui.CreateWidget gui/newsfeed_settings.gui newsfeed_settings_window')]"
+            }
+
+            state = {
+                name = close_settings
+                trigger_when = "[Not(GetVariableSystem.Exists('newsfeed_settings_shown'))]"
+                on_start = "[ExecuteConsoleCommand('gui.ClearWidgets newsfeed_settings_window')]"
+            }
+
+            state = {
                 name = hover_enter
                 alpha = 1
                 duration = 0.05
@@ -162,10 +174,6 @@ types NewsFeed {
             size = { 0 0 }
             shortcut = "army_split_half"
             onclick = "[GetScriptedGui('newsfeed_delete_all_messages_gui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-        }
-
-        newsfeed_settings_menu = {
-            visible = "[GetVariableSystem.Exists('newsfeed_settings_shown')]"
         }
 
         newsfeed_time_ticker = {}
