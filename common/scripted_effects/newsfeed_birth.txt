@@ -1,6 +1,20 @@
 ﻿newsfeed_notify_birth_effect = {
     if = {
         limit = {
+            scope:child = {
+                has_trait = twin
+            }
+        }
+        newsfeed_notify_birth_twins_effect = yes
+    }
+    else = {
+        newsfeed_notify_birth_single_child_effect = yes
+    }
+}
+
+newsfeed_notify_birth_single_child_effect = {
+    if = {
+        limit = {
             NOT = {
                 exists = scope:father
             }
@@ -28,6 +42,47 @@
             type = newsfeed_birth
             title = newsfeed_birth_father
             desc = newsfeed_birth_desc
+        }
+    }
+}
+
+newsfeed_notify_birth_twins_effect = {
+    scope:child = {
+        every_sibling = {
+            limit = { is_twin_of = prev }
+            save_scope_as = second_child
+        }
+    }
+
+    if = {
+        limit = {
+            NOT = {
+                exists = scope:father
+            }
+        }
+
+        send_interface_message = {
+            type = newsfeed_birth
+            title = newsfeed_birth_twins_mother
+            desc = newsfeed_birth_twins_no_father_desc
+        }
+    }
+    else_if = {
+        limit = {
+            newsfeed_is_interested_in_birth = { PERSON = scope:mother }
+        }
+
+        send_interface_message = {
+            type = newsfeed_birth
+            title = newsfeed_birth_twins_mother
+            desc = newsfeed_birth_twins_desc
+        }
+    }
+    else = {
+        send_interface_message = {
+            type = newsfeed_birth
+            title = newsfeed_birth_twins_father
+            desc = newsfeed_birth_twins_desc
         }
     }
 }

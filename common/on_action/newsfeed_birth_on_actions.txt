@@ -17,7 +17,7 @@ newsfeed_on_birth_mother = {
                 }
             }
 
-            newsfeed_notify_birth_effect = yes
+            newsfeed_notify_birth_effect = yes 
         }
     }
 }
