@@ -48,7 +48,6 @@ types NewsFeed {
 
                 scrollbar_vertical = {
                     using = Scrollbar_Vertical
-		            wheelstep = 80
                 }
                 
         		scrollwidget = {
@@ -163,7 +162,6 @@ types NewsFeed {
             size = { 0 0 }
             shortcut = "army_split_half"
             onclick = "[GetScriptedGui('newsfeed_delete_all_messages_gui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
-            button_ignore = all
         }
 
         newsfeed_settings_menu = {
