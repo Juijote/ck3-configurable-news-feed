@@ -1,0 +1,17 @@
+﻿newsfeed_send_test_toast = {
+    every_player = {
+        send_interface_message = {
+            type = newsfeed_test_toast
+            title = DEBUG_COLON
+            desc = DEBUG_COLON
+        }
+    }
+}
+
+newsfeed_send_several_test_toasts = {
+    newsfeed_send_test_toast = yes
+    newsfeed_send_test_toast = yes
+    newsfeed_send_test_toast = yes
+    newsfeed_send_test_toast = yes
+    newsfeed_send_test_toast = yes
+}
