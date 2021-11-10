@@ -62,6 +62,8 @@ newsfeed_delete_message_effect = {
         }
         end_story = yes
     }
+
+    newsfeed_resort_message_containers = yes
 }
 
 newsfeed_delete_all_messages_effect = {
