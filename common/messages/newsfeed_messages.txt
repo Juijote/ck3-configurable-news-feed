@@ -22,7 +22,7 @@ newsfeed_pregnancy = {
 	tooltip = "newsfeed_type_child"
 	title = event_message_title
     desc = event_message_text
-	style = good
+	style = neutral
 	soundeffect = @msg_neutral_soundeffect
 }
 
@@ -31,7 +31,7 @@ newsfeed_pregnancy_ended = {
 	tooltip = "newsfeed_type_death_natural"
 	title = event_message_title
     desc = event_message_text
-	style = bad
+	style = neutral
 	soundeffect = @msg_neutral_soundeffect
 }
 
@@ -40,7 +40,7 @@ newsfeed_birth = {
 	tooltip = "newsfeed_type_child"
 	title = event_message_title
     desc = event_message_text
-	style = good
+	style = neutral
 	soundeffect = @msg_neutral_soundeffect
 }
 
@@ -103,6 +103,6 @@ newsfeed_death = {
     tooltip = "newsfeed_type_death_murder"
 	title = event_message_title
     desc = event_message_text
-	style = bad
+	style = neutral
 	soundeffect = @msg_neutral_soundeffect
 }
