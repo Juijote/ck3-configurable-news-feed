@@ -5,15 +5,15 @@
 
 newsfeed_test_message = {
 	display = feed
-	title = event_message_title
-    desc = event_message_text
+	title = DEBUG_COLON
+    desc = DEBUG_COLON
 	soundeffect = @msg_neutral_soundeffect
 }
 
 newsfeed_test_toast = {
 	display = toast
-	title = event_message_title
-    desc = event_message_text
+	title = SUGGESTIONS_DEBUG
+    desc = SUGGESTIONS_DEBUG
 	soundeffect = @msg_neutral_soundeffect
 }
 

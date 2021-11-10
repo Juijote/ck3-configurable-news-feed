@@ -2,8 +2,6 @@
     every_player = {
         send_interface_message = {
             type = newsfeed_test_toast
-            title = DEBUG_COLON
-            desc = DEBUG_COLON
         }
     }
 }
@@ -12,8 +10,6 @@ newsfeed_send_test_message = {
     every_player = {
         send_interface_message = {
             type = newsfeed_test_message
-            title = DEBUG_COLON
-            desc = DEBUG_COLON
         }
     }
 }
