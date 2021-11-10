@@ -1,0 +1,8 @@
+﻿newsfeed_send_test_message_gui = {
+	scope = empty
+
+	effect = {
+		newsfeed_send_test_message = yes
+		newsfeed_send_test_toast = yes
+	}
+}

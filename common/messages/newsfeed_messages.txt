@@ -3,6 +3,13 @@
 @msg_good_soundeffect = "event:/SFX/UI/Notifications/Messages/sfx_ui_message_theme_positive"
 @msg_bad_soundeffect = "event:/SFX/UI/Notifications/Messages/sfx_ui_message_theme_negative"
 
+newsfeed_test_message = {
+	display = feed
+	title = event_message_title
+    desc = event_message_text
+	soundeffect = @msg_neutral_soundeffect
+}
+
 newsfeed_test_toast = {
 	display = toast
 	title = event_message_title
