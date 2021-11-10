@@ -47,9 +47,8 @@ newsfeed_on_title_inherited = {
     }
 
     effect = {
-        ordered_owned_story = {
+        ordered_newsfeed_title_container = {
             limit = {
-                story_type = story_newsfeed_titles
                 has_variable = newsfeed_title_source
                 var:newsfeed_title_source = scope:previous_holder
             }
@@ -65,8 +64,7 @@ newsfeed_on_title_inherited = {
         if = {
             limit = {
                 NOT = {
-                    any_owned_story = {
-                        story_type = story_newsfeed_titles
+                    any_newsfeed_title_container = {
                         has_variable = newsfeed_title_source
                         var:newsfeed_title_source = scope:previous_holder
                     }

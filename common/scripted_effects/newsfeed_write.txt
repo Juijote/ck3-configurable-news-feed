@@ -45,9 +45,8 @@
 }
 
 newsfeed_delete_message_effect = {
-    ordered_owned_story = {
+    every_newsfeed_message_container = {
         limit = {
-            story_type = story_newsfeed_message
             var:newsfeed_message_index = $INDEX$
         }
         max = 1
@@ -66,10 +65,7 @@ newsfeed_delete_message_effect = {
 }
 
 newsfeed_delete_all_messages_effect = {
-    every_owned_story = {
-        limit = {
-            story_type = story_newsfeed_message
-        }
+    every_newsfeed_message_container = {
         end_story = yes
     }
 
@@ -81,9 +77,7 @@ newsfeed_resort_message_containers = {
     clear_variable_list = newsfeed_recent_message_containers
     clear_variable_list = newsfeed_older_message_containers
 
-    ordered_owned_story = {
-        limit = { story_type = story_newsfeed_message }
-
+    ordered_newsfeed_message_container = {
         order_by = var:newsfeed_message_index
         max = 20
         check_range_bounds = no
@@ -101,9 +95,8 @@ newsfeed_resort_message_containers = {
         }
     }
 
-    ordered_owned_story = {
+    ordered_newsfeed_message_container = {
         limit = {
-            story_type = story_newsfeed_message
             var:newsfeed_message_index < scope:newsfeed_last_recent_index.compare_value
         }
 
@@ -121,9 +114,8 @@ newsfeed_resort_message_containers = {
 }
 
 newsfeed_prune_message_containers = {
-    every_owned_story = {
+    every_newsfeed_message_container = {
         limit = {
-            story_type = story_newsfeed_message
             prev = {
                 NOR = {
                     is_target_in_variable_list = {

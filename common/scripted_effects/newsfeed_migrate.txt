@@ -7,11 +7,7 @@
             }
         }
 
-        every_owned_story = {
-            limit = {
-                story_type = story_newsfeed_setting
-            }
-
+        every_newsfeed_setting_container = {
             newsfeed_migrate_v2_setting_container = yes
         }
 
