@@ -317,58 +317,84 @@ types NewsFeed {
         size = { 20 20 }
     }
 
-    type newsfeed_subject_icon = flowcontainer {
+    type newsfeed_subject_icon = widget {
+        size = { 30 30 }
         ignoreinvisible = yes
 
-        icon = {
+        newsfeed_subject_icon_template = {
             visible = "[EqualTo_string('newsfeed_subject_self', Scope.GetFlagName)]"
             texture = "gfx/interface/icons/portraits/me.dds"
-            size = { 30 30 }
         }
-        icon = {
+        newsfeed_subject_icon_template = {
             visible = "[EqualTo_string('newsfeed_subject_spouse', Scope.GetFlagName)]"
-            texture = "gfx/interface/icons/message_feed/marriage.dds"
-            size = { 30 30 }
+            texture = "gfx/interface/icons/faith_doctrine_groups/doctrine_marriage_type.dds"
         }
-        icon = {
+        newsfeed_subject_icon_template = {
             visible = "[EqualTo_string('newsfeed_subject_close_dynastic_family', Scope.GetFlagName)]"
             texture = "gfx/interface/icons/portraits/relation.dds"
             framesize = { 40 40 }
             frame = 5
-            size = { 30 30 }
         }
-        icon = {
+        newsfeed_subject_icon_template = {
             visible = "[EqualTo_string('newsfeed_subject_extended_dynastic_family', Scope.GetFlagName)]"
-            texture = "gfx/interface/icons/portraits/relation.dds"
-            framesize = { 40 40 }
-            frame = 8
-            size = { 30 30 }
+            texture = "gfx/interface/icons/flat_icons/dynasty.dds"
         }
-        icon = {
+        newsfeed_subject_icon_template = {
             visible = "[EqualTo_string('newsfeed_subject_liege', Scope.GetFlagName)]"
-            texture = "gfx/interface/icons/icon_liege.dds"
-            size = { 30 30 }
+            texture = "gfx/interface/icons/flat_icons/mapmode_kingdom.dds"
+            position = { 0 7 }
         }
-        icon = {
+        newsfeed_subject_icon_template = {
+            visible = "[EqualTo_string('newsfeed_subject_liege', Scope.GetFlagName)]"
+            texture = "gfx/interface/icons/symbols/icon_arrow_up.dds"
+            size = { 15 15 }
+            position = { 8 0 }
+        }
+        newsfeed_subject_icon_template = {
             visible = "[EqualTo_string('newsfeed_subject_direct_vassal', Scope.GetFlagName)]"
-            texture = "gfx/interface/icons/icon_vassal.dds"
-            size = { 30 30 }
+            texture = "gfx/interface/icons/flat_icons/mapmode_kingdom.dds"
+            position = { 0 -5 }
         }
-        icon = {
+        newsfeed_subject_icon_template = {
+            visible = "[EqualTo_string('newsfeed_subject_direct_vassal', Scope.GetFlagName)]"
+            texture = "gfx/interface/icons/symbols/icon_arrow_green_down.dds"
+            size = { 15 15 }
+            position = { 8 15 }
+        }
+        newsfeed_subject_icon_template = {
             visible = "[EqualTo_string('newsfeed_subject_courtier', Scope.GetFlagName)]"
-            texture = "gfx/interface/skinned/hud_maintab/maintab_court.dds"
-            size = { 30 30 }
+            texture = "gfx/interface/icons/flat_icons/window_me.dds"
         }
-        icon = {
+        newsfeed_subject_icon_template = {
             visible = "[EqualTo_string('newsfeed_subject_pinned_character', Scope.GetFlagName)]"
             texture = "gfx/interface/icons/flat_icons/pin.dds"
-            size = { 30 30 }
-
-            modify_texture = {
-                texture = "gfx/interface/colors/colors_textured.dds"
-                blend_mode = add
-                framesize = { 96 96 }
-            }
         }
     }
+
+    type newsfeed_subject_icon_template = icon {
+        size = { 30 30 }
+        using = NewsFeed_Icon_Texture
+    }
+}
+
+template NewsFeed_Icon_Texture {
+	modify_texture = {
+		texture = "gfx/interface/colors/black.dds"
+		blend_mode = multiply
+		framesize = { 96 96 }
+		spritetype = corneredtiled
+	}
+
+	modify_texture = {
+		texture = "gfx/interface/colors/gold.dds"
+		blend_mode = add
+		framesize = { 96 96 }
+		spritetype = corneredtiled
+	}
+
+	modify_texture = {
+        texture = "gfx/interface/component_masks/mask_brushed.dds"
+        blend_mode = alphamultiply
+        spriteType = corneredTiled
+	}
 }
