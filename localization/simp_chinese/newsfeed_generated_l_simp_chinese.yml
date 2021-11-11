@@ -1,5 +1,0 @@
-﻿l_simp_chinese:
-  newsfeed_birth_twins_mother: "Twins Born to [GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('mother'))|U]"
-  newsfeed_birth_twins_father: "Twins Born to [GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('father'))|U]"
-  newsfeed_birth_twins_desc: "#high [SCOPE.sC('child').GetFirstName|U]#! and [SCOPE.sC('second_child').GetShortUIName|U] were born to [SCOPE.sC('father').GetUIName] and [SCOPE.sC('mother').GetUIName]"
-  newsfeed_birth_twins_no_father_desc: "#high [SCOPE.sC('child').GetFirstName|U]#! and [SCOPE.sC('second_child').GetShortUIName|U] were born to [SCOPE.sC('mother').GetUIName]"
