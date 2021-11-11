@@ -88,5 +88,5 @@
  newsfeed_select_all_for_type_tooltip: "汇报所有角色组的[Localize(Concatenate(Scope.GetFlagName, '_label'))|l]"
  newsfeed_birth_twins_mother: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('mother'))|U]生育的孩子是双胞胎"
  newsfeed_birth_twins_father: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('father'))|U]的孩子是双胞胎"
- newsfeed_birth_twins_desc: "[SCOPE.sC('father').GetUIName]与[SCOPE.sC('mother').GetUIName]的孩子出生了 #high [SCOPE.sC('child').GetFirstName|U]#!和[SCOPE.sC('second_child').GetShortUIName|U]"
- newsfeed_birth_twins_no_father_desc: "[SCOPE.sC('mother').GetUIName]的孩子出生了 #high [SCOPE.sC('child').GetFirstName|U]#!和[SCOPE.sC('second_child').GetShortUIName|U]"
+ newsfeed_birth_twins_desc: "[SCOPE.sC('father').GetUIName]与[SCOPE.sC('mother').GetUIName]的孩子#high [SCOPE.sC('child').GetFirstName|U]#!和[SCOPE.sC('second_child').GetShortUIName|U]出生了"
+ newsfeed_birth_twins_no_father_desc: "[SCOPE.sC('mother').GetUIName]的孩子#high [SCOPE.sC('child').GetFirstName|U]#!和[SCOPE.sC('second_child').GetShortUIName|U]出生了"
