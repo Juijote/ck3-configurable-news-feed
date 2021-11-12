@@ -103,10 +103,7 @@ newsfeed_on_title_abdicated = {
         every_player = {
             if = {
                 limit = {
-                    OR = {
-                        newsfeed_is_interested_in_titles = { PERSON = root }
-                        newsfeed_is_interested_in_titles = { PERSON = scope:previous_holder }
-                    }
+                    newsfeed_is_interested_in_titles = { PERSON = root }
                 }
 
                 send_interface_message = {
