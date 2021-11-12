@@ -1,0 +1,7 @@
+﻿l_korean:
+  newsfeed_empty_text: "메시지가 여기 나오겠습니다.\n설정을 바꾸려면 오른쪽상단에 있는 기어를 클릭해주세요.\n이 박스는 옮기기도 할 수 있습니다."
+  newsfeed_settings_header: "뉴즈피드 설정"
+  newsfeed_settings_explanation: "보고 싶은 알림 종류를 선텍해 주세요.\n\n참고로 한국어 번역은 한국말을 잘 못한 개발자가 한 겁니다.\n제대로 번역해 주셨으면 진심으로 감사하겠네요."
+  newsfeed_setting_tooltip: "[Localize(Concatenate(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName, '_label'))]의 [Localize(Concatenate(Scope.GetFlagName, '_label'))|l] 대한 알림을 보내기"
+  newsfeed_select_all_for_subject_tooltip: "[Localize(Concatenate(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName, '_label'))]의 모든 알림을 보내기"
+  newsfeed_select_all_for_type_tooltip: "모든 인물 종류의 [Localize(Concatenate(Scope.GetFlagName, '_label'))|l] 대한 알림을 보내기"
