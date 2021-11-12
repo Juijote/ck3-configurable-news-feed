@@ -61,7 +61,7 @@
   newsfeed_title_usurped_desc: "[ROOT.Char.GetUIName|U] usurped [SCOPE.sC('previous_holder').GetUINamePossessive] title [SCOPE.sTitle('title').GetName]!"
 
   newsfeed_title_granted_recipient: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] Received Title"
-  newsfeed_title_granted_predecessor: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('previous_holder'))|U] Gave Away Title"
+  newsfeed_title_granted_predecessor: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('previous_holder'))|U] Gave Away a Title"
   newsfeed_title_granted_desc: "[SCOPE.sC('previous_holder').GetUIName|U] granted [ROOT.Char.GetUIName] the title [SCOPE.sTitle('title').GetName]"
 
   newsfeed_title_revoked_recipient: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] Revoked a Title"
