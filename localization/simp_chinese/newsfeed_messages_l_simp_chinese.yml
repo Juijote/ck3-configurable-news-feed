@@ -1,16 +1,4 @@
 ﻿l_simp_chinese:
- newsfeed_relation_prefix: "$CHARACTER_NAME_MY$[Scope.Char.Custom2('RelationToMe', second.Self)]"
- newsfeed_relation_and_name: "[Scope.Char.Custom2('newsfeed_relation_prefix', second.Self)][second.GetUIName]"
- newsfeed_name_subject_me: "$CHARACTER_NAME_ME$"
- newsfeed_name_subject_other: "[second.GetUIName]"
- newsfeed_relation_subject_me: "$CHARACTER_NAME_ME$"
- newsfeed_relation_subject_other: "[Scope.Char.Custom2('RelationToMe', second.Self)]"
- newsfeed_relation_possessive_me: "$CHARACTER_NAME_MY$"
- newsfeed_relation_possessive_other: "[Scope.Char.Custom2('RelationToMePossessive', second.Self)]"
-
- newsfeed_empty_text: "通知将出现在这里。\n点击这个小组件右上方的齿轮来编辑你的通知设置。\n你可以拖动这个信息框来移动它，或者拖动其边缘来调整它的大小。"
- newsfeed_settings_header: "信息摘要设置"
- newsfeed_settings_explanation: "选择你想看到的每种类型的通知的角色组。\n\n请注意，尽管禁用了相关的选项，但是一些通知仍可能继续出现。一般来说，这些是包含在基本游戏中的事件，所以不能通过这个MOD来禁用。"
  newsfeed_marriage: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('newsfeed_spouse1'))|U][Concept('marriage', '结婚')|E]"
  newsfeed_marriage_desc: "你的[GetPlayer.Custom2('RelationToMe', SCOPE.sC('newsfeed_spouse1'))] [SCOPE.sC('newsfeed_spouse1').GetUIName]与[SCOPE.sC('newsfeed_spouse2').GetUIName]结婚"
  newsfeed_marriage_me: "你已经[Concept('marriage', '结婚')|E]"

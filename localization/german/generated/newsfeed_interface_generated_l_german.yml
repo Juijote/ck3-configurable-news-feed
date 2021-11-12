@@ -1,0 +1,7 @@
+﻿l_german:
+  newsfeed_empty_text: "Notifications will appear here.\nClick the gear in the upper right of this widget to edit your notification settings.\nYou can drag this box to move it, or drag its edges to resize it."
+  newsfeed_settings_header: "News Feed Settings"
+  newsfeed_settings_explanation: "Choose which groups of characters you want to see each type of notification for.\n\nPlease be aware that some notifications may continue to appear despite disabling the relevant option. Generally, these are events included in the base game which cannot be disabled via this mod."
+  newsfeed_setting_tooltip: "Report [Localize(Concatenate(Scope.GetFlagName, '_label'))|l] for [Localize(Concatenate(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName, '_label'))]"
+  newsfeed_select_all_for_subject_tooltip: "Report all event types for [Localize(Concatenate(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName, '_label'))]"
+  newsfeed_select_all_for_type_tooltip: "Report [Localize(Concatenate(Scope.GetFlagName, '_label'))|l] for all character groups"

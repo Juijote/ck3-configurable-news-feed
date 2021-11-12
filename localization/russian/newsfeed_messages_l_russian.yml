@@ -1,20 +1,4 @@
 ﻿l_russian:
-  newsfeed_relation_prefix: "$CHARACTER_NAME_MY$ [Scope.Char.Custom2('RelationToMe', second.Self)] "
-  newsfeed_relation_and_name: "[Scope.Char.Custom2('newsfeed_relation_prefix', second.Self)][second.GetUIName]"
-
-  newsfeed_name_subject_me: "$CHARACTER_NAME_ME$"
-  newsfeed_name_subject_other: "[second.GetUIName]"
-
-  newsfeed_relation_subject_me: "$CHARACTER_NAME_ME$"
-  newsfeed_relation_subject_other: "[Scope.Char.Custom2('RelationToMe', second.Self)]"
-
-  newsfeed_relation_possessive_me: "$CHARACTER_NAME_MY$"
-  newsfeed_relation_possessive_other: "[Scope.Char.Custom2('RelationToMePossessive', second.Self)]"
-
-  newsfeed_empty_text: "Уведомления появятся здесь.\nЧерез шестерёнку в правом верхнем углу настройте уведомления.\nПеремещайте эту область или изменяйте размер, потянув за края."
-  newsfeed_settings_header: "Настройки уведомлений"
-  newsfeed_settings_explanation: "Выберите группы персонажей, по которым показывать уведомления.\n\nВнимание! Ряд уведомлений продолжать появляться даже при отключении соответствующей опции. Это события базовой игры, которые нельзя отключить."
-
   newsfeed_marriage: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('newsfeed_spouse1'))|U] [Concept('marriage', 'в браке')|E]"
   newsfeed_marriage_desc: "Ваш [GetPlayer.Custom2('RelationToMe', SCOPE.sC('newsfeed_spouse1'))] [SCOPE.sC('newsfeed_spouse1').GetUIName] в браке с [SCOPE.sC('newsfeed_spouse2').GetUIName]"
   newsfeed_marriage_me: "Вы заключили [Concept('marriage', 'брак')|E]"

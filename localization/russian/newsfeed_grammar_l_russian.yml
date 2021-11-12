@@ -1,0 +1,12 @@
+﻿l_russian:
+  newsfeed_relation_prefix: "$CHARACTER_NAME_MY$ [Scope.Char.Custom2('RelationToMe', second.Self)] "
+  newsfeed_relation_and_name: "[Scope.Char.Custom2('newsfeed_relation_prefix', second.Self)][second.GetUIName]"
+
+  newsfeed_name_subject_me: "$CHARACTER_NAME_ME$"
+  newsfeed_name_subject_other: "[second.GetUIName]"
+
+  newsfeed_relation_subject_me: "$CHARACTER_NAME_ME$"
+  newsfeed_relation_subject_other: "[Scope.Char.Custom2('RelationToMe', second.Self)]"
+
+  newsfeed_relation_possessive_me: "$CHARACTER_NAME_MY$"
+  newsfeed_relation_possessive_other: "[Scope.Char.Custom2('RelationToMePossessive', second.Self)]"

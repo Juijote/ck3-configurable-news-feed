@@ -1,16 +1,4 @@
 ﻿l_korean:
-  newsfeed_relation_prefix: "당신의 [Scope.Char.Custom2('RelationToMe', second.Self)]인 "
-  newsfeed_relation_and_name: "[Scope.Char.Custom2('newsfeed_relation_prefix', second.Self)][second.GetUIName]"
-
-  newsfeed_name_subject_me: ""
-  newsfeed_name_subject_other: "[second.GetUIName](이)가 "
-
-  newsfeed_relation_subject_me: ""
-  newsfeed_relation_subject_other: "[Scope.Char.Custom2('RelationToMe', second.Self)](이)가 "
-
-  newsfeed_relation_possessive_me: ""
-  newsfeed_relation_possessive_other: "[Scope.Char.Custom2('RelationToMePossessive', second.Self)] "
-
   newsfeed_marriage: "[GetPlayer.Custom2('newsfeed_relation_possessive', SCOPE.sC('newsfeed_spouse1'))|U][marriage|E]"
   newsfeed_marriage_desc: "[GetPlayer.Custom2('newsfeed_relation_prefix', SCOPE.sC('newsfeed_spouse1'))][SCOPE.sC('newsfeed_spouse1').GetUIName](이)가 [SCOPE.sC('newsfeed_spouse2').GetUIName](와)과 결혼했습니다."
   newsfeed_marriage_me: "[marriage|E]"
