@@ -80,7 +80,7 @@
   newsfeed_title_lost: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] Lost a Title"
   newsfeed_title_lost_desc: "[ROOT.Char.GetUIName|U] lost the title [SCOPE.sTitle('title').GetName]"
 
-  newsfeed_title_lost_to: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] Acquired a Title"
+  newsfeed_title_lost_to: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('previous_holder'))|U] Lost a Title"
   newsfeed_title_lost_to_desc: "[SCOPE.sC('previous_holder').GetUIName|U] lost the title [SCOPE.sTitle('title').GetName] to [ROOT.Char.GetUIName]"
 
   newsfeed_powerful_vassal: "[powerful_vassal|E] Demands Council Position"
