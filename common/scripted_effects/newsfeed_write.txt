@@ -68,21 +68,9 @@ newsfeed_delete_message_effect = {
 }
 
 newsfeed_delete_all_messages_effect = {
-    every_newsfeed_message_container = {
-        prev = {
-            remove_list_variable = {
-                name = newsfeed_recent_message_containers
-                target = prev
-            }
-            remove_list_variable = {
-                name = newsfeed_older_message_containers
-                target = prev
-            }
-        }
-        end_story = yes
-    }
-
-    newsfeed_resort_message_containers = yes
+    clear_variable_list = newsfeed_recent_message_containers
+    clear_variable_list = newsfeed_older_message_containers
+    every_newsfeed_message_container = { end_story = yes }
 }
 
 newsfeed_resort_message_containers = {
