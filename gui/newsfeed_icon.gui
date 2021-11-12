@@ -1,7 +1,5 @@
 types NewsFeed {
-    type newsfeed_type_icon = flowcontainer {
-        ignoreinvisible = yes
-
+    type newsfeed_type_icon = widget {
         newsfeed_message_icon = {
             visible = "[EqualTo_string('newsfeed_type_alliance', Scope.GetVariable('newsfeed_message_type').GetFlagName)]"
             texture = "gfx/interface/icons/message_feed/alliance.dds"
@@ -319,7 +317,6 @@ types NewsFeed {
 
     type newsfeed_subject_icon = widget {
         size = { 30 30 }
-        ignoreinvisible = yes
 
         newsfeed_subject_icon_template = {
             visible = "[EqualTo_string('newsfeed_subject_self', Scope.GetFlagName)]"
