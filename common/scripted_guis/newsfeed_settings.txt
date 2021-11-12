@@ -4,8 +4,8 @@
     is_valid = {
         is_alive = yes
         NAND = {
-            exists = var:newsfeed_has_migrated_v3
-            var:newsfeed_has_migrated_v3 = yes
+            exists = var:newsfeed_migrated_v4
+            var:newsfeed_migrated_v4 = yes
         }
     }
 
@@ -29,9 +29,7 @@
             }
         }
 
-        newsfeed_ensure_setting_containers_for_all_subjects = yes
-        newsfeed_migrate_v2 = yes
-        newsfeed_migrate_v3 = yes
+        newsfeed_ensure_correct_setting_containers = yes
 
         if = {
             limit = {
@@ -39,6 +37,11 @@
             }
 
             newsfeed_set_default_settings = yes
+        }
+
+        set_variable = {
+            name = newsfeed_migrated_v4
+            value = yes
         }
     }
 }

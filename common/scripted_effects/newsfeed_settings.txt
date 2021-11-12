@@ -52,6 +52,17 @@ newsfeed_reset_settings_to_default = {
     newsfeed_set_default_settings = yes
 }
 
+newsfeed_test_wipe_settings = {
+    every_player = {
+        every_newsfeed_setting_container = {
+            end_story = yes
+        }
+
+        clear_variable_list = newsfeed_setting_containers
+        remove_variable = newsfeed_migrated_v4
+    }
+}
+
 newsfeed_clear_all_settings = {
     save_temporary_scope_as = newsfeed_clear_all_settings_player
 
@@ -92,31 +103,89 @@ newsfeed_ensure_global_subjects_and_types = {
     newsfeed_create_type = { type = offensive_war }
     newsfeed_create_type = { type = defensive_war }
     newsfeed_create_type = { type = titles }
+
     newsfeed_remove_type = { type = war }
 }
 
-newsfeed_ensure_setting_containers_for_all_subjects = {
+newsfeed_ensure_correct_setting_containers = {
+    newsfeed_remove_obsolete_setting_containers = yes
+
     every_in_global_list = {
         variable = newsfeed_subjects
         save_temporary_scope_as = newsfeed_subject
         
-        if = {
+        prev = {
+            ordered_in_list = {
+                variable = newsfeed_setting_containers
+                limit = {
+                    var:newsfeed_subject = scope:newsfeed_subject
+                }
+                max = 1
+                save_scope_as = newsfeed_initialization_setting_container
+            }
+
+            if = {
+                limit = {
+                    exists = scope:newsfeed_initialization_setting_container
+                }
+
+                scope:newsfeed_initialization_setting_container = {
+                    newsfeed_remove_obsolete_types_from_container = yes
+                }
+            }
+            else = {
+                newsfeed_create_setting_container = {
+                    SUBJECT = scope:newsfeed_subject
+                }
+            }
+        }
+    }
+}
+
+newsfeed_remove_obsolete_setting_containers = {
+    if = {
+        limit = {
+            has_variable = newsfeed_setting_containers
+        }
+
+        every_in_list = {
+            variable = newsfeed_setting_containers
             limit = {
                 NOT = {
-                    prev = {
-                        any_in_list = {
-                            variable = newsfeed_setting_containers
-                            has_variable = newsfeed_subject
-                            var:newsfeed_subject = scope:newsfeed_subject
-                        }
+                    is_target_in_global_variable_list = {
+                        name = newsfeed_types
+                        target = this
                     }
                 }
             }
 
             prev = {
-                newsfeed_create_setting_container = {
-                    SUBJECT = scope:newsfeed_subject
+                remove_list_variable = {
+                    name = newsfeed_setting_containers
+                    target = prev
                 }
+            }
+
+            end_story = yes
+        }
+    }
+}
+
+newsfeed_remove_obsolete_types_from_container = {
+    every_in_list = {
+        variable = newsfeed_enabled_types
+        limit = {
+            NOT = {
+                is_target_in_global_variable_list = {
+                    name = newsfeed_types
+                    target = this
+                }
+            }
+        }
+        prev = {
+            remove_list_variable = {
+                name = newsfeed_enabled_types
+                target = prev
             }
         }
     }
