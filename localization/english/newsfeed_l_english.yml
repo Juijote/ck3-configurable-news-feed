@@ -6,6 +6,9 @@
   newsfeed_select_all_for_subject_tooltip: "Report all event types for [Localize(Concatenate(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName, '_label'))]"
   newsfeed_select_all_for_type_tooltip: "Report [Localize(Concatenate(Scope.GetFlagName, '_label'))|l] for all character groups"
 
+  newsfeed_relation_prefix_and_name: "[Scope.Char.Custom2('newsfeed_relation_if_not_acquaintance', second.Self)][second.GetUIName]"
+  newsfeed_relation_prefix: "[Localize('CHARACTER_NAME_MY')] [Scope.Char.Custom2('RelationToMe', second.Self)] "
+
   newsfeed_marriage: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('newsfeed_spouse1'))|U] [Concept('marriage', 'Married')|E]"
   newsfeed_marriage_desc: "Your [GetPlayer.Custom2('RelationToMe', SCOPE.sC('newsfeed_spouse1'))] [SCOPE.sC('newsfeed_spouse1').GetUIName] married [SCOPE.sC('newsfeed_spouse2').GetUIName]"
   newsfeed_marriage_me: "You Got [Concept('marriage', 'Married')|E]"

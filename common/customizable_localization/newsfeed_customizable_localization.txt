@@ -6,7 +6,7 @@
             has_RelationToMe_relation = { CHARACTER = scope:second }
         }
 
-        localization_key = "[Localize('CHARACTER_NAME_MY')] [Scope.Char.Custom2('RelationToMe', second.Self)] "
+        localization_key = newsfeed_relation_prefix
     }
 
     text = {
@@ -62,24 +62,7 @@ newsfeed_relation_name_or_me = {
 
     text = {
         fallback = yes
-        localization_key = "[Scope.Char.Custom2('newsfeed_relation_if_not_acquaintance', second.Self)][second.GetUIName]"
-    }
-}
-
-newsfeed_relation_prefix = {
-    type = character
-
-    text = {
-        trigger = {
-            root = scope:second
-        }
-
-        localization_key = ""
-    }
-
-    text = {
-        fallback = yes
-        localization_key = "[Scope.Char.Custom2('RelationToMeShort', second.Self)] "
+        localization_key = newsfeed_relation_prefix_and_name
     }
 }
 
