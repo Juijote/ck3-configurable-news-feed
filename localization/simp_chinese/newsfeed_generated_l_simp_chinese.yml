@@ -1,3 +1,0 @@
-﻿l_simp_chinese:
-  newsfeed_relation_prefix_and_name: "[Scope.Char.Custom2('newsfeed_relation_if_not_acquaintance', second.Self)][second.GetUIName]"
-  newsfeed_relation_prefix: "[Localize('CHARACTER_NAME_MY')] [Scope.Char.Custom2('RelationToMe', second.Self)] "
