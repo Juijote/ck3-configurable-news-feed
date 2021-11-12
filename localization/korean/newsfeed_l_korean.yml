@@ -1,0 +1,128 @@
+﻿l_korean:
+  newsfeed_relation_prefix: "당신의 [Scope.Char.Custom2('RelationToMe', second.Self)]인 "
+  newsfeed_relation_and_name: "[Scope.Char.Custom2('newsfeed_relation_prefix', second.Self)][second.GetUIName]"
+
+  newsfeed_name_subject_me: ""
+  newsfeed_name_subject_other: "[second.GetUIName](이)가 "
+
+  newsfeed_relation_subject_me: ""
+  newsfeed_relation_subject_other: "[Scope.Char.Custom2('RelationToMe', second.Self)](이)가 "
+
+  newsfeed_relation_possessive_me: ""
+  newsfeed_relation_possessive_other: "[Scope.Char.Custom2('RelationToMePossessive', second.Self)] "
+
+  newsfeed_marriage: "[GetPlayer.Custom2('newsfeed_relation_possessive', SCOPE.sC('newsfeed_spouse1'))|U][marriage|E]"
+  newsfeed_marriage_desc: "[GetPlayer.Custom2('newsfeed_relation_prefix', SCOPE.sC('newsfeed_spouse1'))][SCOPE.sC('newsfeed_spouse1').GetUIName](이)가 [SCOPE.sC('newsfeed_spouse2').GetUIName](와)과 결혼했습니다."
+  newsfeed_marriage_me: "[marriage|E]"
+  newsfeed_marriage_me_desc: "[SCOPE.sC('spouse').GetUIName](이)가 당신의 [SCOPE.sC('spouse').Custom('WifeHusband')](이)가 됬습니다."
+
+  newsfeed_pregnancy_mother: "[GetPlayer.Custom2('newsfeed_relation_possessive', SCOPE.sC('mother'))|U]임신"
+  newsfeed_pregnancy_father: "[GetPlayer.Custom2('newsfeed_relation_possessive', SCOPE.sC('father'))|U][SCOPE.sC('father').Custom2('RelationToMeShort', SCOPE.sC('mother'))|U] 임신"
+  newsfeed_pregnancy_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('mother'))|U][SCOPE.sC('father').GetUINamePossessive] 아이를 배고 있습니다."
+  newsfeed_pregnancy_no_father_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('mother'))|U]아이를 배고 있습니다."
+
+  newsfeed_pregnancy_ended_mother: "[GetPlayer.Custom2('newsfeed_relation_possessive', SCOPE.sC('mother'))|U]임신이 끝남"
+  newsfeed_pregnancy_ended_father: "[GetPlayer.Custom2('newsfeed_relation_possessive', SCOPE.sC('father'))|U][SCOPE.sC('father').Custom2('RelationToMePossessive', SCOPE.sC('mother'))|U] 임신이 끝남"
+  newsfeed_pregnancy_ended_desc: "[SCOPE.sC('mother').GetUINamePossessive|U](와)과 [SCOPE.sC('father').GetUINamePossessive] 임신이 끝났습니다."
+  newsfeed_pregnancy_ended_no_father_desc: "[SCOPE.sC('mother').GetUINamePossessive|U] 임신이 끝났습니다."
+
+  newsfeed_birth_mother: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('mother'))|U]아이를 낳음"
+  newsfeed_birth_father: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('father'))|U]아이를 낳음"
+  newsfeed_birth_desc: "[SCOPE.sC('child').GetShortUIName|U](이)가 [SCOPE.sC('father').GetUIName](와)과 [SCOPE.sC('mother').GetUIName]에게서 태어났습니다."
+  newsfeed_birth_no_father_desc: "[SCOPE.sC('child').GetShortUIName|U](이)가 [SCOPE.sC('mother').GetUIName]에게서 태어났습니다."
+
+  newsfeed_birth_twins_mother: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('mother'))|U]쌍둥이를 낳음"
+  newsfeed_birth_twins_father: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('father'))|U]쌍둥이를 낳음"
+  newsfeed_birth_twins_desc: "#high [SCOPE.sC('child').GetFirstName|U]#!(와)과 [SCOPE.sC('second_child').GetShortUIName|U](이)가 [SCOPE.sC('father').GetUIName](와)과 [SCOPE.sC('mother').GetUIName]에게서 태어났습니다."
+  newsfeed_birth_twins_no_father_desc: "#high [SCOPE.sC('child').GetFirstName|U]#!(와)과 [SCOPE.sC('second_child').GetShortUIName|U](이)가 [SCOPE.sC('mother').GetUIName]에게서 태어났습니다."
+
+  newsfeed_death: "[Localize(SCOPE.GetFlagName('newsfeed_dead_character_relation'))|U] 죽음"
+  newsfeed_death_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('newsfeed_dead_character'))|U][SCOPE.sC('newsfeed_dead_character').GetDeathReason]했습니다."
+
+  newsfeed_title_created: "[GetPlayer.Custom2('newsfeed_relation_subject', ROOT.Char)|U]작위를 생성함"
+  newsfeed_title_created_desc: "[GetPlayer.Custom2('newsfeed_name_subject', ROOT.Char)|U][SCOPE.sTitle('title').GetName](을)를 생성했습니다."
+
+  newsfeed_titles_inherited: "[GetPlayer.Custom2('newsfeed_relation_possessive', SCOPE.sC('newsfeed_inheritor'))|U]상속"
+  newsfeed_titles_inherited_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('newsfeed_inheritor'))|U][SCOPE.sC('newsfeed_previous_holder').GetUIName](으)로부터 [SCOPE.sTitle('newsfeed_main_title').GetName](을)를 포함한 작위 [Localize(SCOPE.GetFlagName('newsfeed_title_count'))] 개를 상속받았습니다."
+
+  newsfeed_title_count_1: ""
+  newsfeed_title_count_2: " 포함한 작위 한 개를"
+  newsfeed_title_count_3: " 포함한 작위 두 개를"
+  newsfeed_title_count_4: " 포함한 작위 세 개를"
+  newsfeed_title_count_5: " 포함한 작위 네 개를"
+  newsfeed_title_count_6: " 포함한 작위 다섯 개를"
+  newsfeed_title_count_7: " 포함한 작위 여섯 개를"
+  newsfeed_title_count_8: " 포함한 작위 일곱 개를"
+  newsfeed_title_count_9: " 포함한 작위 여덟 개를"
+  newsfeed_title_count_10: " 포함한 작위 아홉 개를"
+  newsfeed_title_count_many: " 포함한 작위 여러 개를"
+
+  newsfeed_title_abdicated_recipient: "[GetPlayer.Custom2('newsfeed_relation_subject', ROOT.Char)|U]작위를 받음"
+  newsfeed_title_abdicated_predecessor: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('previous_holder'))|U]퇴위"
+  newsfeed_title_abdicated_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('previous_holder'))|U][SCOPE.sTitle('title').GetName](을)를 [ROOT.Char.GetUIName]에게 퇴위로 넘겨주었습니다."
+
+  newsfeed_title_usurped_recipient: "[GetPlayer.Custom2('newsfeed_relation_subject', ROOT.Char)|U]찬탈"
+  newsfeed_title_usurped_predecessor: "[GetPlayer.Custom2('newsfeed_relation_possessive', SCOPE.sC('previous_holder'))|U]작위 찬탈"
+  newsfeed_title_usurped_desc: "[GetPlayer.Custom2('newsfeed_name_subject', ROOT.Char)|U][SCOPE.sC('previous_holder').GetUINamePossessive]의 작위인 [SCOPE.sTitle('title').GetName](을)를 찬탈했습니다."
+
+  newsfeed_title_granted_recipient: "[GetPlayer.Custom2('newsfeed_relation_subject', ROOT.Char)|U]작위를 받음"
+  newsfeed_title_granted_predecessor: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('previous_holder'))|U]작위 수여"
+  newsfeed_title_granted_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('previous_holder'))|U][ROOT.Char.GetUIName]에게 [SCOPE.sTitle('title').GetName](을)를 수여했습니다."
+
+  newsfeed_title_revoked_recipient: "[GetPlayer.Custom2('newsfeed_relation_subject', ROOT.Char)|U]작위를 박탈함"
+  newsfeed_title_revoked_predecessor: "[GetPlayer.Custom2('newsfeed_relation_possessive', SCOPE.sC('previous_holder'))|U]작위 박탈"
+  newsfeed_title_revoked_desc: "[GetPlayer.Custom2('newsfeed_name_subject', ROOT.Char)|U][SCOPE.sC('previous_holder').GetUINamePossessive] 작위인 [SCOPE.sTitle('title').GetName](을)를 박탈했습니다."
+
+  newsfeed_title_destroyed: "[GetPlayer.Custom2('newsfeed_relation_subject', ROOT.Char)|U]작위를 파괴함"
+  newsfeed_title_destroyed_desc: "[GetPlayer.Custom2('newsfeed_name_subject', ROOT.Char)|U][SCOPE.sTitle('landed_title').GetName](을)를 파괴"
+
+  newsfeed_title_gained: "[GetPlayer.Custom2('newsfeed_relation_subject', ROOT.Char)|U]작위를 받음"
+  newsfeed_title_gained_desc: "[GetPlayer.Custom2('newsfeed_name_subject', ROOT.Char)|U][SCOPE.sTitle('title').GetName](을)를 받았습니다."
+
+  newsfeed_title_gained_from: "[GetPlayer.Custom2('newsfeed_relation_subject', ROOT.Char)|U]작위를 받음"
+  newsfeed_title_gained_from_desc: "[GetPlayer.Custom2('newsfeed_name_subject', ROOT.Char)|U][SCOPE.sTitle('title').GetName]을(를) [SCOPE.sC('previous_holder').GetUIName]에게서 받았습니다."
+
+  newsfeed_title_lost: "[GetPlayer.Custom2('newsfeed_relation_subject', ROOT.Char)|U]작위를 상실함"
+  newsfeed_title_lost_desc: "[GetPlayer.Custom2('newsfeed_name_subject', ROOT.Char)|U][SCOPE.sTitle('title').GetName](을)를 상실했습니다."
+
+  newsfeed_title_lost_to: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('previous_holder'))|U]작위를 상실함"
+  newsfeed_title_lost_to_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('previous_holder'))|U][SCOPE.sTitle('title').GetName](을)를 [ROOT.Char.GetUIName]에게 넘겨주었습니다."
+
+  newsfeed_powerful_vassal: "[powerful_vassal|E] 자문회 위원직을 기대 중"
+  newsfeed_powerful_vassal_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('vassal'))|U][council|E] 위원이 되기를 기대하고 있습니다."
+
+  newsfeed_war_declared_by_subject: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('attacker'))|U][war|E]을 선포함"
+  newsfeed_war_declared_by_subject_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('attacker'))|U][GetPlayer.Custom2('newsfeed_relation_and_name', SCOPE.sC('defender'))]에게 [SCOPE.sWar('war').GetName] 전쟁을 선포핬습니다."
+
+  newsfeed_war_declared_on_subject: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('defender'))|U]에게 [war|E]이 선포됨"
+  newsfeed_war_declared_on_subject_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('attacker'))|U][GetPlayer.Custom2('newsfeed_relation_and_name', SCOPE.sC('defender'))]에게 [SCOPE.sWar('war').GetName] 전쟁을 선포핬습니다."
+
+  newsfeed_war_won: "[GetPlayer.Custom2('newsfeed_relation_possessive', SCOPE.sC('protagonist'))|U][war|E] 승리"
+  newsfeed_war_won_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('protagonist'))|U][GetPlayer.Custom2('newsfeed_relation_and_name', SCOPE.sC('antagonist'))](와)과의 [SCOPE.sWar('war').GetName] 전쟁에서 승리핬습니다."
+
+  newsfeed_war_lost: "[GetPlayer.Custom2('newsfeed_relation_possessive', SCOPE.sC('protagonist'))|U]의 [war|E] 패배"
+  newsfeed_war_lost_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('protagonist'))|U][GetPlayer.Custom2('newsfeed_relation_and_name', SCOPE.sC('antagonist'))](와)과의 [SCOPE.sWar('war').GetName] 전쟁에서 패배핬습니다."
+
+  newsfeed_war_white_peace: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('protagonist'))|U](이)가 [white_peace|E]를 협상함"
+  newsfeed_war_white_peace_desc: "[SCOPE.sC('protagonist').GetUIName|U](와)과 [GetPlayer.Custom2('newsfeed_relation_and_name', SCOPE.sC('antagonist'))] [SCOPE.sWar('war').GetName] 전쟁이 무조건 평화로 끝났습니다."
+
+  newsfeed_war_invalidated: "[GetPlayer.Custom2('newsfeed_relation_possessive', SCOPE.sC('protagonist'))|U] [war|E]이 끝남"
+  newsfeed_war_invalidated_desc: "[SCOPE.sC('protagonist').GetUIName|U](와)과 [GetPlayer.Custom2('newsfeed_relation_and_name', SCOPE.sC('antagonist'))] [SCOPE.sWar('war').GetName] 전쟁이 무효화로 끝났습니다."
+
+  newsfeed_lover_added: "새로운 [lover|E]"
+  newsfeed_lover_added_desc: "[SCOPE.sC('target').GetUIName|U](와)과 연인이 됬습니다"
+
+  newsfeed_friend_added: "새로운 [friend|E]"
+  newsfeed_friend_added_desc: "[SCOPE.sC('target').GetUIName](와)과 친구가 됬습니다."
+
+  newsfeed_rival_added: "[Concept('rival', '경쟁')|E] 시작"
+  newsfeed_rival_added_desc: "[SCOPE.sC('target').GetUIName](와)과 경쟁자가 됬습니다."
+
+  newsfeed_lover_removed: "[lover|E]이 아니게 됨"
+  newsfeed_lover_removed_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('target'))|U]이제 당신의 연인이 아닙니다."
+
+  newsfeed_friend_removed: "[friend|E]가 아니게 됨"
+  newsfeed_friend_removed_desc: "[SCOPE.sC('target').GetUIName](이)가 이제 당신의 친구가 아닙니다."
+
+  newsfeed_rival_removed: "[rival|E]가 아니게 됨"
+  newsfeed_rival_removed_desc: "[SCOPE.sC('target').GetUIName]가 이제 당신의 경쟁자가 아닙니다."

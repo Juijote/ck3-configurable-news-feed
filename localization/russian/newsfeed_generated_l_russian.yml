@@ -2,8 +2,6 @@
   newsfeed_setting_tooltip: "Report [Localize(Concatenate(Scope.GetFlagName, '_label'))|l] for [Localize(Concatenate(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName, '_label'))]"
   newsfeed_select_all_for_subject_tooltip: "Report all event types for [Localize(Concatenate(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName, '_label'))]"
   newsfeed_select_all_for_type_tooltip: "Report [Localize(Concatenate(Scope.GetFlagName, '_label'))|l] for all character groups"
-  newsfeed_relation_prefix_and_name: "[Scope.Char.Custom2('newsfeed_relation_if_not_acquaintance', second.Self)][second.GetUIName]"
-  newsfeed_relation_prefix: "[Localize('CHARACTER_NAME_MY')] [Scope.Char.Custom2('RelationToMe', second.Self)] "
   newsfeed_birth_twins_mother: "Twins Born to [GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('mother'))|U]"
   newsfeed_birth_twins_father: "Twins Born to [GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('father'))|U]"
   newsfeed_birth_twins_desc: "#high [SCOPE.sC('child').GetFirstName|U]#! and [SCOPE.sC('second_child').GetShortUIName|U] were born to [SCOPE.sC('father').GetUIName] and [SCOPE.sC('mother').GetUIName]"

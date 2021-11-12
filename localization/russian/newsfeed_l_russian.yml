@@ -1,35 +1,47 @@
 ﻿l_russian:
+  newsfeed_relation_prefix: "$CHARACTER_NAME_MY$ [Scope.Char.Custom2('RelationToMe', second.Self)] "
+  newsfeed_relation_and_name: "[Scope.Char.Custom2('newsfeed_relation_prefix', second.Self)][second.GetUIName]"
+
+  newsfeed_name_subject_me: "$CHARACTER_NAME_ME$"
+  newsfeed_name_subject_other: "[second.GetUIName]"
+
+  newsfeed_relation_subject_me: "$CHARACTER_NAME_ME$"
+  newsfeed_relation_subject_other: "[Scope.Char.Custom2('RelationToMe', second.Self)]"
+
+  newsfeed_relation_possessive_me: "$CHARACTER_NAME_MY$"
+  newsfeed_relation_possessive_other: "[Scope.Char.Custom2('RelationToMePossessive', second.Self)]"
+
   newsfeed_empty_text: "Уведомления появятся здесь.\nЧерез шестерёнку в правом верхнем углу настройте уведомления.\nПеремещайте эту область или изменяйте размер, потянув за края."
   newsfeed_settings_header: "Настройки уведомлений"
   newsfeed_settings_explanation: "Выберите группы персонажей, по которым показывать уведомления.\n\nВнимание! Ряд уведомлений продолжать появляться даже при отключении соответствующей опции. Это события базовой игры, которые нельзя отключить."
 
-  newsfeed_marriage: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('newsfeed_spouse1'))|U] [Concept('marriage', 'в браке')|E]"
+  newsfeed_marriage: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('newsfeed_spouse1'))|U] [Concept('marriage', 'в браке')|E]"
   newsfeed_marriage_desc: "Ваш [GetPlayer.Custom2('RelationToMe', SCOPE.sC('newsfeed_spouse1'))] [SCOPE.sC('newsfeed_spouse1').GetUIName] в браке с [SCOPE.sC('newsfeed_spouse2').GetUIName]"
   newsfeed_marriage_me: "Вы заключили [Concept('marriage', 'брак')|E]"
   newsfeed_marriage_me_desc: "[SCOPE.sC('spouse').GetUIName] теперь ваш [SCOPE.sC('spouse').Custom('WifeHusband')]"
 
-  newsfeed_pregnancy_mother: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('mother'))|U] беременна"
-  newsfeed_pregnancy_father: "[GetPlayer.Custom2('newsfeed_relation_possessive_or_my', SCOPE.sC('father'))|U] [SCOPE.sC('father').Custom2('RelationToMeShort', SCOPE.sC('mother'))|U] ожидает ребенка"
-  newsfeed_pregnancy_desc: "[SCOPE.sC('mother').GetUIName|U] забеременела от [SCOPE.sC('father').GetUINamePossessive]"
+  newsfeed_pregnancy_mother: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('mother'))|U] беременна"
+  newsfeed_pregnancy_father: "[GetPlayer.Custom2('newsfeed_relation_possessive', SCOPE.sC('father'))|U] [SCOPE.sC('father').Custom2('RelationToMeShort', SCOPE.sC('mother'))|U] ожидает ребенка"
+  newsfeed_pregnancy_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('mother'))|U] забеременела от [SCOPE.sC('father').GetUINamePossessive]"
   newsfeed_pregnancy_no_father_desc: "У [SCOPE.sC('mother').GetUIName|U] будет ребенок"
 
-  newsfeed_pregnancy_ended_mother: "[GetPlayer.Custom2('newsfeed_relation_possessive_or_my', SCOPE.sC('mother'))|U] больше не беременна"
-  newsfeed_pregnancy_ended_father: "[GetPlayer.Custom2('newsfeed_relation_possessive_or_my', SCOPE.sC('father'))|U] [SCOPE.sC('father').Custom2('RelationToMePossessive', SCOPE.sC('mother'))|U] больше не ждет ребенка"
-  newsfeed_pregnancy_ended_desc: "[SCOPE.sC('mother').GetUIName|U] больше не вынашивает ребенка [SCOPE.sC('father').GetUINamePossessive]"
-  newsfeed_pregnancy_ended_no_father_desc: "[SCOPE.sC('mother').GetUIName|U] лишилась ребенка"
+  newsfeed_pregnancy_ended_mother: "[GetPlayer.Custom2('newsfeed_relation_possessive', SCOPE.sC('mother'))|U] больше не беременна"
+  newsfeed_pregnancy_ended_father: "[GetPlayer.Custom2('newsfeed_relation_possessive', SCOPE.sC('father'))|U] [SCOPE.sC('father').Custom2('RelationToMePossessive', SCOPE.sC('mother'))|U] больше не ждет ребенка"
+  newsfeed_pregnancy_ended_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('mother'))|U] больше не вынашивает ребенка [SCOPE.sC('father').GetUINamePossessive]"
+  newsfeed_pregnancy_ended_no_father_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('mother'))|U] лишилась ребенка"
 
-  newsfeed_birth_mother: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('mother'))|U] родила"
+  newsfeed_birth_mother: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('mother'))|U] родила"
   newsfeed_birth_father: "Родился ребенок у [GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('father'))|U]"
   newsfeed_birth_desc: "У [SCOPE.sC('father').GetUIName] и [SCOPE.sC('mother').GetUIName] родился ребенок [SCOPE.sC('child').GetShortUIName|U]"
   newsfeed_birth_no_father_desc: "У [SCOPE.sC('mother').GetUIName] родился ребенок [SCOPE.sC('child').GetShortUIName|U]"
 
   newsfeed_death: "[Localize(SCOPE.GetFlagName('newsfeed_dead_character_relation'))|U] умирает"
-  newsfeed_death_desc: "[SCOPE.sC('newsfeed_dead_character').GetUIName|U] [SCOPE.sC('newsfeed_dead_character').GetDeathReason]"
+  newsfeed_death_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('newsfeed_dead_character'))|U] [SCOPE.sC('newsfeed_dead_character').GetDeathReason]"
 
-  newsfeed_title_created: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] создает Титул"
-  newsfeed_title_created_desc: "[ROOT.Char.GetUIName|U] создает титул [SCOPE.sTitle('title').GetName]"
+  newsfeed_title_created: "[GetPlayer.Custom2('newsfeed_relation_subject', ROOT.Char)|U] создает Титул"
+  newsfeed_title_created_desc: "[GetPlayer.Custom2('newsfeed_name_subject', ROOT.Char)|U] создает титул [SCOPE.sTitle('title').GetName]"
 
-  newsfeed_titles_inherited: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('newsfeed_inheritor'))|U] наследует Титулы"
+  newsfeed_titles_inherited: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('newsfeed_inheritor'))|U] наследует Титулы"
   newsfeed_titles_inherited_desc: "[SCOPE.sC('newsfeed_inheritor').GetShortUIName|U] унаследует [SCOPE.sTitle('newsfeed_main_title').GetName][Localize(SCOPE.GetFlagName('newsfeed_title_count'))] от [SCOPE.sC('newsfeed_inheritor').Custom2('newsfeed_her_his_my', GetPlayer.Self)] [SCOPE.sC('newsfeed_inheritor').Custom2('RelationToMeShort', SCOPE.sC('newsfeed_previous_holder'))] [SCOPE.sC('newsfeed_previous_holder').GetShortUIName]"
 
   newsfeed_title_count_1: ""
@@ -44,60 +56,60 @@
   newsfeed_title_count_10: " и еще 9 других титулов"
   newsfeed_title_count_many: " и несколько других титулов"
 
-  newsfeed_title_abdicated_recipient: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] наследует Титул"
-  newsfeed_title_abdicated_predecessor: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('previous_holder'))|U] отрекается от Титула"
-  newsfeed_title_abdicated_desc: "[SCOPE.sC('previous_holder').GetUIName|U] отказывается от титула [SCOPE.sTitle('title').GetName], который принадлежит [ROOT.Char.GetUIName]"
+  newsfeed_title_abdicated_recipient: "[GetPlayer.Custom2('newsfeed_relation_subject', ROOT.Char)|U] наследует Титул"
+  newsfeed_title_abdicated_predecessor: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('previous_holder'))|U] отрекается от Титула"
+  newsfeed_title_abdicated_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('previous_holder'))|U] отказывается от титула [SCOPE.sTitle('title').GetName], который принадлежит [ROOT.Char.GetUIName]"
 
-  newsfeed_title_usurped_recipient: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] узурпирует Титул"
-  newsfeed_title_usurped_predecessor: "Бывший владелец титула [GetPlayer.Custom2('newsfeed_relation_possessive_or_my', SCOPE.sC('previous_holder'))|U]"
-  newsfeed_title_usurped_desc: "[ROOT.Char.GetUIName|U] узурпировал у [SCOPE.sC('previous_holder').GetUINamePossessive] титул [SCOPE.sTitle('title').GetName]!"
+  newsfeed_title_usurped_recipient: "[GetPlayer.Custom2('newsfeed_relation_subject', ROOT.Char)|U] узурпирует Титул"
+  newsfeed_title_usurped_predecessor: "Бывший владелец титула [GetPlayer.Custom2('newsfeed_relation_possessive', SCOPE.sC('previous_holder'))|U]"
+  newsfeed_title_usurped_desc: "[GetPlayer.Custom2('newsfeed_name_subject', ROOT.Char)|U] узурпировал у [SCOPE.sC('previous_holder').GetUINamePossessive] титул [SCOPE.sTitle('title').GetName]!"
 
-  newsfeed_title_granted_recipient: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] получает Титул"
-  newsfeed_title_granted_predecessor: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('previous_holder'))|U] Отдает Титул"
-  newsfeed_title_granted_desc: "[SCOPE.sC('previous_holder').GetUIName|U] передает [ROOT.Char.GetUIName] титул [SCOPE.sTitle('title').GetName]"
+  newsfeed_title_granted_recipient: "[GetPlayer.Custom2('newsfeed_relation_subject', ROOT.Char)|U] получает Титул"
+  newsfeed_title_granted_predecessor: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('previous_holder'))|U] Отдает Титул"
+  newsfeed_title_granted_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('previous_holder'))|U] передает [ROOT.Char.GetUIName] титул [SCOPE.sTitle('title').GetName]"
 
-  newsfeed_title_revoked_recipient: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] отзывает Титул"
-  newsfeed_title_revoked_predecessor: "Титул теряет [GetPlayer.Custom2('newsfeed_relation_possessive_or_my', SCOPE.sC('previous_holder'))|U] "
-  newsfeed_title_revoked_desc: "[ROOT.Char.GetUIName|U] отозвал у [SCOPE.sC('previous_holder').GetUINamePossessive] титул [SCOPE.sTitle('title').GetName]"
+  newsfeed_title_revoked_recipient: "[GetPlayer.Custom2('newsfeed_relation_subject', ROOT.Char)|U] отзывает Титул"
+  newsfeed_title_revoked_predecessor: "Титул теряет [GetPlayer.Custom2('newsfeed_relation_possessive', SCOPE.sC('previous_holder'))|U] "
+  newsfeed_title_revoked_desc: "[GetPlayer.Custom2('newsfeed_name_subject', ROOT.Char)|U] отозвал у [SCOPE.sC('previous_holder').GetUINamePossessive] титул [SCOPE.sTitle('title').GetName]"
 
-  newsfeed_title_destroyed: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] уничтожает Титул"
-  newsfeed_title_destroyed_desc: "[ROOT.Char.GetUIName|U] уничтожает титул [SCOPE.sTitle('landed_title').GetName]"
+  newsfeed_title_destroyed: "[GetPlayer.Custom2('newsfeed_relation_subject', ROOT.Char)|U] уничтожает Титул"
+  newsfeed_title_destroyed_desc: "[GetPlayer.Custom2('newsfeed_name_subject', ROOT.Char)|U] уничтожает титул [SCOPE.sTitle('landed_title').GetName]"
 
-  newsfeed_title_gained: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] приобретает Титул"
-  newsfeed_title_gained_desc: "[ROOT.Char.GetUIName|U] приобретает титул [SCOPE.sTitle('title').GetName]"
+  newsfeed_title_gained: "[GetPlayer.Custom2('newsfeed_relation_subject', ROOT.Char)|U] приобретает Титул"
+  newsfeed_title_gained_desc: "[GetPlayer.Custom2('newsfeed_name_subject', ROOT.Char)|U] приобретает титул [SCOPE.sTitle('title').GetName]"
 
-  newsfeed_title_gained_from: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] приобретает Титул"
-  newsfeed_title_gained_from_desc: "[ROOT.Char.GetUIName|U] приобретает титул [SCOPE.sTitle('title').GetName] у [SCOPE.sC('previous_holder').GetUIName]"
+  newsfeed_title_gained_from: "[GetPlayer.Custom2('newsfeed_relation_subject', ROOT.Char)|U] приобретает Титул"
+  newsfeed_title_gained_from_desc: "[GetPlayer.Custom2('newsfeed_name_subject', ROOT.Char)|U] приобретает титул [SCOPE.sTitle('title').GetName] у [SCOPE.sC('previous_holder').GetUIName]"
 
-  newsfeed_title_lost: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] теряет Титул"
-  newsfeed_title_lost_desc: "[ROOT.Char.GetUIName|U] теряет титул [SCOPE.sTitle('title').GetName]"
+  newsfeed_title_lost: "[GetPlayer.Custom2('newsfeed_relation_subject', ROOT.Char)|U] теряет Титул"
+  newsfeed_title_lost_desc: "[GetPlayer.Custom2('newsfeed_name_subject', ROOT.Char)|U] теряет титул [SCOPE.sTitle('title').GetName]"
 
-  newsfeed_title_lost_to: "[GetPlayer.Custom2('newsfeed_relation_or_me', ROOT.Char)|U] приобретает Титул"
-  newsfeed_title_lost_to_desc: "[SCOPE.sC('previous_holder').GetUIName|U] теряет титул [SCOPE.sTitle('title').GetName] в пользу [ROOT.Char.GetUIName]"
+  newsfeed_title_lost_to: "[GetPlayer.Custom2('newsfeed_relation_subject', ROOT.Char)|U] приобретает Титул"
+  newsfeed_title_lost_to_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('previous_holder'))|U] теряет титул [SCOPE.sTitle('title').GetName] в пользу [ROOT.Char.GetUIName]"
 
   newsfeed_powerful_vassal: "[powerful_vassal|E] требует место в Совете"
-  newsfeed_powerful_vassal_desc: "[SCOPE.sC('vassal').GetUIName|U] хочет занять место [council|E]"
+  newsfeed_powerful_vassal_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('vassal'))|U] хочет занять место [council|E]"
 
-  newsfeed_war_declared_by_subject: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('attacker'))|U] объявляет [war|E]"
-  newsfeed_war_declared_by_subject_desc: "[SCOPE.sC('attacker').GetUIName|U] объявляет [SCOPE.sWar('war').GetName] против [GetPlayer.Custom2('newsfeed_relation_name_or_me', SCOPE.sC('defender'))]"
+  newsfeed_war_declared_by_subject: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('attacker'))|U] объявляет [war|E]"
+  newsfeed_war_declared_by_subject_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('attacker'))|U] объявляет [SCOPE.sWar('war').GetName] против [GetPlayer.Custom2('newsfeed_relation_and_name', SCOPE.sC('defender'))]"
 
   newsfeed_war_declared_on_subject: "Объявлена [war|E] против [GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('defender'))|U]"
-  newsfeed_war_declared_on_subject_desc: "[SCOPE.sC('attacker').GetUIName|U] объявляет [SCOPE.sWar('war').GetName] против [GetPlayer.Custom2('newsfeed_relation_name_or_me', SCOPE.sC('defender'))]"
+  newsfeed_war_declared_on_subject_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('attacker'))|U] объявляет [SCOPE.sWar('war').GetName] против [GetPlayer.Custom2('newsfeed_relation_and_name', SCOPE.sC('defender'))]"
 
-  newsfeed_war_won: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('protagonist'))|U] побеждает в [war|E]"
-  newsfeed_war_won_desc: "[SCOPE.sC('protagonist').GetUIName|U] наносит поражение [GetPlayer.Custom2('newsfeed_relation_name_or_me', SCOPE.sC('antagonist'))] по итогам [SCOPE.sWar('war').GetName]"
+  newsfeed_war_won: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('protagonist'))|U] побеждает в [war|E]"
+  newsfeed_war_won_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('protagonist'))|U] наносит поражение [GetPlayer.Custom2('newsfeed_relation_and_name', SCOPE.sC('antagonist'))] по итогам [SCOPE.sWar('war').GetName]"
 
-  newsfeed_war_lost: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('protagonist'))|U] терпит поражение в [war|E]"
-  newsfeed_war_lost_desc: "[SCOPE.sC('protagonist').GetUIName|U] терпит поражение [GetPlayer.Custom2('newsfeed_relation_name_or_me', SCOPE.sC('antagonist'))] по итогам [SCOPE.sWar('war').GetName]"
+  newsfeed_war_lost: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('protagonist'))|U] терпит поражение в [war|E]"
+  newsfeed_war_lost_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('protagonist'))|U] терпит поражение [GetPlayer.Custom2('newsfeed_relation_and_name', SCOPE.sC('antagonist'))] по итогам [SCOPE.sWar('war').GetName]"
 
-  newsfeed_war_white_peace: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('protagonist'))|U] Negotiated a [white_peace|E]"
-  newsfeed_war_white_peace_desc: "[SCOPE.sC('protagonist').GetUIName|U] ended the [SCOPE.sWar('war').GetName] with [GetPlayer.Custom2('newsfeed_relation_name_or_me', SCOPE.sC('antagonist'))] by white peace"
+  newsfeed_war_white_peace: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('protagonist'))|U] Negotiated a [white_peace|E]"
+  newsfeed_war_white_peace_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('protagonist'))|U] ended the [SCOPE.sWar('war').GetName] with [GetPlayer.Custom2('newsfeed_relation_and_name', SCOPE.sC('antagonist'))] by white peace"
 
-  newsfeed_war_invalidated: "[GetPlayer.Custom2('newsfeed_relation_or_me', SCOPE.sC('protagonist'))|U] завершает [war|E]"
-  newsfeed_war_invalidated_desc: "[SCOPE.sC('protagonist').GetUINamePossessive|U] [SCOPE.sWar('war').GetName] с [GetPlayer.Custom2('newsfeed_relation_name_or_me', SCOPE.sC('antagonist'))] завершается прекращением повода для войны (отмена казус-белли)"
+  newsfeed_war_invalidated: "[GetPlayer.Custom2('newsfeed_relation_subject', SCOPE.sC('protagonist'))|U] завершает [war|E]"
+  newsfeed_war_invalidated_desc: "[SCOPE.sC('protagonist').GetUINamePossessive|U] [SCOPE.sWar('war').GetName] с [GetPlayer.Custom2('newsfeed_relation_and_name', SCOPE.sC('antagonist'))] завершается прекращением повода для войны (отмена казус-белли)"
 
   newsfeed_lover_added: "У вас есть [lover|E]"
-  newsfeed_lover_added_desc: "[SCOPE.sC('target').GetUIName|U] становится вашим любовником"
+  newsfeed_lover_added_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('target'))|U] становится вашим любовником"
 
   newsfeed_friend_added: "У вас есть [friend|E]"
   newsfeed_friend_added_desc: "Вы стали друзьями с [SCOPE.sC('target').GetUIName]"
@@ -106,7 +118,7 @@
   newsfeed_rival_added_desc: "Обнаружен соперник в лице [SCOPE.sC('target').GetUIName]"
 
   newsfeed_lover_removed: "Расстались с [lover|E]"
-  newsfeed_lover_removed_desc: "[SCOPE.sC('target').GetUIName|U] больше вам не любовник"
+  newsfeed_lover_removed_desc: "[GetPlayer.Custom2('newsfeed_name_subject', SCOPE.sC('target'))|U] больше вам не любовник"
 
   newsfeed_friend_removed: "[Concept('friend', 'Дружбы')|E] больше нет"
   newsfeed_friend_removed_desc: "Ваша дружеская связь с [SCOPE.sC('target').GetUIName] окончена"

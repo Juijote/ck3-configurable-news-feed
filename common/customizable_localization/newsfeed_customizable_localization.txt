@@ -1,4 +1,4 @@
-﻿newsfeed_relation_if_not_acquaintance = {
+﻿newsfeed_relation_prefix = {
     type = character
 
     text = {
@@ -32,7 +32,7 @@ newsfeed_relation_or_me = {
     }
 }
 
-newsfeed_relation_possessive_or_my = {
+newsfeed_name_subject = {
     type = character
 
     text = {
@@ -40,16 +40,50 @@ newsfeed_relation_possessive_or_my = {
             root = scope:second
         }
 
-        localization_key = CHARACTER_NAME_MY
+        localization_key = newsfeed_name_subject_me
     }
 
     text = {
         fallback = yes
-        localization_key = "[Scope.Char.Custom2('RelationToMePossessive', second.Self)]"
+        localization_key = newsfeed_name_subject_other
     }
 }
 
-newsfeed_relation_name_or_me = {
+newsfeed_relation_subject = {
+    type = character
+
+    text = {
+        trigger = {
+            root = scope:second
+        }
+
+        localization_key = newsfeed_relation_subject_me
+    }
+
+    text = {
+        fallback = yes
+        localization_key = newsfeed_relation_subject_other
+    }
+}
+
+newsfeed_relation_possessive = {
+    type = character
+
+    text = {
+        trigger = {
+            root = scope:second
+        }
+
+        localization_key = newsfeed_relation_possessive_me
+    }
+
+    text = {
+        fallback = yes
+        localization_key = newsfeed_relation_possessive_other
+    }
+}
+
+newsfeed_relation_and_name = {
     type = character
 
     text = {
@@ -62,7 +96,7 @@ newsfeed_relation_name_or_me = {
 
     text = {
         fallback = yes
-        localization_key = newsfeed_relation_prefix_and_name
+        localization_key = newsfeed_relation_and_name
     }
 }
 
