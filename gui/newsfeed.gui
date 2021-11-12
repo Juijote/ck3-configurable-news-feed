@@ -182,13 +182,6 @@ types NewsFeed {
         direction = vertical
         allow_outside = yes
 
-        state = {
-            name = set_deletable
-            trigger_on_create = yes
-            duration = 0.5
-            on_finish = "[GetScriptedGui('newsfeed_mark_message_deletable_gui').Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'newsfeed_message_index', MakeScopeValue(Scope.GetVariable('newsfeed_message_index').GetValue) ).End )]"
-        }
-
         flowcontainer = {
             allow_outside = yes
 

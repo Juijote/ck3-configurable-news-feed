@@ -48,9 +48,6 @@ newsfeed_delete_message_effect = {
     ordered_newsfeed_message_container = {
         limit = {
             var:newsfeed_message_index = $INDEX$
-
-            has_variable = newsfeed_message_deletable
-            var:newsfeed_message_deletable = yes
         }
 
         max = 1
@@ -72,10 +69,6 @@ newsfeed_delete_message_effect = {
 
 newsfeed_delete_all_messages_effect = {
     every_newsfeed_message_container = {
-        limit = {
-            has_variable = newsfeed_message_deletable
-            var:newsfeed_message_deletable = yes
-        }
         prev = {
             remove_list_variable = {
                 name = newsfeed_recent_message_containers
