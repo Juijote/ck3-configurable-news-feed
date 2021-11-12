@@ -165,23 +165,23 @@ newsfeed_on_title_granted = {
         every_player = {
             if = {
                 limit = {
-                    newsfeed_is_interested_in_titles = { PERSON = root }
-                }
-
-                send_interface_message = {
-                    type = newsfeed_titles
-                    title = newsfeed_title_granted_recipient
-                    desc = newsfeed_title_granted_desc
-                }
-            }
-            else_if = {
-                limit = {
                     newsfeed_is_interested_in_titles = { PERSON = scope:previous_holder }
                 }
 
                 send_interface_message = {
                     type = newsfeed_titles
                     title = newsfeed_title_granted_predecessor
+                    desc = newsfeed_title_granted_desc
+                }
+            }
+            else_if = {
+                limit = {
+                    newsfeed_is_interested_in_titles = { PERSON = root }
+                }
+
+                send_interface_message = {
+                    type = newsfeed_titles
+                    title = newsfeed_title_granted_recipient
                     desc = newsfeed_title_granted_desc
                 }
             }
