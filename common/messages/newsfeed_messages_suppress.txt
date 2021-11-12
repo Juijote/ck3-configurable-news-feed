@@ -33,3 +33,11 @@ msg_inherited_single_title = {
 msg_inherited_titles = {
     tooltip = newsfeed_suppress
 }
+
+msg_lost_single_title = {
+    tooltip = newsfeed_suppress
+}
+
+msg_lost_titles = {
+    tooltip = newsfeed_suppress
+}
