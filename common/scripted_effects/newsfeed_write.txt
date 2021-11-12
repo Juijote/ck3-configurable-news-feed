@@ -38,13 +38,6 @@
             name = newsfeed_message_date
             value = $date$
         }
-        set_variable = {
-            name = newsfeed_message_timestamp
-            value = {
-                value = prev.var:newsfeed_time_tick
-                add = 0.003
-            }
-        }
     }
 
     newsfeed_resort_message_containers = yes
@@ -55,11 +48,11 @@ newsfeed_delete_message_effect = {
     ordered_newsfeed_message_container = {
         limit = {
             var:newsfeed_message_index = $INDEX$
-            NAND = {
-                has_variable = newsfeed_message_timestamp
-                var:newsfeed_message_timestamp.compare_value > prev.var:newsfeed_time_tick.compare_value
-            }
+
+            has_variable = newsfeed_message_deletable
+            var:newsfeed_message_deletable = yes
         }
+
         max = 1
         prev = {
             remove_list_variable = {
@@ -80,10 +73,8 @@ newsfeed_delete_message_effect = {
 newsfeed_delete_all_messages_effect = {
     every_newsfeed_message_container = {
         limit = {
-            NAND = {
-                has_variable = newsfeed_message_timestamp
-                var:newsfeed_message_timestamp.compare_value > prev.var:newsfeed_time_tick.compare_value
-            }
+            has_variable = newsfeed_message_deletable
+            var:newsfeed_message_deletable = yes
         }
         prev = {
             remove_list_variable = {

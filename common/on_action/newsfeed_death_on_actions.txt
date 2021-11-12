@@ -38,13 +38,6 @@ newsfeed_on_death_transfer_message_containers = {
                     value = prev.var:newsfeed_next_message_index
                 }
             }
-
-            player_heir = {
-                set_variable = {
-                    name = newsfeed_time_tick
-                    value = prev.var:newsfeed_time_tick
-                }
-            }
     
             every_in_list = {
                 variable = newsfeed_recent_message_containers

@@ -49,3 +49,24 @@ newsfeed_delete_all_messages_gui = {
         newsfeed_delete_all_messages_effect = yes
     }
 }
+
+newsfeed_mark_message_deletable_gui = {
+    scope = character
+
+    saved_scopes = {
+        newsfeed_message_index
+    }
+
+    effect = {
+        ordered_newsfeed_message_container = {
+            limit = {
+                var:newsfeed_message_index = scope:newsfeed_message_index
+            }
+            max = 1
+            set_variable = {
+                name = newsfeed_message_deletable
+                value = yes
+            }
+        }
+    }
+}
