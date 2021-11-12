@@ -2,7 +2,10 @@
     NOT = { player_heir = $PERSON$ }
 
     OR = {
-        $PERSON$ = { is_councillor_of = prev }
+        $PERSON$ = {
+            is_councillor_of = prev
+            NOT = { is_spouse_of = prev }
+        }
         newsfeed_is_my_sibling = { PERSON = $PERSON$ }
         newsfeed_is_my_parent = { PERSON = $PERSON$ }
     }
