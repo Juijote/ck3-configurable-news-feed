@@ -2,3 +2,6 @@
  newsfeed_empty_text: "通知将出现在这里。\n点击这个小组件右上方的齿轮来编辑你的通知设置。\n你可以拖动这个信息框来移动它，或者拖动其边缘来调整它的大小。"
  newsfeed_settings_header: "信息摘要设置"
  newsfeed_settings_explanation: "选择你想看到的每种类型的通知的角色组。\n\n请注意，尽管禁用了相关的选项，但是一些通知仍可能继续出现。一般来说，这些是包含在基本游戏中的事件，所以不能通过这个MOD来禁用。"
+ newsfeed_setting_tooltip: "汇报来自[Localize(Concatenate(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName, '_label'))]的[Localize(Concatenate(Scope.GetFlagName, '_label'))|l]"
+ newsfeed_select_all_for_subject_tooltip: "汇报[Localize(Concatenate(Story.MakeScope.GetVariable('newsfeed_subject').GetFlagName, '_label'))]的所有事件类型"
+ newsfeed_select_all_for_type_tooltip: "汇报所有角色组的[Localize(Concatenate(Scope.GetFlagName, '_label'))|l]"
